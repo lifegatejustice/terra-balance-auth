@@ -169,10 +169,9 @@ header{
     border: none; /* No border */
     cursor: pointer; /* Pointer cursor */
     position: relative;
-    top: 6.67vw; 
     margin: auto;
     float: right;
-    right: 4px;
+    
     /* Position relative for the icon */
   }
 
@@ -336,6 +335,9 @@ header{
 
   .first-icons{
     grid-column: 2;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
   }
 
   .headercontainer{
@@ -383,7 +385,7 @@ header{
 
   .hamburger-icon {
     display: block;
-    width: 15vw; /* Width of the hamburger icon */
+    width: 12vw; /* Width of the hamburger icon */
     height: 1.2vw; /* Height of the hamburger lines */
     background-color: var(--white); /* Color of the hamburger lines */
     position: relative;
@@ -395,7 +397,7 @@ header{
   .hamburger-icon::after {
     content: "";
     /* Create pseudo-elements */
-    width: 15vw; /* Same width as the main line */
+    width: 12vw; /* Same width as the main line */
     height: 1.2vw; /* Same height as the main line */
     background-color: white; /* Color of the lines */
     position: absolute; /* Position absolute for stacking */
