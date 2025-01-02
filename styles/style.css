@@ -281,6 +281,11 @@ header{
   height: 15vw;
   }
 
+  .second-icons img{
+    width: 10vw; /* Rounded for simplicity */
+    height: 15vw;
+  }
+
   .sign {
     padding: 1vw;
     border-radius: 5px;
@@ -351,11 +356,7 @@ header{
     z-index: 1000; /* Ensure it appears above other content */
   } 
 
-  .hero-img img{
-    width: auto;
-    height: auto;
-    grid-column: 1;
-  }
+ 
 
   .first-icons{
     grid-column: 2;
@@ -379,7 +380,8 @@ header{
   }
 
   .navigation.open {
-    display: flex; /* Show the navigation when open */
+    display: flex;
+     /* Show the navigation when open */
   }
 
   .navigation a {
@@ -511,7 +513,20 @@ header{
     font-size: 12px;
     color: var(--goldenrod-yellow)
   }
+  .search1{
+    display: none;
+  }
 }
+
+@media (max-width:769px) {
+  
+
+
+
+
+}
+
+
 
 .footer {
   display: flex;
