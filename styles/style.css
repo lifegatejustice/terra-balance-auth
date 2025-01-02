@@ -176,8 +176,8 @@ header{
 
   .hamburger-icon {
     display: block;
-    width: 12vw; /* Width of the hamburger icon */
-    height: 1.2vw; /* Height of the hamburger lines */
+    width: 10vw; /* Width of the hamburger icon */
+    height: 1vw; /* Height of the hamburger lines */
     background-color: var(--white); /* Color of the hamburger lines */
     position: relative;
     z-index: 1; /* Position relative for stacking */
@@ -188,8 +188,8 @@ header{
   .hamburger-icon::after {
     content: "";
     /* Create pseudo-elements */
-    width: 12vw; /* Same width as the main line */
-    height: 1.2vw; /* Same height as the main line */
+    width: 10vw; /* Same width as the main line */
+    height: 1vw; /* Same height as the main line */
     background-color: white; /* Color of the lines */
     position: absolute; /* Position absolute for stacking */
     left: 0; /* Align to the left */
