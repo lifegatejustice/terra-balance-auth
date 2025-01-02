@@ -169,17 +169,16 @@ header{
     border: none; /* No border */
     cursor: pointer; /* Pointer cursor */
     position: relative;
-    margin: auto;
     float: right;
-    
-    /* Position relative for the icon */
+    right: 4px;
+    margin: auto;/* Position relative for the icon */
   }
 
   .hamburger-icon {
     display: block;
-    width: 60px; /* Width of the hamburger icon */
-    height: 6px; /* Height of the hamburger lines */
-    background-color: red; /* Color of the hamburger lines */
+    width: 12vw; /* Width of the hamburger icon */
+    height: 1.2vw; /* Height of the hamburger lines */
+    background-color: var(--white); /* Color of the hamburger lines */
     position: relative;
     z-index: 1; /* Position relative for stacking */
   }
@@ -189,12 +188,13 @@ header{
   .hamburger-icon::after {
     content: "";
     /* Create pseudo-elements */
-    width: 60px; /* Same width as the main line */
-    height: 6px; /* Same height as the main line */
-    background-color: rgb(207, 22, 22); /* Color of the lines */
+    width: 12vw; /* Same width as the main line */
+    height: 1.2vw; /* Same height as the main line */
+    background-color: white; /* Color of the lines */
     position: absolute; /* Position absolute for stacking */
     left: 0; /* Align to the left */
     transition: all 0.3s;
+    margin-bottom: 10px;
     /* Smooth transition */
   }
 
@@ -220,6 +220,7 @@ header{
     transform: rotate(-45deg); /* Rotate the bottom line */
     top: 0; /* Align to the center */
   }
+
 
   .search-container {
     display: flex;
@@ -276,7 +277,7 @@ header{
 
 
   .first-icons img{
-    width: 15vw; /* Rounded for simplicity */
+    width: 10vw; /* Rounded for simplicity */
   height: 15vw;
   }
 
@@ -292,10 +293,33 @@ header{
     color: var(--black);
   }
 
-  header a img{
-    width: 10px;
+  .hero-img img{
+    width: auto;
     height: auto;
-}
+    grid-column: 1;
+  }
+
+  .first-icons{
+    grid-column: 2;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+
+  .headercontainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items:legacy;
+
+    
+  }
+
+  .hero-img {
+    grid-column: 1;
+  }
+
 
   .sign a:hover {
     background-color: var(--amber-yellow); /* Falu Red */
@@ -385,8 +409,8 @@ header{
 
   .hamburger-icon {
     display: block;
-    width: 12vw; /* Width of the hamburger icon */
-    height: 1.2vw; /* Height of the hamburger lines */
+    width: 10vw; /* Width of the hamburger icon */
+    height: 1vw; /* Height of the hamburger lines */
     background-color: var(--white); /* Color of the hamburger lines */
     position: relative;
     z-index: 1; /* Position relative for stacking */
@@ -397,8 +421,8 @@ header{
   .hamburger-icon::after {
     content: "";
     /* Create pseudo-elements */
-    width: 12vw; /* Same width as the main line */
-    height: 1.2vw; /* Same height as the main line */
+    width: 10vw; /* Same width as the main line */
+    height: 1vw; /* Same height as the main line */
     background-color: white; /* Color of the lines */
     position: absolute; /* Position absolute for stacking */
     left: 0; /* Align to the left */
