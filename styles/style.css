@@ -29,7 +29,8 @@ body{
 
 .search-container input::placeholder {
   color: #999;
-  padding-left: 10px;
+  padding-left: 20px;
+  font-size: 1rem;
 }
 
 header{
@@ -143,7 +144,8 @@ header{
   .navigation.open {
     display: flex;
     position: relative;
-    width: 100%; /* Show the navigation when open */
+    flex-direction: row;
+    gap: 40px; /* Show the navigation when open */
   }
 
   .navigation.open img{
@@ -231,18 +233,19 @@ header{
   .search-container {
     display: flex;
     align-items: center;
-    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     background-color: white;
-    width: 100%; /* Adjust width as needed */
+    width: 70%; /* Adjust width as needed */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .search-container input {
     border: none;
-    flex: 1;
     border-radius: 25px 0 0 25px;
     font-size: 1.8vw;
     outline: none;
+    height: 50px;
   }
 
   .search-container button {
@@ -254,6 +257,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 52px;
+    margin-left: 0px;
   }
 
   .search-container button img {
@@ -387,7 +392,9 @@ header{
 
   .navigation.open {
     display: flex;
-     /* Show the navigation when open */
+    position: relative;
+    flex-direction: column;
+    gap: 0; /* Show the navigation when open */
   }
 
   .navigation a {
@@ -463,49 +470,15 @@ header{
   }
 
   .search-container {
-    display: flex;
+    display: flex
+;
     align-items: center;
-    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     background-color: white;
-    width: 100%; /* Adjust width as needed */
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2vw;
-  }
-
-  .search-container input {
-    border: none;
-    flex: 1;
-    border-radius: 25px 0 0 25px;
-    outline: none;
-  }
-
-  .search-container button {
-    background-color: var(--lemon-yellow); /* Auburn */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  input::placeholder{
-    font-size: 10px;
-    text-align: left;
-    
-  }
-
-  .search-container button img {
-    font-size: large;
-    width: 20px;
-    height: 4vw;
-  }
-
-  .search-container button:hover {
-    background-color: var(--amber-yellow); /* Falu Red */
-  }
-
+}
 
   .footer a {
     text-decoration: none;
@@ -529,14 +502,14 @@ header{
 
 @media (max-width:769px) {
   .hero-img img{
-    width: 8vw;
+    width: 10vw;
     height: auto;
     grid-column: 1;
   }
 
   .first-icons img{
-    width: 5vw; /* Rounded for simplicity */
-    height: 10vw;
+    width: 10vw; /* Rounded for simplicity */
+    height: 15vw;
   }
 
   .hamburger-icon {
