@@ -141,7 +141,8 @@ header{
   }
 
   .navigation.open {
-    display: flex; /* Show the navigation when open */
+    display: flex;
+    position: relative; /* Show the navigation when open */
   }
 
   .navigation.open img{
@@ -514,6 +515,9 @@ header{
     color: var(--goldenrod-yellow)
   }
   .search1{
+    display: none;
+  }
+  .second-icons{
     display: none;
   }
 }
