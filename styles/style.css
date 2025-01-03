@@ -535,8 +535,32 @@ header{
   }
 
   .first-icons img{
-    width: 8vw; /* Rounded for simplicity */
+    width: 5vw; /* Rounded for simplicity */
     height: 10vw;
+  }
+
+  .hamburger-icon {
+    display: block;
+    width: 8vw; /* Width of the hamburger icon */
+    height: 1vw; /* Height of the hamburger lines */
+    background-color: var(--white); /* Color of the hamburger lines */
+    position: relative;
+    z-index: 1; /* Position relative for stacking */
+  }
+
+  /* Create three lines for the hamburger icon */
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    content: "";
+    /* Create pseudo-elements */
+    width: 8vw; /* Same width as the main line */
+    height: 1vw; /* Same height as the main line */
+    background-color: white; /* Color of the lines */
+    position: absolute; /* Position absolute for stacking */
+    left: 0; /* Align to the left */
+    transition: all 0.3s;
+    margin-bottom: 10px;
+    /* Smooth transition */
   }
 
 
