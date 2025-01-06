@@ -352,6 +352,11 @@ header{
     z-index: 1000; /* Ensure it appears above other content */
   } 
 
+  .image-container img{
+    width: 100%;
+    height: auto;
+  }
+
  
 
   .first-icons{

@@ -9,32 +9,43 @@ function toggleMenu() {
 }
 
 
-const image = document.getElementById('myImage');
-const images = [
-    "images/catfish.webp",
-    "images/turkey.webp",
-    "images/plantain.webp",
-    "images/tomatoes.webp",
-    "images/cucumber.webp",
-    "images/maize.webp",
-    "images/goat.webp"
+// Array of product objects
+const products = [
+    {
+        image: 'images/product1.jpg', // Placeholder path
+        name: 'Product 1',
+        price: 29.99,
+        description: 'Description for Product 1'
+    },
+    {
+        image: 'images/product2.jpg', // Placeholder path
+        name: 'Product 2',
+        price: 39.99,
+        description: 'Description for Product 2'
+    },
+    {
+        image: 'images/product3.jpg', // Placeholder path
+        name: 'Product 3',
+        price: 49.99,
+        description: 'Description for Product 3'
+    }
 ];
-let currentIndex = 0;
 
-function changeImage() {
-    // Add the swipe-left class for animation
-    image.classList.add('swipe-left');
-    
-    // Wait for the animation to complete before changing the image
-    setTimeout(() => {
-        // Update the image source
-        currentIndex = (currentIndex + 1) % images.length;
-        image.src = images[currentIndex];
-        
-        // Reset the animation class
-        image.classList.remove('swipe-left');
-    }, 500); // Match the CSS transition duration
+// Function to render products
+function renderProducts() {
+    const productList = document.getElementById('product-list');
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>Price: $${product.price.toFixed(2)}</p>
+            <p>${product.description}</p>
+        `;
+        productList.appendChild(productDiv);
+    });
 }
 
-// Automatically change the image every 3 seconds
-setInterval(changeImage, 5000);
+// Call the function to render products on page load
+document.addEventListener('DOMContentLoaded', renderProducts);
