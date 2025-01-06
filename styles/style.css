@@ -276,7 +276,7 @@ header{
 
   .first-icons img{
     width: 10vw; /* Rounded for simplicity */
-  height: 15vw;
+    height: 15vw;
   }
 
   .second-icons img{
