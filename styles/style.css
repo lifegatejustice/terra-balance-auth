@@ -219,7 +219,7 @@ header{
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     background-color: white;
-    width: 70%;
+    width: 200%;
     height: 35px; /* Adjust width as needed */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
@@ -242,6 +242,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: 180%;
     height: 37px;
     margin-left: 0px;
   }
