@@ -40,22 +40,6 @@ header{
   align-items: center;
 }
 
-.sign {
-  
-  padding: 1vw;
-  border-radius: 5px;
-  
-  text-align: center;
-  color: var(--white);
-}
-
-
-
-.sign:hover {
-  background-color: var(--amber-yellow); /* Falu Red */
-  padding: 1vw;
-  
-}
 
 @media (max-width: 793px) {
   .navigation {
@@ -65,8 +49,7 @@ header{
     background-color: var(--black); /* Background color for the menu */
     position: absolute; /* Position it absolutely */
     /* Adjust based on your layout */
-    right: 0; /* Align to the right */
-    width: 300px; /* Set a width for the menu */
+    right: 0; /* Align to the right */ /* Set a width for the menu */
     z-index: 1000; /* Ensure it appears above other content */
   }
 
