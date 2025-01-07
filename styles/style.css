@@ -174,6 +174,7 @@ header{
     z-index: 1; /* Position relative for stacking */
   }
 
+
   /* Create three lines for the hamburger icon */
   .hamburger-icon::before,
   .hamburger-icon::after {
@@ -315,6 +316,7 @@ header{
     align-items: center;
     justify-content: center;
     justify-items:legacy;
+    width: 100%;
   }
 
   .hero-img {
@@ -335,6 +337,7 @@ header{
     padding: 1vw;
     
   }
+  
 
 
 
@@ -515,6 +518,12 @@ header{
     width: 10vw;
     height: auto;
     grid-column: 1;
+  }
+
+  
+.image-container img{
+  width: 100%;
+  height: auto;
   }
 
   .first-icons img{

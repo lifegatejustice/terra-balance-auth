@@ -57,8 +57,12 @@
     <main>
         <section>
             <div class="image-container">
-                <img src="images/turkey.jpg" alt="dynamic images containing sports, series and movies" id="myImage">
-                <div class="gradient-overlay"></div>
+                <picture>
+                    <source media="(min-width: 794px)" srcset="images/turkey-large.jpg">
+                    <source media="(min-width: 426px)" srcset="images/turkey-large.jpg">
+                    <source media="(max-width: 426px)" srcset="images/turkey.jpg">
+                    <img src="images/turkey-large.jpg" alt="IfItDoesntMatchAnyMedia">
+                </picture>
             </div>
         </section>
         <!-- Main content goes here -->
