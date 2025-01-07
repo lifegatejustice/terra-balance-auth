@@ -217,8 +217,6 @@ header{
   .search-container {
     display: flex;
     align-items: center;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
     background-color: white;
     width: 200%;
     height: 35px; /* Adjust width as needed */
@@ -337,6 +335,32 @@ header{
     padding: 1vw;
     
   }
+
+  .shop-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--amber-yellow);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    
+    border: 2px solid var(--amber-yellow);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: var(--lemon-yellow);
+    color: var(--white);
+    border-color: var(--lemon-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shop-now-btn:active {
+    background-color: var(--earthy-green);
+    color: var(--white);
+}
   
 
 
@@ -511,6 +535,11 @@ header{
   .second-icons{
     display: none;
   }
+
+  .shop-now-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
 }
 
 @media (max-width:769px) {
