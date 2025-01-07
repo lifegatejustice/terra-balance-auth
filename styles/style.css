@@ -369,10 +369,36 @@ header{
   color: var(--white);
 }
 
+
+.howlearn-now-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--amber-yellow);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid var(--amber-yellow);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.howlearn-now-btn:hover {
+  background-color: var(--lemon-yellow);
+  color: var(--white);
+  border-color: var(--lemon-yellow);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.howlearn-now-btn:active {
+  background-color: var(--earthy-green);
+  color: var(--white);
+}
+
 .how{
   background-color: var(--earthy-green);
   padding-top: 1vw;
-  padding-bottom: 1vw;
+  padding-bottom: 2vw;
   color: var(--white);
 }
 
@@ -571,8 +597,24 @@ header{
 
 .shop-now-btn {
   position: relative;
-  bottom: 100px; /* Move to the middle vertically */
+  bottom: 23.47vw; /* Move to the middle vertically */
   
+}
+
+.howlearn-now-btn {
+  padding: 4vw 10vw;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.howlearn-button {
+position: relative;/* Full viewport height */
+}
+
+.howlearn-now-btn {
+position: relative;
+ /* Move to the middle vertically */
+
 }
 
 .howbold p{
@@ -582,6 +624,8 @@ header{
 
 .how{
   text-align: center;
+  position: relative;
+  bottom: 16vw;
 }
 }
 
