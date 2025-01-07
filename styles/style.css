@@ -336,32 +336,42 @@ header{
     
   }
 
-  .shop-now-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--amber-yellow);
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    
-    border: 2px solid var(--amber-yellow);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  /* Center the button using flexbox */
+.shop-button {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Full viewport height */
+}
+
+/* Button styles */
+.shop-now-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--amber-yellow);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid var(--amber-yellow);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .shop-now-btn:hover {
-    background-color: var(--lemon-yellow);
-    color: var(--white);
-    border-color: var(--lemon-yellow);
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--lemon-yellow);
+  color: var(--white);
+  border-color: var(--lemon-yellow);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .shop-now-btn:active {
-    background-color: var(--earthy-green);
-    color: var(--white);
+  background-color: var(--earthy-green);
+  color: var(--white);
 }
-  
+
+.how{
+  background-color: var(--earthy-green);
+}
 
 
 
@@ -537,8 +547,19 @@ header{
   }
 
   .shop-now-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    padding: 4vw 10vw;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.shop-button {
+  position: relative;/* Full viewport height */
+}
+
+.shop-now-btn {
+  position: relative;
+  bottom: 100px; /* Move to the middle vertically */
+  
 }
 }
 
