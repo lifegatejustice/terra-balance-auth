@@ -371,6 +371,19 @@ header{
 
 .how{
   background-color: var(--earthy-green);
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  color: var(--white);
+}
+
+.how p{
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.howbold{
+  font-weight: bold; 
+  font-size: xx-large; 
 }
 
 
@@ -560,6 +573,15 @@ header{
   position: relative;
   bottom: 100px; /* Move to the middle vertically */
   
+}
+
+.howbold p{
+  font-weight: bold;  
+  text-align: center;
+}
+
+.how{
+  text-align: center;
 }
 }
 
