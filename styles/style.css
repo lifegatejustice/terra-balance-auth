@@ -665,6 +665,30 @@ position: relative;
 .shop-now i {
   margin-left: 5px;
 }
+
+
+/*Our Mission styling*/
+.container {
+  text-align: center;
+  
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+.title {
+  font-size: 30.1px;
+}
+.description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
 }
 
 @media (max-width:769px) {
