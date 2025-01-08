@@ -653,9 +653,7 @@ position: relative;
   text-decoration: none;
   
 }
-.category:hover{
-  background-color: #1155CC;
-}
+
 .category h2 {
   font-size: 24px;
   margin: 0;
