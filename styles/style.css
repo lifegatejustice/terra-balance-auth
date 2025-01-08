@@ -651,6 +651,7 @@ position: relative;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
+  
 }
 .category h2 {
   font-size: 24px;
