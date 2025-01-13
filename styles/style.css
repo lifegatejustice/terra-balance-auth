@@ -318,6 +318,7 @@ header{
     justify-content: center;
     justify-items:legacy;
     width: 100%;
+    padding-top: 4vw;
   }
 
   .hero-img {
