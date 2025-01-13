@@ -433,9 +433,7 @@ header{
     width: 200px; /* Set a width for the menu */
     z-index: 1000; /* Ensure it appears above other content */
   } 
-
   
-
   .image-container img{
     width: 100%;
     height: auto;
