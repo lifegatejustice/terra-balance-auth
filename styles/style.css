@@ -850,12 +850,13 @@ position: relative;
   align-items: center;
   position: relative;
   bottom: 10vw;
+  justify-content: space-evenly;
 }
 .category {
   background-color: #000;
   color: #fff;
   padding: 20px;
-  margin: 10px 0;
+  margin: 10px;
   width: 40vw;
   height: 40vw;
   display: flex;
