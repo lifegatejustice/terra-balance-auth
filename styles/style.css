@@ -875,6 +875,10 @@ position: relative;
   text-align: left;
 }
 
+.mission-container{
+   position: relative;
+  bottom: 80px;
+}
 .mission-image-container img {
   width: 100%;
   height: auto;
