@@ -420,7 +420,7 @@ header{
 
 
 
-@media (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 426px) {
   /* Basic styles for the navigation */
   .navigation {
     display: none; /* Hide navigation by default */
@@ -634,7 +634,7 @@ position: relative;
 .how{
   text-align: center;
   position: relative;
-  bottom: 16vw;
+  bottom: 20vw;
 }
 .container {
   text-align: center;
