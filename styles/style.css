@@ -32,6 +32,7 @@ body{
   font-size: 1rem;
 }
 
+
 header{
   background-color: var(--black);
   padding: 1vw;
@@ -308,6 +309,7 @@ header{
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
+    
   }
 
   .headercontainer{
@@ -433,7 +435,7 @@ header{
     width: 200px; /* Set a width for the menu */
     z-index: 1000; /* Ensure it appears above other content */
   } 
-  
+
   .image-container img{
     width: 100%;
     height: auto;
@@ -446,6 +448,7 @@ header{
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
+    margin-right: 3vw;
   }
 
   .headercontainer{
@@ -750,7 +753,7 @@ position: relative;
 
 }
 
-@media (max-width:769px) {
+@media (min-width: 426px) and (max-width:769px) {
   .hero-img img{
     width: 10vw;
     height: auto;
@@ -769,7 +772,7 @@ position: relative;
   }
 
   .first-icons{
-    margin-right: 1.3vw; 
+    margin-right: 3vw; 
   }
 
   .hamburger-icon {
@@ -795,6 +798,54 @@ position: relative;
     margin-bottom: 10px;
     /* Smooth transition */
   }
+
+  .shop-now-btn {
+    padding: 3vw 8vw;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.shop-button {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  left: 2vw;
+  /* Full viewport height */
+}
+
+.shop-now-btn {
+  position: relative;
+  bottom: 23.47vw; /* Move to the middle vertically */
+  
+}
+
+.howlearn-now-btn {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.howlearn-button {
+position: relative;/* Full viewport height */
+}
+
+.howlearn-now-btn {
+position: relative;
+ /* Move to the middle vertically */
+
+}
+
+
+
+.howbold p{
+  font-weight: bold;  
+  text-align: center;
+}
+
+.how{
+  text-align: center;
+  position: relative;
+  bottom: 20vw;
+}
 
 
 

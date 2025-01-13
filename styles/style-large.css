@@ -3,7 +3,7 @@
     font-family: "Josefin Sans",
   }
 
-@media (min-width: 794px) {
+@media (min-width: 769px) {
     .headercontainer {
         display: grid;
         grid-template-columns: 1fr;
@@ -126,7 +126,8 @@ height: auto;
 .shop-button {
     display: flex;
     justify-content: left;
-    align-items: center; /* Full viewport height */
+    align-items: center;
+     /* Full viewport height */
   }
 
   .shop-button a{
