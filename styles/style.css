@@ -35,7 +35,6 @@ body{
 
 header{
   background-color: var(--black);
-  padding: 1vw;
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
@@ -217,26 +216,28 @@ header{
   }
 
 
-  .search-container {
+.search-container {
     display: flex;
     align-items: center;
     background-color: white;
-    width: 200%;
-    height: 35px; /* Adjust width as needed */
+    width: 100%; /* Adjusted width */
+    height: 35px; /* Consistent height */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
-  }
+    border-radius:25px;
+}
 
-  .search-container input {
+.search-container input {
     border: none;
     border-radius: 25px 0 0 25px;
-    font-size: 1.8vw;
+    font-size: 1.2rem; /* Adjusted font size for better readability */
     outline: none;
-    height: 30px;
-  }
+    height: 30px; /* Consistent height */
+    padding-left: 10px; /* Added padding for better UX */
+}
 
-  .search-container button {
-    background-color: var(--lemon-yellow);/* Auburn */
+.search-container button {
+    background-color: var(--lemon-yellow); /* Auburn */
     border: none;
     padding: 10px 15px;
     border-radius: 0 25px 25px 0;
@@ -244,11 +245,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 180%;
-    height: 37px;
-    margin-left: 0px;
-  }
+    height: 37px; /* Consistent height */
+    margin-left: 35px; /* Removed absolute positioning */
+}
 
   .search-container button img {
     font-size: large;
@@ -570,7 +569,7 @@ header{
   justify-content: center;
   height: 32px;
   position: absolute;
-  left: 95%;
+  left: 120%;
   width: 51px;
   margin-left: 0px;
 }
@@ -767,12 +766,12 @@ position: relative;
   }
 
   .first-icons img{
-    width: 10vw; /* Rounded for simplicity */
-    height: 15vw;
+    width: 8vw; /* Rounded for simplicity */
+    height: 10vw;
   }
 
   .first-icons{
-    margin-right: 3vw; 
+
   }
 
   .hamburger-icon {
