@@ -44,6 +44,7 @@
         transition: background-color 0.3s ease, color 0.3s ease;
         text-align: center;
     }
+    
 
     .navigation img{
         width: 4vw;
@@ -70,6 +71,10 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin-right: 1vw;
         align-items: center;
+    }
+
+    header{
+        padding: 0px;
     }
     
     .search-container input {
@@ -114,9 +119,97 @@ height: auto;
 }
 
 .shop-now-btn {
-    padding: 12px 24px; /* Larger padding */
+    padding: 24px 48px; /* Larger padding */
     font-size: 1.2rem; /* Larger font size */
 }
+
+.shop-button {
+    display: flex;
+    justify-content: left;
+    align-items: center; /* Full viewport height */
+  }
+
+  .shop-button a{
+    color: var(--white);
+  }
+  
+  /* Button styles */
+  .shop-now-btn {
+    display: inline-block;
+    position: relative;
+    bottom: 150px;
+    left:2vw;
+    padding: 20px 40px;
+    background-color: var(--amber-yellow);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid var(--amber-yellow);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .shop-now-btn:hover {
+    background-color: var(--lemon-yellow);
+    color: var(--white);
+    border-color: var(--lemon-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .shop-now-btn:active {
+    background-color: var(--earthy-green);
+    color: var(--white);
+  }
+  
+  
+  .howlearn-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--amber-yellow);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid var(--amber-yellow);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .howlearn-now-btn:hover {
+    background-color: var(--lemon-yellow);
+    color: var(--white);
+    border-color: var(--lemon-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .howlearn-now-btn:active {
+    background-color: var(--earthy-green);
+    color: var(--white);
+  }
+  
+  .how{
+    background-color: var(--earthy-green);
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    color: var(--white);
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .how p{
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  
+  .howbold{
+    font-weight: bold; 
+    font-size: xx-large; 
+  }            
 
 }
 
