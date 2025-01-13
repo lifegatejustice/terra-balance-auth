@@ -38,7 +38,7 @@ header{
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  width: 100%;
+  width: 98%;
   z-index: 1;
 }
 
@@ -768,10 +768,6 @@ position: relative;
   .first-icons img{
     width: 8vw; /* Rounded for simplicity */
     height: 10vw;
-  }
-
-  .first-icons{
-
   }
 
   .hamburger-icon {
