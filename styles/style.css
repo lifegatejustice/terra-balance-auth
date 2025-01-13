@@ -10,7 +10,7 @@
   --lemon-yellow: #2F4055;
   --amber-yellow: #1155CC;
   --white: #ffffff;
-  --whitetrans: #ffffffd8;
+  --whitetrans: #8a8a8a;
   --black: #000000;
   --black-variant: #1c1c1c;
 
@@ -876,7 +876,9 @@ position: relative;
 }
 
 .mission-details{
-  background-color: #1155CC;
+  background-color: var(--whitetrans);
+  padding-top: 5vw;
+  position: relative;
 
 }
 
@@ -896,14 +898,16 @@ position: relative;
 .mission-image-container img:hover{
   transform: scale(2); /* Scales the image to 2 times its original size */
 }
+
 .mission-container h2 {
   font-size: 30.1px;
   font-weight: bold;
   text-align: center;
 }
+
 .mission-description {
   font-size: 16px;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 20px;
   margin-left: 2vw;
   margin-right: 2vw;
