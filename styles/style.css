@@ -63,73 +63,7 @@ header {
   
 }
 @media (max-width: 793px) {
-  .navigation {
-    display: none; /* Hide navigation by default */
-    flex-direction: column;
-    padding: 3vw; /* Stack items vertically */
-    background-color: var(--black); /* Background color for the menu */
-    position: absolute; /* Position it absolutely */
-    /* Adjust based on your layout */
-    right: 0; /* Align to the right */ /* Set a width for the menu */
-    z-index: 1000; /* Ensure it appears above other content */
-  }
-
-  .card {
-    flex: 0 0 calc(50% - 16px); /* Two cards per view */
-    scroll-snap-align: start; /* Align each card when scrolling */
-    background-color: var(--black-variant);
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .aboutcard {
-    flex: 0 0 calc(50% - 16px); /* Two cards per view */
-    scroll-snap-align: start; /* Align each card when scrolling */
-    background-color: var(--black-variant);
-
-    transition: transform 0.2s ease-in-out;
   
-  }
-
-  .card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-  }
-
-  .card h3 {
-    margin: 0 0 8px;
-    color: var(--amber-yellow);
-  }
-
-  .aboutcard h3 {
-    margin: 0 0 8px;
-    color: var(--amber-yellow);
-  }
-
-  .card p {
-    color: var(--white);
-  }
-
-  .aboutcard p {
-    color: var(--white);
-  }
-
-  .navigation.open {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-     /* Show the navigation when open */
-  }
-
-  .navigation.open img{
-    
-      width: 4vw;
-      height: auto;
-  }
-
-  .second-icons{
-    display: none;
-  }
   }
 
   .navigation a {
@@ -234,7 +168,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 37px; /* Consistent height */
-    margin-left: 35px; /* Removed absolute positioning */
+    margin-left: 40px; /* Removed absolute positioning */
 }
 
   .search-container button img {
@@ -296,7 +230,7 @@ header {
     grid-column: 2;
     display: grid;
     grid-auto-flow: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     justify-items: center;
     
   }
@@ -616,7 +550,7 @@ position: relative;
 .how{
   text-align: center;
   position: relative;
-  bottom: 20vw;
+  bottom: 22vw;
 }
 .container {
   text-align: center;
@@ -735,6 +669,75 @@ position: relative;
 }
 
 @media (min-width: 426px) and (max-width:769px) {
+  
+  .navigation {
+    display: none; /* Hide navigation by default */
+    flex-direction: column;
+    padding: 3vw; /* Stack items vertically */
+    background-color: var(--black); /* Background color for the menu */
+    position: absolute; /* Position it absolutely */
+    /* Adjust based on your layout */
+    right: 0; /* Align to the right */ /* Set a width for the menu */
+    z-index: 1; /* Ensure it appears above other content */
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 16px); /* Two cards per view */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .aboutcard {
+    flex: 0 0 calc(50% - 16px); /* Two cards per view */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+
+    transition: transform 0.2s ease-in-out;
+  
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+    color: var(--amber-yellow);
+  }
+
+  .aboutcard h3 {
+    margin: 0 0 8px;
+    color: var(--amber-yellow);
+  }
+
+  .card p {
+    color: var(--white);
+  }
+
+  .aboutcard p {
+    color: var(--white);
+  }
+
+  .navigation.open {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+     /* Show the navigation when open */
+  }
+
+  .navigation.open img{
+    
+      width: 4vw;
+      height: auto;
+  }
+
+  .second-icons{
+    display: none;
+  }
+  
   .hero-img img{
     width: 8vw;
     height: auto;

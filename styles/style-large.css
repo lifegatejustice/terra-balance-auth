@@ -67,8 +67,9 @@
         border-radius: 50px;
         background-color: var(--white);
         width: 100%; /* Consistent width */
-        height: 50px; /* Consistent height */
+        height: 35px; /* Consistent height */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 0%;
     }
 
     header{
@@ -88,12 +89,13 @@
         border: none;
         padding: 10px 15px;
         border-radius: 0 25px 25px 0;
-        height: 51px; /* Consistent height */
+        height: 37px; /* Consistent height */
         width: 51px; /* Consistent width */
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
+        align-items: center;
     }
     
     .search-container button img {
