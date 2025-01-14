@@ -34,13 +34,23 @@ body{
 }
 
 
-header{
+header {
   background-color: var(--black);
-  justify-content: space-evenly;
+  justify-content: center; /* Center the content */
   align-items: center;
   position: fixed;
   width: 100%;
   z-index: 1;
+  padding: 10px 0; /* Add padding for better spacing */
+}
+
+.headercontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  align-items: center;
+  justify-content: center;
+  max-width: 768px; /* Limit the width for tablet view */
+  margin: 0 auto; /* Center the container */
 }
 
 .headercontainer{
@@ -281,11 +291,13 @@ header{
     grid-column: 1;
   }
 
+
   .first-icons{
     grid-column: 2;
     display: grid;
     grid-auto-flow: column;
-    justify-content: center;
+    justify-content: space-between;
+    justify-items: center;
     
   }
 
@@ -418,8 +430,9 @@ header{
     grid-column: 2;
     display: grid;
     grid-auto-flow: column;
-    justify-content: center;
-    margin-right: 3vw;
+    justify-content: space-between;
+    justify-items: center;
+    
   }
 
 
@@ -728,6 +741,9 @@ position: relative;
     grid-column: 1;
   }
 
+  body{
+    max-width:768px;
+  }
   
 .image-container img {
   width: 100%;
