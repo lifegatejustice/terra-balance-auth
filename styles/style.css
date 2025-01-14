@@ -786,10 +786,21 @@ position: relative;
 .howlearn-now-btn {
   font-size: 1.2rem;
   color: var(--white);
+
+}
+
+.howlearn-now-button{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
 }
 
 .howlearn-button {
-position: relative;/* Full viewport height */
+position: relative;
+display: flex;
+justify-content: center;
+/* Full viewport height */
 }
 
 .howlearn-now-btn {
@@ -844,15 +855,19 @@ position: relative;
 
 
 .mission-details{
-  background-color: var(--whitetrans);
-  padding-top: 17vw;
-  position: relative;
+  background-color: var(--earthy-green);
+  
+  
+  display: flex;
+  flex-direction: column;
 
 }
 
-.mission-details h2, p{
+
+.mission-details p{
   position: relative;
-  bottom: 50px;
+  top: 100px;
+  font-size: larger;
 
 }
 
@@ -864,19 +879,21 @@ position: relative;
 
 .mission-image-container img {
   width: 100%;
-  transform: scale(2); /* Scales the image to 1.5 times its original size */
+  transform: scale(1); /* Scales the image to 1.5 times its original size */
   transition: transform 0.3s ease-in-out; /* Smooth transition */
   grid-column: 1;
 }
 
 .mission-image-container img:hover{
-  transform: scale(2); /* Scales the image to 2 times its original size */
+  transform: scale(1); /* Scales the image to 2 times its original size */
 }
 
 .mission-container h2 {
-  font-size: 30.1px;
+  font-size: 40.1px;
   font-weight: bold;
   text-align: center;
+  position: relative;
+  color: var(--white);
 }
 
 .mission-description {
@@ -887,11 +904,13 @@ position: relative;
   margin-right: 2vw;
   text-align: center;
   grid-column: 2;
-  
+  position: relative;
+  bottom: 100px;
 }
 
 .mission-container{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: 1fr 2fr;
 }
 .shop-now {
