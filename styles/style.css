@@ -49,7 +49,7 @@ header {
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   align-items: center;
   justify-content: center;
-  max-width: 768px; /* Limit the width for tablet view */
+   /* Limit the width for tablet view */
   margin: 0 auto; /* Center the container */
 }
 
@@ -739,10 +739,6 @@ position: relative;
     width: 8vw;
     height: auto;
     grid-column: 1;
-  }
-
-  body{
-    max-width:768px;
   }
   
 .image-container img {
