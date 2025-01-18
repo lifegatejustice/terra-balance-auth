@@ -26,6 +26,17 @@ body{
   padding: 0%;
 }
 
+.herocha{
+  display: flex;
+}
+
+.herocha h2{
+  color: var(--white);
+  position: relative;
+  top: 500px;
+  
+}
+
 
 .search-container input::placeholder {
   color: #999;
@@ -41,7 +52,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
-  padding: 10px 0; /* Add padding for better spacing */
+ 
+   /* Add padding for better spacing */
 }
 
 .headercontainer {
@@ -50,7 +62,8 @@ header {
   align-items: center;
   justify-content: center;
    /* Limit the width for tablet view */
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
+  /* Center the container */
 }
 
 .headercontainer{
@@ -666,6 +679,31 @@ position: relative;
   margin-top: 20px;
 }
 
+.herocha{
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 8vw;
+  
+}
+
+.herocha h2{
+  position: relative;
+  top: 112.68vw;
+}
+.herocha p{
+  display: flex;
+  position: relative;
+  top: 105.63vw;
+  color: white;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
 }
 
 @media (min-width: 426px) and (max-width:769px) {
@@ -936,7 +974,27 @@ position: relative;
 }
 
 
+.herocha{
+  
+}
 
+ 
+.herocha h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px 2px rgb(27, 27, 27);
+
+}
+
+.herocha p{
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  top: 500px;
+
+}
 
 }
 
