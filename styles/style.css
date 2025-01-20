@@ -26,7 +26,6 @@ body{
 
 .herocha{
   display: flex;
-    align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -486,11 +485,16 @@ header {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     background-color: white;
-    width: 100%;
-    height: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 130%;
+    height: 30px;
+   
     margin-bottom: 10px;
     margin-left: 10px;
+}
+
+.search-container input{
+  height: 30px;
+  width: 150%;
 }
 
 .search-container button {
@@ -502,7 +506,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
+  height: 35px;
   position: absolute;
   left: 120%;
   width: 51px;
@@ -570,7 +574,7 @@ position: relative;
 .how{
   text-align: center;
   position: relative;
-  bottom: 47vw;
+  bottom: 43vw;
 }
 .container {
   text-align: center;
@@ -687,6 +691,8 @@ position: relative;
 }
 
 .herocha{
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
@@ -798,7 +804,7 @@ position: relative;
   width: 100%;
   height: auto;
   position: relative;
-  bottom: 1vw;
+  bottom: 27vw;
   z-index: 3;
   }
 
@@ -847,7 +853,7 @@ position: relative;
 
 .shop-now-btn {
   position: relative;
-  bottom: 15vw; 
+  bottom: 45vw; 
   z-index: 3;/* Move to the middle vertically */
   
 }
@@ -888,7 +894,22 @@ position: relative;
 .how{
   text-align: center;
   position: relative;
-  bottom: 20vw;
+  bottom: 43vw;
+  z-index: 4;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.how h2{
+  margin-bottom: 0%;
+ 
+
+}
+
+@media only screen and (min-width: 769px) {
+
 }
 
 .container {
@@ -1034,9 +1055,10 @@ body{
 
 .herocha h2{
   color: var(--white);
-  position: absolute;
-  top: 430px;
+  position: relative;
+  top: 120vw;
   font-size: 2.5rem;
+  z-index: 3;
   
 }
 
@@ -1045,20 +1067,47 @@ body{
   align-items: flex-start;
   position: relative;
   text-align: center;
-  top: 500px;
+  top: 115vw;
   color: var(--white);
+  text-shadow: 2px 2px 2px rgb(27, 27, 27);
 
 }
 
 .herocha{
     flex-direction: column;
     flex-wrap: wrap;
+    display: flex;
     position: relative;
+    align-items: flex-start;
+    align-content: flex-start;
     left: 2vw;
-    top: -40vw;
+    top: -70vw;
     z-index: 4;
     
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 200%;
+  height: 35px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+
+.search-container button {
+  background-color: var(--lemon-yellow);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37px;
+  margin-left: 130px;
 
 }
 
