@@ -22,18 +22,20 @@
 body{
   font-family: var(--body-font);
   
-  margin: 0;
-  padding: 0%;
 }
 
 .herocha{
   display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .herocha h2{
   color: var(--white);
-  position: relative;
-  top: 500px;
+  position: absolute;
+  top: 400px;
   
 }
 
@@ -82,7 +84,7 @@ header {
   .navigation a {
     color: white; /* Link color */
     padding: 10px; /* Padding for links */
-    font-weight: bold;
+    
     text-decoration: none; /* Remove underline */
     transition: background 0.3s; /* Smooth background transition */
   }
@@ -155,7 +157,7 @@ header {
     display: flex;
     align-items: center;
     background-color: white;
-    width: 100%; /* Adjusted width */
+    width: 160%; /* Adjusted width */
     height: 35px; /* Consistent height */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
@@ -362,7 +364,7 @@ header {
     /* Adjust based on your layout */
     right: 0; /* Align to the right */
     width: 200px; /* Set a width for the menu */
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1; /* Ensure it appears above other content */
   } 
 
   .image-container img{
@@ -402,7 +404,7 @@ header {
 
   .navigation a {
     color: white; /* Link color */
-    font-weight: bold;
+    
     width: 100%;
     font-size: 1rem;
     padding: 10px; /* Padding for links */
@@ -717,6 +719,8 @@ position: relative;
     /* Adjust based on your layout */
     right: 0; /* Align to the right */ /* Set a width for the menu */
     z-index: 1; /* Ensure it appears above other content */
+    width: 200px; /* Set a width for the menu */
+    z-index: 1; /* Ensure it appears above other content */
   }
 
   .card {
@@ -973,27 +977,77 @@ position: relative;
   justify-content: flex-start;
 }
 
-
-.herocha{
-  
+header{
+  max-width: 768px;
+  width: 98%;
 }
+.headercontainer{
 
+
+display: grid;
+ grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        justify-items: legacy;
+        max-width: 768px;
+        width: 98%;
+      }
+      header{
+        max-width: 783px;
+      }
+
+      .first-icons {
+        grid-column: 2;
+        display: grid
+    ;
+        grid-auto-flow: column;
+        justify-content: space-evenly;
+        justify-items: center;
+        
+      }
+
+      
  
 .herocha h2{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-shadow: 2px 2px 2px rgb(27, 27, 27);
 
 }
 
+body{
+  max-width: 783px;
+}
+
+.herocha h2{
+  color: var(--white);
+  position: absolute;
+  top: 430px;
+  font-size: 2.5rem;
+  
+}
+
 .herocha p{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   text-align: center;
   top: 500px;
+  color: var();
 
+}
+
+.herocha{
+  display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    left: 2vw;
+    top: 20px;
 }
 
 }
