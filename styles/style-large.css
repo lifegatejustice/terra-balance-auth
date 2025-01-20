@@ -116,7 +116,8 @@
 
 .image-container img{
 width: 100%;
-height: auto;
+height: 100vh;
+
 }
 
 .shop-now-btn {
@@ -218,7 +219,8 @@ height: auto;
     color: var(--white);
     position: absolute;
     top: 430px;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    width: max-content;
     text-shadow: 2px 2px 2px rgb(27, 27, 27);
     
   }
@@ -228,7 +230,9 @@ height: auto;
     align-items: flex-start;
     position: relative;
     text-align: center;
-    top: 500px;
+    
+    top: 520px;
+    font-size: 2rem;
     color: var(--white);
     text-shadow: 2px 2px 2px rgb(27, 27, 27);
   
@@ -242,8 +246,9 @@ height: auto;
       flex-direction: column;
       flex-wrap: wrap;
       position: relative;
+      z-index: 3;
       left: 2vw;
-      top: 40px;
+      top:1vh;
   }
   
 
