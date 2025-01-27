@@ -97,3 +97,25 @@ function updateContent() {
 }
 
 setInterval(updateContent, 5000);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector('.carousel');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    prevButton.addEventListener('click', function() {
+        carousel.scrollBy({
+            top: 0,
+            left: -carousel.clientWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    nextButton.addEventListener('click', function() {
+        carousel.scrollBy({
+            top: 0,
+            left: carousel.clientWidth,
+            behavior: 'smooth'
+        });
+    });
+});

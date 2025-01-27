@@ -1,166 +1,170 @@
-
-  body {
-    font-family: "Josefin Sans",
-  }
-
-@media (min-width: 769px) {
-    .headercontainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        justify-items:legacy;
-         /* Adjust as needed */
-    }
-
-    .hero-img img{
-        width: 5vw;
-        height: auto;
-        grid-column: 1;
-      }
-
-      .second-icons{
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: center;
-        align-items: center;
-      }
-    
-    
-    .navigation {
-        display: grid;
-        grid-column: 2;
-        grid-auto-flow: column;
-        justify-content: center;
-        font-size: 1.5vw;
-        align-items: center;
-    }
-    
-    .navigation a {
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        border-radius: 4px;
-      
-
-        
-        transition: background-color 0.3s ease, color 0.3s ease;
-        text-align: center;
-    }
-    
-
-    .navigation img{
-        width: 4vw;
-        height: auto;
-    }
-    
-    .first-icons{
-        display: none;
-    }
-    
-    .navigation a:hover {
-        background-color: var(--amber-yellow);
-        color: var(--white);
-        padding: 1vw;
-        
-    }
-    
-    .search-container {
-        display: flex;
-        align-items: center;
-        border-radius: 50px;
-        background-color: var(--white);
-        width: 100%; /* Consistent width */
-        height: px; /* Consistent height */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 0%;
-    }
-
-    header{
-        padding: 0px;
-    }
-    .search-container{
-      height: 67px;
-      align-self: center;
-      position: relative;
-    }
-    .search-container input {
-        border: none;
-        
-        border-radius: 25px 0 0 25px;
-        font-size: 1rem; /* Adjusted font size for better readability */
-        outline: none;
-        padding-left: 15px; /* Consistent padding */
-    }
-    
-    .search-container button {
-        background-color: var(--lemon-yellow); /* Auburn */
-        border: none;
-        padding: 10px 15px;
-        border-radius: 0 25px 25px 0;
-        height: 67px; /* Consistent height */
-        width: 51px; /* Consistent width */
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .search-container button img {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .search-container button:hover {
-        background-color: var(--amber-yellow); /* Falu Red */
-    }
-    #menu{
-      display: none;
-    }
-
-.image-container img{
-width: 100%;
-height: 110vh;
-position: relative;
-bottom: 8vw;
+body {
+  font-family: "Josefin Sans";
 }
 
-.shop-now-btn {
+@media (min-width: 769px) {
+  .headercontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items: legacy;
+    /* Adjust as needed */
+  }
+
+  .hero-img img {
+    width: 5vw;
+    height: auto;
+    grid-column: 1;
+  }
+
+  .second-icons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation {
+    display: grid;
+    grid-column: 2;
+    grid-auto-flow: column;
+    justify-content: center;
+    font-size: 1.5vw;
+    align-items: center;
+  }
+
+  .navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+  }
+
+  .navigation img {
+    width: 4vw;
+    height: auto;
+  }
+
+  .first-icons {
+    display: none;
+  }   
+
+  .navigation a:hover {
+    background-color: var(--amber-yellow);
+    color: var(--white);
+    padding: 1vw;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 1.5rem;
+    opacity: 1;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--white);
+    width: 96%; /* Consistent width */
+    /* Consistent height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0%;
+  }
+
+  header {
+    padding: 0px;
+  }
+  .search-container {
+    height: 3vw;
+    align-self: center;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 14vw;
+  }
+  .search-container input {
+    border: none;
+
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem; /* Adjusted font size for better readability */
+    outline: none;
+    padding-left: 15px; /* Consistent padding */
+  }
+
+  .search-container button {
+    background-color: var(--lemon-yellow); /* Auburn */
+    border: none;
+    padding: 10px 15px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 3vw; /* Consistent height */
+    width: 5vw; /* Consistent width */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    left: 14vw;
+    position: relative;
+  }
+
+  .search-container button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-container button:hover {
+    background-color: var(--amber-yellow); /* Falu Red */
+  }
+  #menu {
+    display: none;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    bottom: 8vw;
+  }
+
+  .shop-now-btn {
     padding: 24px 48px; /* Larger padding */
     font-size: 1.2rem; /* Larger font size */
     position: relative;
-    
-}
+  }
 
-.shop-button {
+  .shop-button {
     display: flex;
     justify-content: left;
     align-items: center;
-     /* Full viewport height */
+    /* Full viewport height */
   }
 
-  .shop-button a{
+  .shop-button a {
     color: var(--white);
   }
-  
+
   /* Button styles */
   .shop-now-btn {
     display: inline-block;
     position: relative;
     bottom: 33vh;
     z-index: 3;
-    left:2vw;
+    left: 2vw;
     padding: 20px 40px;
     background-color: var(--amber-yellow);
     color: var(--black);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     border: 2px solid var(--amber-yellow);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
-  
+
   .shop-now-btn:hover {
     background-color: var(--lemon-yellow);
     color: var(--white);
@@ -168,26 +172,30 @@ bottom: 8vw;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .shop-now-btn:active {
     background-color: var(--earthy-green);
     color: var(--white);
   }
-  
-  
+
+  .howlearn-button a {
+    font-size: 2rem;
+  }
+
   .howlearn-now-btn {
     display: inline-block;
-    padding: 1rem 3rem; /* Adjusts based on root font size */
-    font-size: 1rem; /* Scales with user settings */
+    padding: 1rem 2rem; /* Adjusts based on root font size */
+    /* Scales with user settings */
     background-color: var(--amber-yellow);
     color: var(--white);
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid var(--amber-yellow);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
-  
+
   .howlearn-now-btn:hover {
     background-color: var(--lemon-yellow);
     color: var(--white);
@@ -195,13 +203,13 @@ bottom: 8vw;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .howlearn-now-btn:active {
     background-color: var(--earthy-green);
     color: var(--white);
   }
-  
-  .how{
+
+  .how {
     background-color: var(--earthy-green);
     padding-top: 1vw;
     padding-bottom: 2vw;
@@ -213,58 +221,54 @@ bottom: 8vw;
     justify-content: center;
     align-items: baseline;
   }
-  
-  .how p{
+
+  .how p {
     margin-left: 3vw;
     margin-right: 3vw;
     font-size: 1.5rem;
   }
-  
-  .howbold{
-    font-weight: bold; 
-    font-size: xx-large; 
-  }            
 
-  .how h2{
+  .howbold {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+
+  .how h2 {
     margin-bottom: 0%;
     font-size: 3rem;
-   
-  
   }
-   
-  .herocha h2{
+
+  .herocha h2 {
     color: var(--white);
     position: absolute;
     top: 55vh;
     font-size: 3rem;
     width: max-content;
     text-shadow: 2px 2px 2px rgb(27, 27, 27);
-    
   }
-  
-  .herocha p{
+
+  .herocha p {
     display: flex;
     align-items: flex-start;
     position: relative;
     text-align: center;
-    
+
     top: 65vh;
     font-size: 2rem;
     color: var(--white);
     text-shadow: 2px 2px 2px rgb(27, 27, 27);
-  
   }
-  
-  .herocha{
+
+  .herocha {
     display: flex;
-      align-items: flex-start;
-      align-content: flex-start;
-      flex-direction: column;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 3;
-      left: 2vw;
-      top: 10vh;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
+    left: 2vw;
+    top: 10vh;
   }
 
   .container {
@@ -273,7 +277,7 @@ bottom: 8vw;
     flex-direction: row;
     align-items: center;
     position: relative;
-    bottom: 15vw;
+    bottom: 10vw;
     justify-content: space-evenly;
   }
 
@@ -281,27 +285,24 @@ bottom: 8vw;
     background-color: #000;
     color: #fff;
     padding: 20px;
-    margin: 10px;
-    width: 20vw;
+    width: 45vw;
     height: 20vw;
     display: flex;
+    margin: 2vw;
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
     box-shadow: 0 0 30px gray;
   }
-  
-  
+
+  .category p {
+    font-size: 3rem;
+  }
+
   .category h2 {
-    font-size: 24px;
+    font-size: 3rem;
     margin: 0;
     margin-top: 20px;
     text-align: left;
   }
-  
-  
-
 }
-
-
-
