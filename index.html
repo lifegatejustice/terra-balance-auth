@@ -23,7 +23,7 @@
         <div class="headercontainer">
             <div class="hero-img">   
                 <a href="index.html" target="_blank" style="text-decoration: none;">
-                    <img src="images/terrabalance-logo.svg" alt="Clickable Image"/>
+                    <img src="images/terrabalance-logo.svg" alt="Clickable Image" loading="lazy">
                 </a></div>
 
             <div class="first-icons">
@@ -37,10 +37,13 @@
                     <span class="hamburger-icon"></span>
                 </button></div>
             <nav class="navigation" aria-label="Main navigation">
+               
                 <div class="search-container" id="search-bar">
-                    <input type="text" id="search" placeholder="Search..." >
-                    <button type="submit" id="searchButton"><img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Search icon image"></button>
+                    <input type="text" id="search" placeholder="Search">
+                    <button type="submit" id="searchButton">
+                        <img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Search icon image" class="search-icon"></button>
                 </div>
+            
                 <a href="index.html">Home</a>
                 <a href="#">About Us</a>
                 <a href="#">Contact Us</a>
@@ -56,6 +59,28 @@
             </nav>
         </div>
     </header>
+
+
+    <!-- <nav class="navbar">
+        <div class="logo">
+            <img src="images/terrabalance-logo.svg" alt="Terra Balance Logo">
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button type="submit"><img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Search icon"></button>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Projects</a>
+        </div>
+        <div class="icon-container">
+            <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Cart"></a>
+            <a href="#"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Store"></a>
+            <a href="#loginForm"><img src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Account"></a>
+        </div>
+    </nav> -->
     <main>
         <section>
             <div class="herocha">
@@ -67,7 +92,7 @@
                     <source media="(min-width: 794px)" srcset="images/turkey-large.jpg">
                     <source media="(min-width: 426px)" srcset="images/turkey-medium.jpg">
                     <source media="(max-width: 426px)" srcset="images/turkey.jpg">
-                    <img src="images/turkey-large.jpg" alt="dynamic images of turkey, goat meat, compost, catfish etc. ">
+                    <img src="images/turkey-large.jpg" alt="dynamic images of turkey, goat meat, compost, catfish etc." loading="lazy"">
                 </picture>
             </div>
             
@@ -100,7 +125,7 @@
         <section>
             <div class="mission-container">
                 <div class="mission-image-container">
-                    <img alt="woman happily harvesting maize" src="images/our-mission.jpg" width="150"/>
+                    <img alt="woman happily harvesting maize" src="images/our-mission.jpg" width="150" loading="lazy">
                 </div>
 
                 <div class="mission-details">
@@ -239,7 +264,28 @@
     </div>
 </section>
 
-    </main>
+        <section class="features">
+            <div class="feature">
+                <img src="images/assets/shipping-icon.svg" alt="UK-wide shipping">
+                <h3>UK-wide shipping</h3>
+                <p>Convenient delivery across the UK, with trusted shipping partners</p>
+            </div>
+            <div class="feature">
+                <img src="images/assets/quality-icon.svg" alt="Premium quality">
+                <h3>Premium quality</h3>
+                <p>The finest ethically grown, organic veg, meat, dairy & pantry goods</p>
+            </div>
+            <div class="feature">
+                <img src="images/assets/sourced-icon.svg" alt="Locally sourced">
+                <h3>Locally sourced</h3>
+                <p>Carefully curated selection from the UK's best food producers</p>
+            </div>
+            <div class="feature">
+                <img src="images/assets/sustainable-icon.svg" alt="Sustainable shopping">
+                <h3>Sustainable shopping</h3>
+                <p>A more sustainable, low-carbon way to shop for food online</p>
+            </div>
+        </section>
     <footer>
         <div class="footer">
             <div>

@@ -51,7 +51,7 @@ body {
 
   .first-icons {
     display: none;
-  }   
+  }
 
   .navigation a:hover {
     background-color: var(--amber-yellow);
@@ -60,44 +60,54 @@ body {
   }
 
   input[type="text"]::placeholder {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    align-self: center;
     opacity: 1;
+    line-height: 0;
+  }
+
+  .search-container input[type="text"] {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #888;
+  }
+
+  .search-container .search-icon {
+    font-size: 20px;
+    color: #000;
   }
 
   .search-container {
     display: flex;
     align-items: center;
-    border-radius: 50px;
+    border: 1px solid #ddd;
+    
+    max-width: 500px;
     background-color: var(--white);
-    width: 96%; /* Consistent width */
-    /* Consistent height */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0%;
   }
 
   header {
     padding: 0px;
   }
   .search-container {
-    height: 3vw;
-    align-self: center;
-    position: relative;
-    padding-left: 20px;
-    margin-right: 14vw;
+    display: flex;
+    align-items: center;
   }
+
   .search-container input {
+    padding: 10px;
     border: none;
-
-    border-radius: 25px 0 0 25px;
-    font-size: 1rem; /* Adjusted font size for better readability */
-    outline: none;
-    padding-left: 15px; /* Consistent padding */
+    border-radius: 4px;
+    margin-right: 10px;
   }
 
-  .search-container button {
-    background-color: var(--lemon-yellow); /* Auburn */
+  .search-container button { /* Auburn */
     border: none;
-    padding: 10px 15px;
+    background-color: transparent;
+    
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     height: 3vw; /* Consistent height */
@@ -107,8 +117,6 @@ body {
     align-items: center;
     justify-content: center;
     align-items: center;
-    left: 14vw;
-    position: relative;
   }
 
   .search-container button img {
@@ -116,9 +124,6 @@ body {
     height: 20px;
   }
 
-  .search-container button:hover {
-    background-color: var(--amber-yellow); /* Falu Red */
-  }
   #menu {
     display: none;
   }
@@ -145,6 +150,7 @@ body {
 
   .shop-button a {
     color: var(--white);
+    font-size: 1.5rem;
   }
 
   /* Button styles */
@@ -179,7 +185,7 @@ body {
   }
 
   .howlearn-button a {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .howlearn-now-btn {
@@ -189,7 +195,7 @@ body {
     background-color: var(--amber-yellow);
     color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: bold;
     border: 2px solid var(--amber-yellow);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
@@ -235,7 +241,7 @@ body {
 
   .how h2 {
     margin-bottom: 0%;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .herocha h2 {
@@ -305,4 +311,73 @@ body {
     margin-top: 20px;
     text-align: left;
   }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    text-align: left;
+    background-color: var(--black);
+  }
+  .footer div {
+    margin: 10px;
+  }
+  .footer h3 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #b3b3b3;
+  }
+  .footer a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    justify-content: flex-start;
+    margin-left: 6vw;
+  }
+  .social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .social-icons img {
+    width: 5vw;
+    height: 15vw;
+  }
+  .footer p {
+    text-align: center;
+    font-size: 12px;
+    color: #b3b3b3;
+    margin-top: 20px;
+  }
+
+  footer {
+    margin-top: 10vw;
+    background-color: var(--black);
+    padding-bottom: 2vw;
+  }
+
+  .follow {
+    color: var(--white);
+    margin-left: 10vw;
+  }
+  footer p {
+    color: var(--white);
+    font-size: 14px;
+
+    text-align: center;
+  }
+}
+
 }
