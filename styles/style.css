@@ -368,8 +368,84 @@ input::placeholder {
 
 @media (max-width: 768px) {
   .carousel-buttons {
-      display: none; /* Hide buttons on mobile */
+    display: none; /* Hide buttons on mobile */
   }
+}
+
+#customer-reviews {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.review-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.review-card {
+  min-width: 300px;
+  margin: 0 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.carousel-buttons {
+  margin-top: 10px;
+}
+
+.carousel-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+  background-color: #0056b3;
+}
+
+#blog-posts {
+  margin: 20px 0;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.featured-post {
+  flex: 2;
+  margin-right: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.latest-posts {
+  flex: 1;
+}
+
+.latest-posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.latest-posts li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.latest-posts img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
 @media (min-width: 320px) and (max-width: 426px) {
