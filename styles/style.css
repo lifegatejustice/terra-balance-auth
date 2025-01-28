@@ -364,8 +364,10 @@ input::placeholder {
 
 .review-carousel {
   display: flex;
-  overflow: hidden;
-  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-left: 2vw;
+  gap: 20px; /* Space between cards */
 }
 
 .review-card {
@@ -375,6 +377,10 @@ input::placeholder {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  scroll-snap-align: start; /* Align each card when scrolling */
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
 }
 
 .carousel-buttons {
