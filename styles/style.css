@@ -309,48 +309,6 @@ input::placeholder {
   z-index: 1;
 }
 
-#farming-services{
-  position: relative;
-  bottom: ;
-}
-
-#farming-services h2{
-  text-align: center;
-  font-size: 36px;
-  background-color: var(--earthy-green);
-  padding-top: 1vw;
-}
-
-.service-card h3{
-  z-index: 2;
-  position: relative;
-  color: var(--white);
-}
-
-.handbut{
-  position: relative;
-  bottom: 115px;
-  z-index: 2;
-  text-align: center;
-  background-color: #0000005b;
-  padding: 1vw;
-  padding-bottom: 0.2vw;
-}
-
-.service-card {
-  flex: 0 0 auto; /* Prevent shrinking */
-  width: 300px;
-  height: 300px; /* Fixed width for cards */
-  scroll-snap-align: start; /* Align each card when scrolling */
-  background-color: var(--black-variant);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-  margin-bottom: 30px;
-}
-
-.service-card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
 
 .carousel-buttons {
   display: flex;
@@ -1070,6 +1028,52 @@ input::placeholder {
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
+
+
+  #farming-services{
+    position: relative;
+    bottom: 40px;
+  }
+  
+  #farming-services h2{
+    text-align: center;
+    font-size: 36px;
+    background-color: var(--earthy-green);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  
+  .service-card h3{
+    z-index: 2;
+    position: relative;
+    color: var(--white);
+  }
+  
+  .handbut{
+    position: relative;
+    bottom: 115px;
+    z-index: 2;
+    text-align: center;
+    background-color: #0000005b;
+    padding: 1vw;
+    padding-bottom: 0.2vw;
+  }
+  
+  .service-card {
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 300px;
+    height: 300px; /* Fixed width for cards */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
   .navigation {
     display: none; /* Hide navigation by default */
     flex-direction: column;
