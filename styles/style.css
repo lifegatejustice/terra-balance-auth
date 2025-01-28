@@ -1025,6 +1025,61 @@ input::placeholder {
     text-align: center;
   }
 
+  #farming-services{
+    position: relative;
+    bottom: 20px;
+  }
+  
+  #farming-services h2{
+    text-align: center;
+    font-size: 24px;
+    
+    color: var(--white);
+    background-color: var(--earthy-green);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  
+  .service-card h3{
+    z-index: 2;
+    position: relative;
+    color: var(--white);
+    text-align: center;
+  }
+
+  #farming-services h3{
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
+  
+  .handbut{
+    position: relative;
+    bottom: 115px;
+    z-index: 2;
+    text-align: center;
+    background-color: #0000005b;
+    padding: 1vw;
+    padding-bottom: 0.2vw;
+  }
+  
+  .service-card {
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 300px;
+    height: 300px; /* Fixed width for cards */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
@@ -1038,6 +1093,7 @@ input::placeholder {
   #farming-services h2{
     text-align: center;
     font-size: 36px;
+    color: var(--white);
     background-color: var(--earthy-green);
     padding-top: 2vw;
     padding-bottom: 2vw;
@@ -1047,6 +1103,12 @@ input::placeholder {
     z-index: 2;
     position: relative;
     color: var(--white);
+    text-align: center;
+  }
+  #farming-services h3{
+    z-index: 2;
+    position: relative;
+    text-align: center;
   }
   
   .handbut{
