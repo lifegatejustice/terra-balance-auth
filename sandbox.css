@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: white;
+}
+
+.mission-text {
+    max-width: 50%;
+}
+
+.mission-text h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mission-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.learn-more {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #555;
+}
+
+.mission-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    transform: scale(1);
+}
