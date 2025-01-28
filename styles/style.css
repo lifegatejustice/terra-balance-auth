@@ -375,7 +375,7 @@ input::placeholder {
 }
 
 #blog-posts {
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
 .blog-container {
@@ -516,6 +516,46 @@ input::placeholder {
     right: 0; /* Align to the right */
     width: 200px; /* Set a width for the menu */
     z-index: 1; /* Ensure it appears above other content */
+  }
+
+  #blog-posts {
+    margin: 20px 10px;
+  }
+  
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .featured-post {
+    flex: 2;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .latest-posts {
+    flex: 1;
+  }
+  
+  .latest-posts ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .latest-posts li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .latest-posts img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
   }
 
   .image-container img {
@@ -954,6 +994,8 @@ input::placeholder {
     z-index: 1; /* Ensure it appears above other content */
   }
 
+  
+
   .card {
     flex: 0 0 calc(50% - 16px); /* Two cards per view */
     scroll-snap-align: start; /* Align each card when scrolling */
@@ -1278,11 +1320,10 @@ input::placeholder {
   }
 
   .blog-container {
-    display: flex
-;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 }
 
   .search-container {
