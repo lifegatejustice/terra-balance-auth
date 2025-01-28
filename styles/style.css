@@ -309,6 +309,18 @@ input::placeholder {
   z-index: 1;
 }
 
+#farming-services{
+  position: relative;
+  bottom: ;
+}
+
+#farming-services h2{
+  text-align: center;
+  font-size: 36px;
+  background-color: var(--earthy-green);
+  padding-top: 1vw;
+}
+
 .service-card h3{
   z-index: 2;
   position: relative;
