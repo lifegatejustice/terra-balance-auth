@@ -1099,6 +1099,8 @@ input::placeholder {
   .service-card {
     flex: 0 0 auto; /* Prevent shrinking */
     width: 300px;
+    position: relative;
+    z-index: 4;
     height: 300px; /* Fixed width for cards */
     scroll-snap-align: start; /* Align each card when scrolling */
     background-color: var(--black-variant);
