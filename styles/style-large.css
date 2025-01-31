@@ -424,7 +424,8 @@ body {
 }
 
 .learn-more:hover {
-    background-color: #555;
+    background-color: var(--lemon-yellow);
+    font-weight: bold;
 }
 
 .mission-image img {

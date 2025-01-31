@@ -7,7 +7,7 @@
 
 :root {
   --earthy-green: #17a638;
-  --lemon-yellow: #2f4055;
+  --lemon-yellow: #234774;
   --amber-yellow: #1155cc;
   --white: #ffffff;
   --whitetrans: #8a8a8a;
@@ -96,7 +96,7 @@ header {
 }
 
 .navigation a:hover {
-  background-color: #555; /* Change background on hover */
+  background-color: var(--lemon-yellow); /* Change background on hover */
 }
 
 /* Hamburger button styles */
@@ -371,17 +371,46 @@ input::placeholder {
 }
 
 .review-card {
-  min-width: 300px;
-  margin: 0 10px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  scroll-snap-align: start; /* Align each card when scrolling */
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+    min-width: 300px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    scroll-snap-align: start;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     margin-bottom: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
 }
+
+.review-author{
+  display: flex;
+  align-items: center;
+  background-color: var(--amber-yellow);
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  margin-top: -15px;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-self: baseline;
+
+  font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+  }
+ 
+
 
 .carousel-buttons {
   margin-top: 10px;
@@ -513,6 +542,7 @@ input::placeholder {
 .subscribe-form button:hover {
   background-color: #138f2b; /* Darker shade on hover */
 }
+
 
 
 
@@ -910,7 +940,7 @@ input::placeholder {
 }
 
 .learn-more:hover {
-    background-color: #555;
+    background-color: var(--lemon-yellow);
 }
 
 .mission-image img {
@@ -1475,7 +1505,7 @@ input::placeholder {
 }
 
 .learn-more:hover {
-    background-color: #555;
+    background-color: var(--lemon-yellow);
 }
 
 .mission-image img {
