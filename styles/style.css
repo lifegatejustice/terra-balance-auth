@@ -66,6 +66,11 @@ html,body {
   color: var(--white);
   position: absolute;
   top: 400px;
+  text-shadow: 2px 2px 2px rgb(27, 27, 27);
+}
+
+.herocha p{
+  text-shadow: 2px 2px 2px rgb(27, 27, 27);
 }
 
 .search-container input::placeholder {
@@ -1542,7 +1547,6 @@ input::placeholder {
   overflow: hidden;
   position: relative;
   animation: fadeInScale 0.5s ease forwards;
-  opacity: 0; /* Start hidden */
   margin: 20px; /* Add some margin for spacing */
   transition: background-color 0.5s ease; /* Optional background color transition */
   }

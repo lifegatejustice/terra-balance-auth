@@ -63,19 +63,19 @@ const contentArray = [
 
     {
         image: {
-            mobile: 'images/turkey.jpg',
-            tablet: 'images/turkey-medium.jpg',
-            laptop: 'images/turkey-large.jpg'
+            mobile: 'images/compost.jpg',
+            tablet: 'images/compost-medium.jpg',
+            laptop: 'images/compost-large.jpg'
         },
-        heading: 'Organic Turkey',
-        paragraph: 'Nutrient-rich turkey for your table.'
+        heading: 'Compost Packs',
+        paragraph: 'Ready to use Organic compost for gardens and farms'
     },
 
     {
         image: {
-            mobile: 'images/turkey.jpg',
-            tablet: 'images/turkey-medium.jpg',
-            laptop: 'images/turkey-large.jpg'
+            mobile: 'images/fresheggs.jpg',
+            tablet: 'images/fresheggs-medium.jpg',
+            laptop: 'images/fresheggs-large.jpg'
         },
         heading: 'Fresh Eggs',
         paragraph: 'Nutrient-rich Eggs for your table.'
@@ -83,12 +83,12 @@ const contentArray = [
 
     {
         image: {
-            mobile: 'images/turkey.jpg',
-            tablet: 'images/turkey-medium.jpg',
-            laptop: 'images/turkey-large.jpg'
+            mobile: 'images/tomatoes.jpg',
+            tablet: 'images/tomatoes-medium.jpg',
+            laptop: 'images/tomatoes-large.jpg'
         },
-        heading: 'Organic Turkey',
-        paragraph: 'Nutrient-rich turkey for your table.'
+        heading: 'Organic Tomatoes ',
+        paragraph: 'Enjoy the rich taste of organically grown tomatoes, cultivated without synthetic pesticides or fertilizers.'
     },
 
     {
@@ -133,7 +133,7 @@ function updateContent() {
     const currentContent = contentArray[currentIndex];
     const screenWidth = window.innerWidth;
 
-    if (screenWidth < 426) {
+    if (screenWidth < 425) {
         imageContainer.src = currentContent.image.mobile;
     } else if (screenWidth < 794) {
         imageContainer.src = currentContent.image.tablet;
