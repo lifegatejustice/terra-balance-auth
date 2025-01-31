@@ -27,6 +27,25 @@ html,body {
   width: 100%;
 }
 
+/* Scrollbar Styling */
+.carousel-container::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 5px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 5px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
 .service-card img{
   width: 300px;
   height: 300px;
@@ -184,6 +203,7 @@ input::placeholder {
 .second-icons img {
   width: 10vw; /* Rounded for simplicity */
   height: 15vw;
+
 }
 
 .sign {
@@ -362,6 +382,7 @@ input::placeholder {
 #customer-reviews {
   margin: 20px 0;
   text-align: center;
+
 }
 
 .review-carousel {
@@ -426,6 +447,7 @@ input::placeholder {
   margin-right: 1vw;
   font-size: larger;
   font-weight: bolder;
+  text-align: center;
 }
 .review-date{
   margin-left: 1vw;
@@ -434,6 +456,7 @@ input::placeholder {
 
 .review-card h3{
   align-self: center;
+  border-bottom: 1px solid black;
 }
 
 .carousel-buttons {
@@ -566,6 +589,20 @@ input::placeholder {
 .subscribe-form button:hover {
   background-color: #138f2b; /* Darker shade on hover */
 }
+
+#customer-reviews h2{
+  text-align: center;
+        font-size: 24px;
+        color: var(--white);
+        background-color: var(--earthy-green);
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+      
+      }
+
+
 
 
 
@@ -871,9 +908,6 @@ input::placeholder {
   }
 }
 
-.membership-cards .card {
-  
-}
 
 /* Optional: Change background color on hover */
 .membership-cards .card:hover {
@@ -885,7 +919,7 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   position: relative;
-  bottom: 10vw;
+  bottom: 35vw;
 }
 
 .category {
@@ -901,12 +935,15 @@ input::placeholder {
   text-decoration: none;
   box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
   transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
-  border-radius: 15px;
   overflow: hidden;
   position: relative;
+  animation: fadeInScale 0.5s ease forwards;
+  opacity: 0; /* Start hidden */
+  margin: 20px; /* Add some margin for spacing */
+  transition: background-color 0.5s ease; /* Optional background color transition */
 }
 
-.category::before {
+.category:hover:before {
   content: '';
   position: absolute;
   top: 0;
@@ -932,6 +969,10 @@ input::placeholder {
 .category:hover h2 {
   color: #ffcc00; /* Change to your preferred hover color */
 }
+
+
+
+
 
 .shop-now {
   display: flex;
@@ -1240,7 +1281,6 @@ input::placeholder {
   .service-card:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
   }
-
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
@@ -1483,7 +1523,7 @@ input::placeholder {
     flex-direction: row;
     align-items: center;
     position: relative;
-    bottom: 15vw;
+    bottom: 35vw;
     justify-content: space-evenly;
   }
   .category {
@@ -1498,6 +1538,13 @@ input::placeholder {
     justify-content: space-between;
     text-decoration: none;
     box-shadow: 0 0 30px gray;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  animation: fadeInScale 0.5s ease forwards;
+  opacity: 0; /* Start hidden */
+  margin: 20px; /* Add some margin for spacing */
+  transition: background-color 0.5s ease; /* Optional background color transition */
   }
 
   .category h2 {

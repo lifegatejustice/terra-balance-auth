@@ -283,7 +283,7 @@ body {
     flex-direction: row;
     align-items: center;
     position: relative;
-    bottom: 10vw;
+    bottom: 13vw;
     justify-content: space-evenly;
   }
 
@@ -299,6 +299,13 @@ body {
     justify-content: space-between;
     text-decoration: none;
     box-shadow: 0 0 30px gray;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  animation: fadeInScale 0.5s ease forwards;
+  opacity: 100; /* Start hidden */
+  margin: 20px; /* Add some margin for spacing */
+  transition: background-color 0.5s ease; /* Optional background color transition */
   }
 
   .category p {
@@ -311,6 +318,34 @@ body {
     margin-top: 20px;
     text-align: left;
   }
+
+  .category:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease-in-out;
+  }
+  
+  .category:hover::before {
+    left: 100%;
+  }
+  
+  .category h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+    transition: color 0.6s ease-in-out;
+  }
+  
+  .category:hover h2 {
+    color: #ffcc00; /* Change to your preferred hover color */
+  }
+  
 
   .footer {
     display: grid;
@@ -499,6 +534,32 @@ body {
 
 .service-card:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.review-card {
+  flex: 0 0 calc(100% / 3); /* Show 3 cards at a time */
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Scrollbar Styling */
+.carousel-container::-webkit-scrollbar {
+  height: 8px!important; /* Height of the scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f1f1f1!important; /* Track color */
+  border-radius: 5px!important;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #888!important; /* Thumb color */
+  border-radius: 5px!important;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: #555!important; /* Thumb color on hover */
 }
 
 

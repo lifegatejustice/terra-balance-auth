@@ -60,6 +60,57 @@ const contentArray = [
         heading: 'Fresh Turkey',
         paragraph: 'Sustainably sourced turkey from local farms.'
     },
+
+    {
+        image: {
+            mobile: 'images/turkey.jpg',
+            tablet: 'images/turkey-medium.jpg',
+            laptop: 'images/turkey-large.jpg'
+        },
+        heading: 'Organic Turkey',
+        paragraph: 'Nutrient-rich turkey for your table.'
+    },
+
+    {
+        image: {
+            mobile: 'images/turkey.jpg',
+            tablet: 'images/turkey-medium.jpg',
+            laptop: 'images/turkey-large.jpg'
+        },
+        heading: 'Fresh Eggs',
+        paragraph: 'Nutrient-rich Eggs for your table.'
+    },
+
+    {
+        image: {
+            mobile: 'images/turkey.jpg',
+            tablet: 'images/turkey-medium.jpg',
+            laptop: 'images/turkey-large.jpg'
+        },
+        heading: 'Organic Turkey',
+        paragraph: 'Nutrient-rich turkey for your table.'
+    },
+
+    {
+        image: {
+            mobile: 'images/turkey.jpg',
+            tablet: 'images/turkey-medium.jpg',
+            laptop: 'images/turkey-large.jpg'
+        },
+        heading: 'Organic Turkey',
+        paragraph: 'Nutrient-rich turkey for your table.'
+    },
+
+    {
+        image: {
+            mobile: 'images/turkey.jpg',
+            tablet: 'images/turkey-medium.jpg',
+            laptop: 'images/turkey-large.jpg'
+        },
+        heading: 'Organic Turkey',
+        paragraph: 'Nutrient-rich turkey for your table.'
+    },
+
     {
         image: {
             mobile: 'images/turkey.jpg',
@@ -128,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "rating": "★★★★☆",
             "date": "2 days ago",
             "title": "Great Quality!",
-            "text": "The organic vegetables I ordered were fresh and delicious. They arrived in perfect condition, neatly packaged, and tasted amazing in my meals. I could tell they were sourced from high-quality farms, and the difference in taste was noticeable compared to what I usually get from the supermarket. I especially loved the cherry tomatoes—they were sweet, juicy, and full of flavor. It’s refreshing to find a company that truly values organic produce. I will definitely be a returning customer!"
+            "text": "The organic vegetables I ordered were fresh and delicious. They arrived in perfect condition, neatly packaged, and tasted amazing in my meals. I could tell they were sourced from high-quality farms, and the difference in taste was noticeable compared to what I usually get from the supermarket. I especially loved the cherry tomatoes—they were sweet, juicy, and full of flavor. It's refreshing to find a company that truly values organic produce. I will definitely be a returning customer!"
         },
         {
             "name": "Bob Johnson",
@@ -142,59 +193,58 @@ document.addEventListener("DOMContentLoaded", function() {
             "rating": "★★★★☆",
             "date": "1 week ago",
             "title": "Very Satisfied",
-            "text": "The meat was tender and flavorful, and the portion size was just right. I ordered grass-fed beef and free-range chicken, and both exceeded my expectations. The beef had a deep, rich flavor that I don’t usually get from store-bought cuts, and the chicken was incredibly juicy. Cooking with such high-quality ingredients made my meals so much better. My only complaint is that I wish they had a subscription service so I could automatically receive my order every month!"
+            "text": "The meat was tender and flavorful, and the portion size was just right. I ordered grass-fed beef and free-range chicken, and both exceeded my expectations. The beef had a deep, rich flavor that I don't usually get from store-bought cuts, and the chicken was incredibly juicy. Cooking with such high-quality ingredients made my meals so much better. My only complaint is that I wish they had a subscription service so I could automatically receive my order every month!"
         },
         {
             "name": "Diana Prince",
             "rating": "★★★★★",
             "date": "1 week ago",
             "title": "Best Purchase Ever!",
-            "text": "I loved everything about my order. The quality is unmatched, and the products were carefully packed to maintain freshness. What impressed me most was the transparency about where the food came from. Each item had details about the farm and the production process, which made me feel confident in what I was eating. The honey was raw and unfiltered, with a deep, complex flavor that tasted amazing in my tea. If you’re looking for premium, farm-to-table food, this is the place to shop!"
+            "text": "I loved everything about my order. The quality is unmatched, and the products were carefully packed to maintain freshness. What impressed me most was the transparency about where the food came from. Each item had details about the farm and the production process, which made me feel confident in what I was eating. The honey was raw and unfiltered, with a deep, complex flavor that tasted amazing in my tea. If you're looking for premium, farm-to-table food, this is the place to shop!"
         },
         {
             "name": "Ethan Hunt",
             "rating": "★★★★☆",
             "date": "2 weeks ago",
             "title": "Good Value",
-            "text": "Great products for the price. I will definitely be back for more. The variety was impressive, and I felt like I got my money’s worth. The organic eggs had deep yellow yolks, which is always a sign of high quality. The leafy greens were crisp and fresh, and they stayed that way for days after delivery. It’s rare to find such good quality at reasonable prices, so I’m grateful for this service. My only suggestion would be to include a recipe guide with the produce!"
+            "text": "Great products for the price. I will definitely be back for more. The variety was impressive, and I felt like I got my money's worth. The organic eggs had deep yellow yolks, which is always a sign of high quality. The leafy greens were crisp and fresh, and they stayed that way for days after delivery. It's rare to find such good quality at reasonable prices, so I'm grateful for this service. My only suggestion would be to include a recipe guide with the produce!"
         },
         {
             "name": "Fiona Gallagher",
             "rating": "★★★★★",
             "date": "3 weeks ago",
             "title": "Highly Recommend!",
-            "text": "The service was excellent, and the products were fresh. The delivery was on time, and everything was well-packaged to prevent damage. I ordered their artisan cheeses, and they were absolutely delicious! Each cheese had a unique, rich taste that paired perfectly with my homemade bread. It’s clear that a lot of care goes into selecting their suppliers. This was my first order, but I’m already planning my next one. I’m recommending Terra Balance to all my friends and family!"
+            "text": "The service was excellent, and the products were fresh. The delivery was on time, and everything was well-packaged to prevent damage. I ordered their artisan cheeses, and they were absolutely delicious! Each cheese had a unique, rich taste that paired perfectly with my homemade bread. It's clear that a lot of care goes into selecting their suppliers. This was my first order, but I'm already planning my next one. I'm recommending Terra Balance to all my friends and family!"
         },
         {
             "name": "George Costanza",
             "rating": "★★★★☆",
             "date": "1 month ago",
             "title": "Will Buy Again",
-            "text": "Everything was great, but I wish there were more options available. I love what I ordered, but I’d like to see more seasonal produce and maybe some exotic fruits in the future. The organic coffee I received was absolutely amazing—it had a bold, smooth taste that made my mornings so much better. The whole experience was great, from the easy ordering process to the well-packaged delivery. If they expand their offerings, this will easily be my go-to store!"
+            "text": "Everything was great, but I wish there were more options available. I love what I ordered, but I'd like to see more seasonal produce and maybe some exotic fruits in the future. The organic coffee I received was absolutely amazing—it had a bold, smooth taste that made my mornings so much better. The whole experience was great, from the easy ordering process to the well-packaged delivery. If they expand their offerings, this will easily be my go-to store!"
         },
         {
             "name": "Hannah Baker",
             "rating": "★★★★★",
             "date": "1 month ago",
             "title": "Fantastic Experience",
-            "text": "I was impressed with the quality and service. The food was delicious, and I could tell it was carefully sourced. The farm-fresh dairy was unlike anything I’ve had before—the yogurt was creamy and full of flavor, and the milk tasted so pure. The ordering process was smooth, and I loved the sustainability efforts, like the use of minimal plastic packaging. I appreciate that this company is making it easier to access truly fresh, organic food!"
+            "text": "I was impressed with the quality and service. The food was delicious, and I could tell it was carefully sourced. The farm-fresh dairy was unlike anything I've had before—the yogurt was creamy and full of flavor, and the milk tasted so pure. The ordering process was smooth, and I loved the sustainability efforts, like the use of minimal plastic packaging. I appreciate that this company is making it easier to access truly fresh, organic food!"
         },
         {
             "name": "Ian Malcolm",
             "rating": "★★★★☆",
             "date": "2 months ago",
             "title": "Good Quality",
-            "text": "The products were fresh and well-packaged. Satisfied with my purchase. The fruits and vegetables tasted great, and I loved the eco-friendly packaging. The free-range eggs had a deep, rich flavor, and the avocados were perfectly ripe. I also tried their herbal teas, which were a great addition to my collection. Overall, this was a great shopping experience, and I’ll definitely be back for more!"
+            "text": "The products were fresh and well-packaged. Satisfied with my purchase. The fruits and vegetables tasted great, and I loved the eco-friendly packaging. The free-range eggs had a deep, rich flavor, and the avocados were perfectly ripe. I also tried their herbal teas, which were a great addition to my collection. Overall, this was a great shopping experience, and I'll definitely be back for more!"
         },
         {
             "name": "Jane Doe",
             "rating": "★★★★★",
             "date": "2 months ago",
             "title": "Excellent!",
-            "text": "I loved everything about my order. The quality is fantastic! The flavors were rich, and everything was neatly packed. The grass-fed butter was incredibly creamy, and the homemade granola was the perfect combination of crunchy and sweet. I also appreciate the handwritten note that came with my order—it made the experience feel personal. If you’re looking for high-quality, responsibly sourced food, you won’t be disappointed!"
+            "text": "I loved everything about my order. The quality is fantastic! The flavors were rich, and everything was neatly packed. The grass-fed butter was incredibly creamy, and the homemade granola was the perfect combination of crunchy and sweet. I also appreciate the handwritten note that came with my order—it made the experience feel personal. If you're looking for high-quality, responsibly sourced food, you won't be disappointed!"
         }
-    ]
-    ;
+    ];
 
     const reviewContainer = document.querySelector('.review-carousel');
 
@@ -234,3 +284,51 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Blog posts array
+const blogPosts = [
+    {
+        image: 'images/goat-farming.webp',
+        title: 'How Goats Eat on the Field',
+        description: 'Learn about the natural grazing habits of goats and how they contribute to sustainable farming.'
+    },
+    {
+        image: 'images/chicken-farming.webp',
+        title: '1 Night Chicken Survival',
+        description: 'Essential tips for overnight care and protection of your chicken flock.'
+    },
+    {
+        image: 'images/terrabalance-logo.webp',
+        title: 'Terra Balance Plan Presentation',
+        description: 'Discover our comprehensive approach to sustainable farming and food production.'
+    },
+    {
+        image: 'images/maize-farming.webp',
+        title: 'How to Cultivate Maize',
+        description: 'A complete guide to growing and maintaining healthy maize crops.'
+    }
+];
+
+// Function to update blog posts
+document.addEventListener('DOMContentLoaded', function() {
+    // Update featured post
+    const featuredPost = document.querySelector('.featured-post');
+    featuredPost.innerHTML = `
+        <img src="${blogPosts[0].image}" alt="${blogPosts[0].title}">
+        <h3>${blogPosts[0].title}</h3>
+        <p>${blogPosts[0].description}</p>
+    `;
+
+    // Update latest posts
+    const latestPostsList = document.querySelector('.latest-posts ul');
+    latestPostsList.innerHTML = ''; // Clear existing posts
+
+    // Add all posts to the latest posts section
+    blogPosts.forEach(post => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <img src="${post.image}" alt="${post.title}">
+            <a href="#">${post.title}</a>
+        `;
+        latestPostsList.appendChild(li);
+    });
+});
