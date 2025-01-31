@@ -206,8 +206,8 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="review-stars">${review.rating}</div>
             <p class="review-date">${review.date}</p>
             <h3>${review.title}</h3>
-            <p>${review.text}</p>
-            <p class="review-author">${review.name}, Verified Buyer</p>
+            <p class="review-text">${review.text}</p>
+            <p class="review-author"><b>${review.name},</b> Verified Buyer</p>
         `;
 
         reviewContainer.appendChild(reviewCard);

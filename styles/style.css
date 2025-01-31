@@ -357,6 +357,8 @@ input::placeholder {
   }
 }
 
+
+
 #customer-reviews {
   margin: 20px 0;
   text-align: center;
@@ -373,10 +375,10 @@ input::placeholder {
 .review-card {
   display: flex;
     min-width: 300px;
-    margin: 0 10px;
+   
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #d3d0d0;
     scroll-snap-align: start;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -385,7 +387,7 @@ input::placeholder {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    max-height: 600px;
+    max-height: 500px;
     overflow: hidden;
     position: relative;
 }
@@ -397,20 +399,42 @@ input::placeholder {
   width: 100%;
   padding: 10px;
   position: relative;
-  margin-top: -15px;
+  margin-bottom: -2px;
   align-content: center;
   flex-direction: row;
   justify-content: center;
   align-self: baseline;
+  color: var(--white);
 
   font-size: 18px;
-            font-weight: bold;
+  
             text-align: center;
             position: relative;
             z-index: 2;
   }
  
+.review-text{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  height: 100%;
+  overflow: hidden;
+}
 
+.review-stars{
+  padding-top: 2vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: larger;
+  font-weight: bolder;
+}
+.review-date{
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.review-card h3{
+  align-self: center;
+}
 
 .carousel-buttons {
   margin-top: 10px;
@@ -834,34 +858,108 @@ input::placeholder {
     position: relative;
     bottom: 43vw;
   }
-  .container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    bottom: 10vw;
-  }
-  .category {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    margin: 10px 0;
-    width: 80vw;
-    height: 80vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-decoration: none;
-    box-shadow: 0 0 30px gray;
-  }
 
-  .category h2 {
-    font-size: 24px;
-    margin: 0;
-    margin-top: 20px;
-    text-align: left;
+  /* Animation for membership cards */
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.9);
   }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.membership-cards .card {
+  
+}
+
+/* Optional: Change background color on hover */
+.membership-cards .card:hover {
+  background-color: rgb(59, 58, 58); /* Light gray on hover */
+}
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 10vw;
+}
+
+.category {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  width: 80vw;
+  height: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease-in-out;
+}
+
+.category:hover::before {
+  left: 100%;
+}
+
+.category h2 {
+  font-size: 24px;
+  margin: 0;
+  margin-top: 20px;
+  text-align: left;
+  transition: color 0.6s ease-in-out;
+}
+
+.category:hover h2 {
+  color: #ffcc00; /* Change to your preferred hover color */
+}
+
+.shop-now {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.6s ease-in-out;
+}
+
+.custom-btn img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.category:hover .shop-now {
+  transform: translateX(10px);
+}
+
+.category:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(128, 128, 128, 0.8);
+  background-color: #111; /* Slightly lighter black for hover effect */
+}
+
+.custom-btn:hover img {
+  transform: translateX(5px);
+}
+
   .shop-now {
     font-size: 16px;
     display: flex;
