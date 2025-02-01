@@ -1,16 +1,22 @@
+.josefin-sans {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 :root {
   --earthy-green: #17a638;
-  --deep-blue: #234774;
-  --royal-blue: #1155cc;
+  --lemon-yellow: #234774;
+  --amber-yellow: #1155cc;
   --white: #ffffff;
-  --gray: #8a8a8a;
+  --whitetrans: #8a8a8a;
   --black: #000000;
   --black-variant: #1c1c1c;
 
-  --heading-font: "Outfit", sans-serif;
+  --heading-font: "Outfit", serif;
   --paragraph-font: "Poppins", sans-serif;
-  --body-font: "Roboto", sans-serif;
+  --body-font: "Josefin Sans", serif;
 }
 
 html,
@@ -19,8 +25,7 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-
-p {
+p{
   font-family: var(--paragraph-font);
 }
 
@@ -117,7 +122,7 @@ header {
 }
 
 .navigation a:hover {
-  background-color: var(--deep-blue); /* Change background on hover */
+  background-color: var(--lemon-yellow); /* Change background on hover */
 }
 
 /* Hamburger button styles */
@@ -234,14 +239,14 @@ input::placeholder {
 }
 
 .sign a:hover {
-  background-color: var(--royal-blue); /* Falu Red */
+  background-color: var(--amber-yellow); /* Falu Red */
   padding: 1vw;
   color: var(--black);
   font-weight: bold;
 }
 
 .sign:hover {
-  background-color: var(--royal-blue); /* Falu Red */
+  background-color: var(--amber-yellow); /* Falu Red */
 }
 
 /* Center the button using flexbox */
@@ -255,20 +260,20 @@ input::placeholder {
 .shop-now-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--royal-blue);
+  background-color: var(--amber-yellow);
   color: var(--black);
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  border: 2px solid var(--royal-blue);
+  border: 2px solid var(--amber-yellow);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .shop-now-btn:hover {
-  background-color: var(--deep-blue);
+  background-color: var(--lemon-yellow);
   color: var(--white);
-  border-color: var(--deep-blue);
+  border-color: var(--lemon-yellow);
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -281,20 +286,20 @@ input::placeholder {
 .howlearn-now-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--royal-blue);
+  background-color: var(--amber-yellow);
   color: var(--black);
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  border: 2px solid var(--royal-blue);
+  border: 2px solid var(--amber-yellow);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .howlearn-now-btn:hover {
-  background-color: var(--deep-blue);
+  background-color: var(--lemon-yellow);
   color: var(--white);
-  border-color: var(--deep-blue);
+  border-color: var(--lemon-yellow);
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -355,14 +360,14 @@ input::placeholder {
 }
 
 .carousel-buttons button {
-  border: 3px solid var(--royal-blue);
+  border: 3px solid var(--amber-yellow);
   padding: 10px;
   margin: 0 5px;
   cursor: pointer;
 }
 
 .carousel-buttons button:hover {
-  background-color: var(--deep-blue);
+  background-color: var(--lemon-yellow);
   align-self: baseline;
 }
 
@@ -408,7 +413,7 @@ input::placeholder {
 .review-author {
   display: flex;
   align-items: center;
-  background-color: var(--royal-blue);
+  background-color: var(--amber-yellow);
   width: 100%;
   padding: 10px;
   position: relative;
@@ -456,10 +461,10 @@ input::placeholder {
 }
 
 .carousel-buttons button {
-  background-color: var(--royal-blue);
+  background-color: var(--amber-yellow);
   border-radius: 50px;
   color: white;
-  border: 3px solid var(--royal-blue);
+  border: 3px solid var(--amber-yellow);
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 70px;
@@ -535,11 +540,6 @@ input::placeholder {
   transition: transform 0.3s; /* Smooth hover effect */
 }
 
-.feature img {
-   /* Responsive image */
-  width: 20vw;
-  height: 15vw; /* Maintain aspect ratio */
-}
 
 .feature:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
@@ -602,6 +602,12 @@ input::placeholder {
   padding-right: 2vw;
 }
 
+.latest-posts h2 {
+ padding-bottom: 2vw;
+  border-bottom: 1px solid black;
+  margin-right: 2vw;
+}
+
 /* Responsive styles */
 @media (max-width: 600px) {
   .subscribe-section {
@@ -649,6 +655,15 @@ input::placeholder {
     background-color: #f9f9f9;
   }
 
+
+
+  .feature img {
+    /* Responsive image */
+   width: 20vw;
+   height: 15vw; /* Maintain aspect ratio */
+ }
+ 
+
   .latest-posts {
     flex: 1;
   }
@@ -665,8 +680,8 @@ input::placeholder {
   }
 
   .latest-posts img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     
   }
 
@@ -830,7 +845,7 @@ input::placeholder {
 
   .footer a {
     text-decoration: none;
-    color: var(--royal-blue);
+    color: var(--amber-yellow);
     font-size: 14px;
   }
 
@@ -1063,7 +1078,7 @@ input::placeholder {
   .learn-more {
     padding: 12px 25px;
     font-size: 16px;
-    background-color: var(--royal-blue);
+    background-color: var(--amber-yellow);
     color: white;
     border: none;
     cursor: pointer;
@@ -1072,7 +1087,7 @@ input::placeholder {
   }
 
   .learn-more:hover {
-    background-color: var(--deep-blue);
+    background-color: var(--lemon-yellow);
   }
 
   .mission-image img {
@@ -1364,12 +1379,12 @@ input::placeholder {
 
   .card h3 {
     margin: 0 0 8px;
-    color: var(--royal-blue);
+    color: var(--amber-yellow);
   }
 
   .aboutcard h3 {
     margin: 0 0 8px;
-    color: var(--royal-blue);
+    color: var(--amber-yellow);
   }
 
   .card p {
@@ -1630,7 +1645,7 @@ input::placeholder {
   .learn-more {
     padding: 12px 25px;
     font-size: 16px;
-    background-color: var(--royal-blue);
+    background-color: var(--amber-yellow);
     color: white;
     border: none;
     cursor: pointer;
@@ -1639,7 +1654,7 @@ input::placeholder {
   }
 
   .learn-more:hover {
-    background-color: var(--deep-blue);
+    background-color: var(--lemon-yellow);
   }
 
   .mission-image img {
