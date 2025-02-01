@@ -19,9 +19,8 @@
   --body-font: "Josefin Sans", serif;
 }
 
-
-
-html,body {
+html,
+body {
   font-family: var(--body-font);
   overflow-x: hidden;
   width: 100%;
@@ -46,7 +45,7 @@ html,body {
   background: #555; /* Thumb color on hover */
 }
 
-.service-card img{
+.service-card img {
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -69,7 +68,7 @@ html,body {
   text-shadow: 2px 2px 2px rgb(27, 27, 27);
 }
 
-.herocha p{
+.herocha p {
   text-shadow: 2px 2px 2px rgb(27, 27, 27);
 }
 
@@ -98,7 +97,7 @@ header {
   justify-content: center;
   /* Limit the width for tablet view */
   margin: 0 auto;
-  
+
   /* Center the container */
 }
 
@@ -181,13 +180,10 @@ header {
   top: 0; /* Align to the center */
 }
 
-
 input::placeholder {
   color: #888; /* Placeholder color */
   font-size: 0.9rem; /* Responsive font size */
 }
-
-
 
 input::placeholder {
   font-size: 20px;
@@ -208,7 +204,6 @@ input::placeholder {
 .second-icons img {
   width: 10vw; /* Rounded for simplicity */
   height: 15vw;
-
 }
 
 .sign {
@@ -341,7 +336,7 @@ input::placeholder {
   gap: 20px; /* Space between cards */
 }
 
-.service-card img{
+.service-card img {
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -349,22 +344,19 @@ input::placeholder {
   z-index: 1;
 }
 
-
 .carousel-buttons {
   display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    align-items: center;
-    align-content: center;
-    margin-left: 1vw;
-    position: relative;
-    bottom: 200px;
-    z-index: 3;
-
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  align-content: center;
+  margin-left: 1vw;
+  position: relative;
+  bottom: 200px;
+  z-index: 3;
 }
 
 .carousel-buttons button {
-  
   border: 3px solid var(--amber-yellow);
   padding: 10px;
   margin: 0 5px;
@@ -382,12 +374,9 @@ input::placeholder {
   }
 }
 
-
-
 #customer-reviews {
   margin: 20px 0;
   text-align: center;
-
 }
 
 .review-carousel {
@@ -400,25 +389,25 @@ input::placeholder {
 
 .review-card {
   display: flex;
-    min-width: 300px;
-   
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #d3d0d0;
-    scroll-snap-align: start;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    margin-bottom: 30px;
-    align-items: flex-start;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    max-height: 500px;
-    overflow: hidden;
-    position: relative;
+  min-width: 300px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #d3d0d0;
+  scroll-snap-align: start;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
 }
 
-.review-author{
+.review-author {
   display: flex;
   align-items: center;
   background-color: var(--amber-yellow);
@@ -433,20 +422,20 @@ input::placeholder {
   color: var(--white);
 
   font-size: 18px;
-  
-            text-align: center;
-            position: relative;
-            z-index: 2;
-  }
- 
-.review-text{
+
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.review-text {
   margin-left: 1vw;
   margin-right: 1vw;
   height: 100%;
   overflow: hidden;
 }
 
-.review-stars{
+.review-stars {
   padding-top: 2vw;
   margin-left: 1vw;
   margin-right: 1vw;
@@ -454,12 +443,12 @@ input::placeholder {
   font-weight: bolder;
   text-align: center;
 }
-.review-date{
+.review-date {
   margin-left: 1vw;
   margin-right: 1vw;
 }
 
-.review-card h3{
+.review-card h3 {
   align-self: center;
   border-bottom: 1px solid black;
 }
@@ -595,22 +584,16 @@ input::placeholder {
   background-color: #138f2b; /* Darker shade on hover */
 }
 
-#customer-reviews h2{
+#customer-reviews h2 {
   text-align: center;
-        font-size: 24px;
-        color: var(--white);
-        background-color: var(--earthy-green);
-        padding-top: 2vw;
-        padding-bottom: 2vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
-      
-      }
-
-
-
-
-
+  font-size: 24px;
+  color: var(--white);
+  background-color: var(--earthy-green);
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
 
 /* Responsive styles */
 @media (max-width: 600px) {
@@ -640,18 +623,17 @@ input::placeholder {
     width: 200px; /* Set a width for the menu */
     z-index: 1; /* Ensure it appears above other content */
   }
-  
 
   #blog-posts {
     margin: 20px 10px;
   }
-  
+
   .blog-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .featured-post {
     flex: 2;
     margin-right: 20px;
@@ -660,22 +642,22 @@ input::placeholder {
     border-radius: 5px;
     background-color: #f9f9f9;
   }
-  
+
   .latest-posts {
     flex: 1;
   }
-  
+
   .latest-posts ul {
     list-style-type: none;
     padding: 0;
   }
-  
+
   .latest-posts li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
   }
-  
+
   .latest-posts img {
     width: 50px;
     height: 50px;
@@ -797,7 +779,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     border: 1px solid #ddd;
-    
+
     max-width: 500px;
     background-color: var(--white);
   }
@@ -813,17 +795,17 @@ input::placeholder {
 
   .search-container input {
     padding: 10px;
-    
+
     border: none;
     border-radius: 4px;
     width: 100%;
   }
 
-  .search-container button { /* Auburn */
+  .search-container button {
+    /* Auburn */
     border: none;
     background-color: transparent;
-  
-    
+
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     height: 3vw; /* Consistent height */
@@ -839,7 +821,6 @@ input::placeholder {
     width: 20px;
     height: 20px;
   }
-
 
   .footer a {
     text-decoration: none;
@@ -902,109 +883,110 @@ input::placeholder {
   }
 
   /* Animation for membership cards */
-@keyframes fadeInScale {
-  0% {
+  @keyframes fadeInScale {
+    0% {
       opacity: 0;
       transform: scale(0.9);
-  }
-  100% {
+    }
+    100% {
       opacity: 1;
       transform: scale(1);
+    }
   }
-}
 
+  /* Optional: Change background color on hover */
+  .membership-cards .card:hover {
+    background-color: rgb(59, 58, 58); /* Light gray on hover */
+  }
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 35vw;
+  }
 
-/* Optional: Change background color on hover */
-.membership-cards .card:hover {
-  background-color: rgb(59, 58, 58); /* Light gray on hover */
-}
-.container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  bottom: 35vw;
-}
+  .category {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    width: 80vw;
+    height: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out,
+      background-color 0.6s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    animation: fadeInScale 0.5s ease forwards;
+    opacity: 0; /* Start hidden */
+    margin: 20px; /* Add some margin for spacing */
+    transition: background-color 0.5s ease; /* Optional background color transition */
+  }
 
-.category {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  margin: 10px 0;
-  width: 80vw;
-  height: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-decoration: none;
-  box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
-  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
-  overflow: hidden;
-  position: relative;
-  animation: fadeInScale 0.5s ease forwards;
-  opacity: 0; /* Start hidden */
-  margin: 20px; /* Add some margin for spacing */
-  transition: background-color 0.5s ease; /* Optional background color transition */
-}
+  .category:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.6s ease-in-out;
+  }
 
-.category:hover:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.6s ease-in-out;
-}
+  .category:hover::before {
+    left: 100%;
+  }
 
-.category:hover::before {
-  left: 100%;
-}
+  .category h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+    transition: color 0.6s ease-in-out;
+  }
 
-.category h2 {
-  font-size: 24px;
-  margin: 0;
-  margin-top: 20px;
-  text-align: left;
-  transition: color 0.6s ease-in-out;
-}
+  .category:hover h2 {
+    color: #ffcc00; /* Change to your preferred hover color */
+  }
 
-.category:hover h2 {
-  color: #ffcc00; /* Change to your preferred hover color */
-}
+  .shop-now {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.6s ease-in-out;
+  }
 
+  .custom-btn img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
 
+  .category:hover .shop-now {
+    transform: translateX(10px);
+  }
 
+  .category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(128, 128, 128, 0.8);
+    background-color: #111; /* Slightly lighter black for hover effect */
+  }
 
-
-.shop-now {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  transition: transform 0.6s ease-in-out;
-}
-
-.custom-btn img {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
-
-.category:hover .shop-now {
-  transform: translateX(10px);
-}
-
-.category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(128, 128, 128, 0.8);
-  background-color: #111; /* Slightly lighter black for hover effect */
-}
-
-.custom-btn:hover img {
-  transform: translateX(5px);
-}
+  .custom-btn:hover img {
+    transform: translateX(5px);
+  }
 
   .shop-now {
     font-size: 16px;
@@ -1050,29 +1032,29 @@ input::placeholder {
     align-items: center;
     justify-content: space-between;
     background-color: var(--black);
-}
+  }
 
-.mission-text {
+  .mission-text {
     max-width: 100%;
     margin: 2vw;
     text-align: center;
-}
+  }
 
-.mission-text h1 {
+  .mission-text h1 {
     font-size: 36px;
     font-weight: bold;
     color: var(--white);
     margin-bottom: 20px;
-}
+  }
 
-.mission-text p {
+  .mission-text p {
     font-size: 16px;
     color: var(--white);
     margin-bottom: 30px;
     line-height: 1.5;
-}
+  }
 
-.learn-more {
+  .learn-more {
     padding: 12px 25px;
     font-size: 16px;
     background-color: var(--amber-yellow);
@@ -1081,16 +1063,16 @@ input::placeholder {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s;
-}
+  }
 
-.learn-more:hover {
+  .learn-more:hover {
     background-color: var(--lemon-yellow);
-}
+  }
 
-.mission-image img {
+  .mission-image img {
     max-width: 100%;
     transform: scale(1);
-}
+  }
   /*footer*/
   .footer {
     display: grid;
@@ -1230,15 +1212,15 @@ input::placeholder {
     text-align: center;
   }
 
-  #farming-services{
+  #farming-services {
     position: relative;
     bottom: 20px;
   }
-  
-  #farming-services h2{
+
+  #farming-services h2 {
     text-align: center;
     font-size: 24px;
-    
+
     color: var(--white);
     background-color: var(--earthy-green);
     padding-top: 2vw;
@@ -1246,21 +1228,21 @@ input::placeholder {
     padding-left: 2vw;
     padding-right: 2vw;
   }
-  
-  .service-card h3{
+
+  .service-card h3 {
     z-index: 2;
     position: relative;
     color: var(--white);
     text-align: center;
   }
 
-  #farming-services h3{
+  #farming-services h3 {
     z-index: 2;
     position: relative;
     text-align: center;
   }
-  
-  .handbut{
+
+  .handbut {
     position: relative;
     bottom: 115px;
     z-index: 2;
@@ -1269,7 +1251,7 @@ input::placeholder {
     padding: 1vw;
     padding-bottom: 1.2vw;
   }
-  
+
   .service-card {
     flex: 0 0 auto; /* Prevent shrinking */
     width: 300px;
@@ -1282,21 +1264,19 @@ input::placeholder {
     transition: transform 0.2s ease-in-out;
     margin-bottom: 30px;
   }
-  
+
   .service-card:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
   }
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
-
-
-  #farming-services{
+  #farming-services {
     position: relative;
     bottom: 40px;
   }
-  
-  #farming-services h2{
+
+  #farming-services h2 {
     text-align: center;
     font-size: 36px;
     color: var(--white);
@@ -1304,20 +1284,20 @@ input::placeholder {
     padding-top: 2vw;
     padding-bottom: 2vw;
   }
-  
-  .service-card h3{
+
+  .service-card h3 {
     z-index: 2;
     position: relative;
     color: var(--white);
     text-align: center;
   }
-  #farming-services h3{
+  #farming-services h3 {
     z-index: 2;
     position: relative;
     text-align: center;
   }
-  
-  .handbut{
+
+  .handbut {
     position: relative;
     bottom: 115px;
     z-index: 2;
@@ -1326,7 +1306,7 @@ input::placeholder {
     padding: 1vw;
     padding-bottom: 0.2vw;
   }
-  
+
   .service-card {
     flex: 0 0 auto; /* Prevent shrinking */
     width: 300px;
@@ -1337,11 +1317,11 @@ input::placeholder {
     transition: transform 0.2s ease-in-out;
     margin-bottom: 30px;
   }
-  
+
   .service-card:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
   }
-  
+
   .navigation {
     display: none; /* Hide navigation by default */
     flex-direction: column;
@@ -1354,8 +1334,6 @@ input::placeholder {
     width: 200px; /* Set a width for the menu */
     z-index: 1; /* Ensure it appears above other content */
   }
-
-  
 
   .card {
     flex: 0 0 calc(50% - 16px); /* Two cards per view */
@@ -1543,12 +1521,13 @@ input::placeholder {
     justify-content: space-between;
     text-decoration: none;
     box-shadow: 0 0 30px gray;
-    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
-  overflow: hidden;
-  position: relative;
-  animation: fadeInScale 0.5s ease forwards;
-  margin: 20px; /* Add some margin for spacing */
-  transition: background-color 0.5s ease; /* Optional background color transition */
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out,
+      background-color 0.6s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    animation: fadeInScale 0.5s ease forwards;
+    margin: 20px; /* Add some margin for spacing */
+    transition: background-color 0.5s ease; /* Optional background color transition */
   }
 
   .category h2 {
@@ -1620,29 +1599,29 @@ input::placeholder {
     align-items: center;
     justify-content: space-between;
     background-color: var(--black);
-}
+  }
 
-.mission-text {
+  .mission-text {
     max-width: 100%;
     margin: 2vw;
     text-align: center;
-}
+  }
 
-.mission-text h1 {
+  .mission-text h1 {
     font-size: 36px;
     font-weight: bold;
     color: var(--white);
     margin-bottom: 20px;
-}
+  }
 
-.mission-text p {
+  .mission-text p {
     font-size: 16px;
     color: var(--white);
     margin-bottom: 30px;
     line-height: 1.5;
-}
+  }
 
-.learn-more {
+  .learn-more {
     padding: 12px 25px;
     font-size: 16px;
     background-color: var(--amber-yellow);
@@ -1651,16 +1630,16 @@ input::placeholder {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s;
-}
+  }
 
-.learn-more:hover {
+  .learn-more:hover {
     background-color: var(--lemon-yellow);
-}
+  }
 
-.mission-image img {
+  .mission-image img {
     max-width: 100%;
     transform: scale(1);
-}
+  }
   .shop-now {
     font-size: 16px;
     display: flex;
@@ -1734,7 +1713,7 @@ input::placeholder {
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
-}
+  }
 
   .search-container {
     display: flex;
@@ -1744,18 +1723,19 @@ input::placeholder {
   .search-container input {
     padding: 10px;
     padding-right: 100%;
-    
+
     border: none;
     border-radius: 4px;
     max-width: 500px;
   }
 
-  .search-container button { /* Auburn */
+  .search-container button {
+    /* Auburn */
     border: none;
     background-color: transparent;
     position: relative;
     right: 40px;
-    
+
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     height: 3vw; /* Consistent height */
