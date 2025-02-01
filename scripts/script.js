@@ -133,21 +133,45 @@ function updateContent() {
     const currentContent = contentArray[currentIndex];
     const screenWidth = window.innerWidth;
 
-    if (screenWidth < 425) {
-        imageContainer.src = currentContent.image.mobile;
-    } else if (screenWidth < 794) {
-        imageContainer.src = currentContent.image.tablet;
-    } else {
-        imageContainer.src = currentContent.image.laptop;
-    }
+    // Apply fade-out effect
+    imageContainer.classList.add('fade-out');
+    heading.classList.add('fade-out');
+    paragraph.classList.add('fade-out');
 
-    heading.textContent = currentContent.heading;
-    paragraph.textContent = currentContent.paragraph;
+    setTimeout(() => {
+        if (screenWidth < 425) {
+            imageContainer.src = currentContent.image.mobile;
+        } else if (screenWidth < 794) {
+            imageContainer.src = currentContent.image.tablet;
+        } else {
+            imageContainer.src = currentContent.image.laptop;
+        }
+
+        heading.textContent = currentContent.heading;
+        paragraph.textContent = currentContent.paragraph;
+
+        // Apply fade-in effect
+        imageContainer.classList.remove('fade-out');
+        heading.classList.remove('fade-out');
+        paragraph.classList.remove('fade-out');
+    }, 500); // Match this duration with the CSS transition duration
 
     currentIndex = (currentIndex + 1) % contentArray.length;
 }
 
 setInterval(updateContent, 5000);
+
+// CSS transitions for smooth effects
+const style = document.createElement('style');
+style.innerHTML = `
+    .fade-out {
+        opacity: 30;
+        transition: opacity 0.5s ease-in-out;
+    }
+`;
+document.head.appendChild(style);
+
+// Carousel functionality
 
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector('.carousel');
