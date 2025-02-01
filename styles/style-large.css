@@ -54,7 +54,7 @@ body {
   }
 
   .navigation a:hover {
-    background-color: var(--royal-blue);
+    background-color: var(--amber-yellow);
     color: var(--white);
     padding: 1vw;
   }
@@ -161,12 +161,12 @@ body {
     z-index: 3;
     left: 2vw;
     padding: 20px 40px;
-    background-color: var(--royal-blue);
+    background-color: var(--amber-yellow);
     color: var(--black);
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    border: 2px solid var(--royal-blue);
+    border: 2px solid var(--amber-yellow);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
       box-shadow 0.3s ease;
   }
@@ -192,12 +192,12 @@ body {
     display: inline-block;
     padding: 1rem 2rem; /* Adjusts based on root font size */
     /* Scales with user settings */
-    background-color: var(--royal-blue);
+    background-color: var(--amber-yellow);
     color: var(--white);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    border: 2px solid var(--royal-blue);
+    border: 2px solid var(--amber-yellow);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
       box-shadow 0.3s ease;
   }
@@ -284,7 +284,13 @@ body {
     align-items: center;
     position: relative;
     bottom: 13vw;
+    z-index: 2;
     justify-content: space-evenly;
+  }
+
+  .ctimg{
+    position: relative;
+    z-index: 1;
   }
 
   .category {
@@ -450,7 +456,7 @@ body {
     padding: 12px 25px;
     font-size: 16px;
    
-    background-color: var(--royal-blue);
+    background-color: var(--amber-yellow);
     color: white;
     border: none;
     cursor: pointer;
@@ -563,4 +569,23 @@ body {
 }
 
 
+.feature img {
+  /* Responsive image */
+ width: 8vw;
+ height: 10vw; /* Maintain aspect ratio */
+}
+
+.featured-post img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  
+  animation:  .5s cubic-bezier(.29,.65,.58,1) forwards
+}
+
+.latest-posts img {
+  width: 120px;
+  height: 100px;
+  margin-right: 10px;
+}
 }

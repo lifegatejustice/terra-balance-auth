@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/auth.js" defer></script>
     <link rel="icon" href="images/terrabalance-logo.svg" type="image/webp">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,16 +47,18 @@
                 </div>
             
                 <a href="index.html">Home</a>
-                <a href="#">About Us</a>
+                <a href="about.html">About Us</a>
                 <a href="#">Contact Us</a>
                 <a href="#">Projects</a>
                 <div class="second-icons">
                     <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
                     <a href="#"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="shop"></a>
 
-                    <div class="sign">
-                        <a href="#loginForm" title="Sign"><img src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon" srcset=""></a>
-                    </div>
+                    
+                        <a href="#" id="openLoginDialog" title="Sign">
+                            <img src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+                        </a>
+                    
                 </div>
             </nav>
         </div>
@@ -83,6 +86,30 @@
         </div>
     </nav> -->
     <main>
+        <!-- Login Form -->
+<!-- Modal for Login Form -->
+<dialog id="loginDialog">
+    <form method="dialog">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <button type="button" id="closeLoginDialog">Cancel</button>
+    </form>
+</dialog>
+
+<!-- Registration Form -->
+<div id="registrationForm" style="display:none;">
+    <h2>Register</h2>
+    <form id="register">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+        <!-- Other content of the main section -->
         <section>
             <div class="herocha">
             <h2 class="herochah2"><!--dynamically changed--></h2>
@@ -112,12 +139,14 @@
 
             <div class="container">
                 <a href="#" class="custom-btn category">
+                    <img class="ctimg" src="images/kelly-sikkema-Uh5GWNUGgGY-unsplash.jpg" alt="">
                     <h2>Shop</h2>
                     <div class="shop-now">
                         Discover <img src="images/assets/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="arrow forward">
                     </div>
                 </a>
                 <a href="#" class="custom-btn category">
+                    <img class="ctimg" src="images/kelly-sikkema-6vudIBHwLe8-unsplash.jpg" alt="">
                     <h2>Sell</h2>
                     <div class="shop-now">
                         Start Selling <img src="images/assets/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="arrow forward">
@@ -250,7 +279,7 @@
         </section>
 
 <section id="blog-posts">
-    <h2>Best practices, news & recipes</h2>
+    <h1>Best practices, news & recipes</h1>
     
     
     <div class="blog-container">
@@ -286,32 +315,34 @@
         <section class="features">
             <div class="feature">
                 <img src="images/assets/la--shipping-fast.svg" alt="9ja-wide shipping">
-                <h2>9ja-wide shipping</h2>
+                <h1>9ja-wide shipping</h1>
                 <p>Convenient delivery across Nigeria, with trusted shipping partners</p>
             </div>
             <div class="feature">
                 <img src="images/assets/ic--outline-workspace-premium.svg" alt="Premium quality">
-                <h2>Premium quality</h2>
+                <h1>Premium quality</h1>
                 <p>The finest ethically grown, organic veg, meat, dairy & pantry goods</p>
             </div>
             <div class="feature">
                 <img src="images/assets/icon-park-outline--local.svg" alt="Locally sourced">
-                <h2>Locally sourced</h2>
+                <h1>Locally sourced</h1>
                 <p>Carefully curated selection from Nigeria's best farmers and food producers</p>
             </div>
             <div class="feature">
                 <img src="images/assets/tabler--shopping-cart-star.svg" alt="Sustainable shopping">
-                <h2>Sustainable shopping</h2>
+                <h1>Sustainable shopping</h1>
                 <p>A more sustainable, low-carbon way to shop for food online</p>
             </div>
         </section>
 
         <section class="subscribe-section">
-            <h2>Get 5% off your first order</h2>
+            <h1>Get 5% off your first order</h1>
             <p>Sign up for emails to receive 5% off your first Terra Balance order, plus foodie inspiration direct to your inbox</p>
             <div class="subscribe-form">
+                <form action="" method="get">
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
+            </form>
             </div>
         </section>
     <footer>
