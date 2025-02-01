@@ -54,7 +54,7 @@ body {
   }
 
   .navigation a:hover {
-    background-color: var(--amber-yellow);
+    background-color: var(--royal-blue);
     color: var(--white);
     padding: 1vw;
   }
@@ -161,20 +161,20 @@ body {
     z-index: 3;
     left: 2vw;
     padding: 20px 40px;
-    background-color: var(--amber-yellow);
+    background-color: var(--royal-blue);
     color: var(--black);
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    border: 2px solid var(--amber-yellow);
+    border: 2px solid var(--royal-blue);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
       box-shadow 0.3s ease;
   }
 
   .shop-now-btn:hover {
-    background-color: var(--lemon-yellow);
+    background-color: var(--deep-blue);
     color: var(--white);
-    border-color: var(--lemon-yellow);
+    border-color: var(--deep-blue);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -192,20 +192,20 @@ body {
     display: inline-block;
     padding: 1rem 2rem; /* Adjusts based on root font size */
     /* Scales with user settings */
-    background-color: var(--amber-yellow);
+    background-color: var(--royal-blue);
     color: var(--white);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    border: 2px solid var(--amber-yellow);
+    border: 2px solid var(--royal-blue);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
       box-shadow 0.3s ease;
   }
 
   .howlearn-now-btn:hover {
-    background-color: var(--lemon-yellow);
+    background-color: var(--deep-blue);
     color: var(--white);
-    border-color: var(--lemon-yellow);
+    border-color: var(--deep-blue);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -450,7 +450,7 @@ body {
     padding: 12px 25px;
     font-size: 16px;
    
-    background-color: var(--amber-yellow);
+    background-color: var(--royal-blue);
     color: white;
     border: none;
     cursor: pointer;
@@ -459,7 +459,7 @@ body {
 }
 
 .learn-more:hover {
-    background-color: var(--lemon-yellow);
+    background-color: var(--deep-blue);
     font-weight: bold;
 }
 

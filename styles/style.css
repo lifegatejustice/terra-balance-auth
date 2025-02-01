@@ -1,22 +1,16 @@
-.josefin-sans {
-  font-family: "Josefin Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
 
 :root {
   --earthy-green: #17a638;
-  --lemon-yellow: #234774;
-  --amber-yellow: #1155cc;
+  --deep-blue: #234774;
+  --royal-blue: #1155cc;
   --white: #ffffff;
-  --whitetrans: #8a8a8a;
+  --gray: #8a8a8a;
   --black: #000000;
   --black-variant: #1c1c1c;
 
-  --heading-font: "Outfit", serif;
+  --heading-font: "Outfit", sans-serif;
   --paragraph-font: "Poppins", sans-serif;
-  --body-font: "Josefin Sans", serif;
+  --body-font: "Roboto", sans-serif;
 }
 
 html,
@@ -24,6 +18,10 @@ body {
   font-family: var(--body-font);
   overflow-x: hidden;
   width: 100%;
+}
+
+p {
+  font-family: var(--paragraph-font);
 }
 
 /* Scrollbar Styling */
@@ -119,7 +117,7 @@ header {
 }
 
 .navigation a:hover {
-  background-color: var(--lemon-yellow); /* Change background on hover */
+  background-color: var(--deep-blue); /* Change background on hover */
 }
 
 /* Hamburger button styles */
@@ -236,14 +234,14 @@ input::placeholder {
 }
 
 .sign a:hover {
-  background-color: var(--amber-yellow); /* Falu Red */
+  background-color: var(--royal-blue); /* Falu Red */
   padding: 1vw;
   color: var(--black);
   font-weight: bold;
 }
 
 .sign:hover {
-  background-color: var(--amber-yellow); /* Falu Red */
+  background-color: var(--royal-blue); /* Falu Red */
 }
 
 /* Center the button using flexbox */
@@ -257,20 +255,20 @@ input::placeholder {
 .shop-now-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--amber-yellow);
+  background-color: var(--royal-blue);
   color: var(--black);
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  border: 2px solid var(--amber-yellow);
+  border: 2px solid var(--royal-blue);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .shop-now-btn:hover {
-  background-color: var(--lemon-yellow);
+  background-color: var(--deep-blue);
   color: var(--white);
-  border-color: var(--lemon-yellow);
+  border-color: var(--deep-blue);
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -283,20 +281,20 @@ input::placeholder {
 .howlearn-now-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--amber-yellow);
+  background-color: var(--royal-blue);
   color: var(--black);
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  border: 2px solid var(--amber-yellow);
+  border: 2px solid var(--royal-blue);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .howlearn-now-btn:hover {
-  background-color: var(--lemon-yellow);
+  background-color: var(--deep-blue);
   color: var(--white);
-  border-color: var(--lemon-yellow);
+  border-color: var(--deep-blue);
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -357,14 +355,14 @@ input::placeholder {
 }
 
 .carousel-buttons button {
-  border: 3px solid var(--amber-yellow);
+  border: 3px solid var(--royal-blue);
   padding: 10px;
   margin: 0 5px;
   cursor: pointer;
 }
 
 .carousel-buttons button:hover {
-  background-color: var(--lemon-yellow);
+  background-color: var(--deep-blue);
   align-self: baseline;
 }
 
@@ -410,7 +408,7 @@ input::placeholder {
 .review-author {
   display: flex;
   align-items: center;
-  background-color: var(--amber-yellow);
+  background-color: var(--royal-blue);
   width: 100%;
   padding: 10px;
   position: relative;
@@ -458,10 +456,10 @@ input::placeholder {
 }
 
 .carousel-buttons button {
-  background-color: var(--amber-yellow);
+  background-color: var(--royal-blue);
   border-radius: 50px;
   color: white;
-  border: 3px solid var(--amber-yellow);
+  border: 3px solid var(--royal-blue);
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 70px;
@@ -538,8 +536,9 @@ input::placeholder {
 }
 
 .feature img {
-  max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
+   /* Responsive image */
+  width: 20vw;
+  height: 15vw; /* Maintain aspect ratio */
 }
 
 .feature:hover {
@@ -831,7 +830,7 @@ input::placeholder {
 
   .footer a {
     text-decoration: none;
-    color: var(--amber-yellow);
+    color: var(--royal-blue);
     font-size: 14px;
   }
 
@@ -1064,7 +1063,7 @@ input::placeholder {
   .learn-more {
     padding: 12px 25px;
     font-size: 16px;
-    background-color: var(--amber-yellow);
+    background-color: var(--royal-blue);
     color: white;
     border: none;
     cursor: pointer;
@@ -1073,7 +1072,7 @@ input::placeholder {
   }
 
   .learn-more:hover {
-    background-color: var(--lemon-yellow);
+    background-color: var(--deep-blue);
   }
 
   .mission-image img {
@@ -1365,12 +1364,12 @@ input::placeholder {
 
   .card h3 {
     margin: 0 0 8px;
-    color: var(--amber-yellow);
+    color: var(--royal-blue);
   }
 
   .aboutcard h3 {
     margin: 0 0 8px;
-    color: var(--amber-yellow);
+    color: var(--royal-blue);
   }
 
   .card p {
@@ -1631,7 +1630,7 @@ input::placeholder {
   .learn-more {
     padding: 12px 25px;
     font-size: 16px;
-    background-color: var(--amber-yellow);
+    background-color: var(--royal-blue);
     color: white;
     border: none;
     cursor: pointer;
@@ -1640,7 +1639,7 @@ input::placeholder {
   }
 
   .learn-more:hover {
-    background-color: var(--lemon-yellow);
+    background-color: var(--deep-blue);
   }
 
   .mission-image img {
