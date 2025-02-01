@@ -51,15 +51,6 @@ document.addEventListener('DOMContentLoaded', renderProducts);
 
 // New functionality for changing images and text
 const contentArray = [
-    {
-        image: {
-            mobile: 'images/turkey.jpg',
-            tablet: 'images/turkey-medium.jpg',
-            laptop: 'images/turkey-large.jpg'
-        },
-        heading: 'Fresh Turkey',
-        paragraph: 'Sustainably sourced turkey from local farms.'
-    },
 
     {
         image: {
@@ -125,13 +116,13 @@ const contentArray = [
 let currentIndex = 0;
 
 function updateContent() {
-    const imageContainer = document.querySelector('.image-container img');
-    const heading = document.querySelector('.herochah2'); // Updated to class selector
-    const paragraph = document.querySelector('.herochap'); // Updated to class selector
-
+    const imageContainer = document.querySelector('.image-container picture');
+    const sources = imageContainer.querySelectorAll('source');
+    const img = imageContainer.querySelector('img');
+    const heading = document.querySelector('.herochah2');
+    const paragraph = document.querySelector('.herochap');
 
     const currentContent = contentArray[currentIndex];
-    const screenWidth = window.innerWidth;
 
     // Apply fade-out effect
     imageContainer.classList.add('fade-out');
@@ -139,27 +130,26 @@ function updateContent() {
     paragraph.classList.add('fade-out');
 
     setTimeout(() => {
-        if (screenWidth < 425) {
-            imageContainer.src = currentContent.image.mobile;
-        } else if (screenWidth < 794) {
-            imageContainer.src = currentContent.image.tablet;
-        } else {
-            imageContainer.src = currentContent.image.laptop;
-        }
-
+        sources[0].srcset = currentContent.image.laptop;
+        sources[1].srcset = currentContent.image.tablet;
+        img.src = currentContent.image.mobile;
+        
         heading.textContent = currentContent.heading;
         paragraph.textContent = currentContent.paragraph;
 
-        // Apply fade-in effect
-        imageContainer.classList.remove('fade-out');
-        heading.classList.remove('fade-out');
-        paragraph.classList.remove('fade-out');
-    }, 500); // Match this duration with the CSS transition duration
+         // Remove fade-out for smooth transition
+         imageContainer.classList.remove('fade-out');
+         heading.classList.remove('fade-out');
+         paragraph.classList.remove('fade-out');
+     }, 500);
 
     currentIndex = (currentIndex + 1) % contentArray.length;
 }
 
-setInterval(updateContent, 5000);
+// Start image cycling after 5 seconds
+setTimeout(() => {
+    setInterval(updateContent, 5000);
+}, 5000);
 
 // CSS transitions for smooth effects
 const style = document.createElement('style');

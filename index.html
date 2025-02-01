@@ -85,13 +85,17 @@
     <main>
         <section>
             <div class="herocha">
-            <h2 class="herochah2"><!--dynamically changed--></h2>
-            <p class="herochap"><!--dynamically changed--></p></div>
+            <h2 class="herochah2">Fresh Turkey<!--dynamically changed--></h2>
+            <p class="herochap">Sustainably sourced turkey from local farms.<!--dynamically changed--></p></div>
             <div class="hero-overlay">
             <div class="image-container">
                     <!--dynamically changed-->
                   
-                    <img src="" alt="dynamic images of turkey, goat meat, compost, catfish etc.">
+                    <picture>
+                        <source srcset="images/turkey-large.jpg" media="(min-width: 794px)">
+                        <source srcset="images/turkey-medium.jpg" media="(min-width: 425px)">
+                        <img src="images/turkey.jpg" alt="dynamic images of turkey, goat meat, compost, catfish etc.">
+                    </picture>
                 
             </div>
             
