@@ -51,6 +51,15 @@ document.addEventListener('DOMContentLoaded', renderProducts);
 
 // New functionality for changing images and text
 const contentArray = [
+    {
+        image: {
+            mobile: 'images/turkey.jpg',
+            tablet: 'images/turkey-medium.jpg',
+            laptop: 'images/turkey-large.jpg'
+        },
+        heading: 'Fresh Turkey',
+        paragraph: 'Sustainably sourced turkey from local farms.'
+    },
 
     {
         image: {
@@ -137,11 +146,11 @@ function updateContent() {
         heading.textContent = currentContent.heading;
         paragraph.textContent = currentContent.paragraph;
 
-         // Remove fade-out for smooth transition
-         imageContainer.classList.remove('fade-out');
-         heading.classList.remove('fade-out');
-         paragraph.classList.remove('fade-out');
-     }, 500);
+        // Remove fade-out for smooth transition
+        imageContainer.classList.remove('fade-out');
+        heading.classList.remove('fade-out');
+        paragraph.classList.remove('fade-out');
+    }, 500);
 
     currentIndex = (currentIndex + 1) % contentArray.length;
 }
@@ -150,18 +159,6 @@ function updateContent() {
 setTimeout(() => {
     setInterval(updateContent, 5000);
 }, 5000);
-
-// CSS transitions for smooth effects
-const style = document.createElement('style');
-style.innerHTML = `
-    .fade-out {
-        opacity: 30;
-        transition: opacity 0.5s ease-in-out;
-    }
-`;
-document.head.appendChild(style);
-
-// Carousel functionality
 
 document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector('.carousel');
