@@ -295,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 // Blog posts array
 const blogPosts = [
     {
@@ -321,12 +322,13 @@ const blogPosts = [
 
 // Function to update blog posts
 document.addEventListener('DOMContentLoaded', function() {
-    // Update featured post
+    // Randomly select a featured post
+    const randomIndex = Math.floor(Math.random() * blogPosts.length);
     const featuredPost = document.querySelector('.featured-post');
     featuredPost.innerHTML = `
-        <img src="${blogPosts[0].image}" alt="${blogPosts[0].title}">
-        <h3>${blogPosts[0].title}</h3>
-        <p>${blogPosts[0].description}</p>
+        <img src="${blogPosts[randomIndex].image}" alt="${blogPosts[randomIndex].title}">
+        <h2>${blogPosts[randomIndex].title}</h2>
+        <p>${blogPosts[randomIndex].description}</p>
     `;
 
     // Update latest posts
@@ -334,12 +336,16 @@ document.addEventListener('DOMContentLoaded', function() {
     latestPostsList.innerHTML = ''; // Clear existing posts
 
     // Add all posts to the latest posts section
-    blogPosts.forEach(post => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <img src="${post.image}" alt="${post.title}">
-            <a href="#">${post.title}</a>
-        `;
-        latestPostsList.appendChild(li);
+    blogPosts.forEach((post, index) => {
+        if (index !== randomIndex) { // Exclude the featured post
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <img src="${post.image}" alt="${post.title}">
+                <a href="#">${post.title}</a>
+            `;
+            latestPostsList.appendChild(li);
+        }
     });
 });
+
+

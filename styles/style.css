@@ -474,6 +474,10 @@ input::placeholder {
 #blog-posts {
   margin: 20px 10px;
 }
+.latest-posts a{
+  text-decoration: none;
+  color: var(--earthy-green);
+}
 
 .blog-container {
   display: flex;
