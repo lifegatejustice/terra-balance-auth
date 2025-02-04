@@ -261,18 +261,6 @@ footer{
     .two{
         flex-direction: column-reverse;
     }
-
-    .mission-two{
-        flex-direction: column-reverse;
-        display: flex;
-    }
-
-    .mission-two {
-        display: flex;
-        align-items: center;
-        background-color: var(--earthy-green);
-    }
-    
     
     .mission-two-text li{
         color: var(--white);
@@ -287,11 +275,12 @@ footer{
     }
     
     .history h1{
-        font-size: 70px;
+        font-size: 36px;
+        text-align: center;
     }
     
     .history p{
-        font-size: 1.3rem;
+        font-size: 16px;
         line-height: 30px;
     }
     
@@ -374,8 +363,13 @@ footer{
     }
     
     .commitment h1{
-        font-size: 70px;
+        font-size: 36px;
         height: 100%;
+    }
+    .commitment p{
+        font-size: 16px;
+        height: 100%;
+        line-height: 30px;
     }
     
     .subscribe-section{
@@ -385,5 +379,61 @@ footer{
     
     footer{
         margin-top: 150px;
+    }
+
+    .mission-two-image img {
+    
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        overflow: hidden;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: relative;
+        width: 100%;
+        z-index: 4;
+        align-self: center;
+        
+        
+        
+    }
+
+    .mission-two {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--black);
+    }
+
+    .mission-two-text {
+        max-width: 100%;
+        margin: 2vw;
+        text-align: center;
+    }
+
+    .mission-two-text h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--white);
+        margin-bottom: 20px;
+    }
+
+    .mission-two-text p {
+        font-size: 16px;
+        color: var(--white);
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .mission-two-image{
+        background-color: var(--earthy-green);
+        width: 100%;
+    }
+
+    .mission-two-image img {
+        max-width: 100%;
+        height:100%;
+        transform: scale(1);
     }
 }

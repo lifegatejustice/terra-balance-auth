@@ -627,6 +627,8 @@ body {
   overflow: hidden;
 }
 
+
+
 #farming-services{
   position: relative;
   bottom: 20px;
@@ -737,7 +739,7 @@ body {
   padding-bottom: 40px;
   color: var(--white);
   position: relative;
-  bottom: -155px;
+  bottom: -15px;
  /* Centering the section */
 }
 

@@ -1220,7 +1220,21 @@ h2,h1,h3{
     background-color: var(--black);
   }
 
+  .mission-two {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+  }
+
   .mission-text {
+    max-width: 100%;
+    margin: 2vw;
+    text-align: center;
+  }
+
+  .mission-two-text {
     max-width: 100%;
     margin: 2vw;
     text-align: center;
@@ -1233,7 +1247,20 @@ h2,h1,h3{
     margin-bottom: 20px;
   }
 
+  .mission-two-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
   .mission-text p {
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  .mission-two-text p {
     font-size: 16px;
     color: var(--white);
     margin-bottom: 30px;
@@ -1256,6 +1283,10 @@ h2,h1,h3{
   }
 
   .mission-image img {
+    max-width: 100%;
+    transform: scale(1);
+  }
+  .mission-two-image img {
     max-width: 100%;
     transform: scale(1);
   }
