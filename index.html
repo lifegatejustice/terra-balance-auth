@@ -109,13 +109,31 @@
     </form>
 </div>
 
+
+<!-- The Modal/Form -->
+<div class="form-container" id="discountForm">
+    <div class="form-section">
+        <h1>Before you go...</h1>
+        <h2>How does a 5% discount sound?</h2>
+        <p>Enter your email to get 5% off your next order</p>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Sign up</button>
+        </form>
+        <div class="image-section">
+            <img src="images/fresheggs.jpg" alt="" srcset="">
+            <button class="close-button" aria-label="Close"><span>&times;</span></button>
+        </div>
+    </div>
+    
+</div>
+
         <!-- Other content of the main section -->
-        <section>
+        <section class="herom">
             <div class="herocha">
             <h2 class="herochah2"><!--dynamically changed--></h2>
             <p class="herochap"><!--dynamically changed--></p></div>
-            <div class="hero-overlay">
-            <div class="image-container">
+            <div class="image-container"> 
                     <!--dynamically changed-->
                   
                     <picture>
@@ -133,32 +151,35 @@
                 <h2>How it Works</h2>
                 <p>Sell and Buy directly from quality African farmers, producers & artisans</p>
                 <div class="howlearn-button">
-                    <a href="http://" class="howlearn-now-btn">Get Started</a>
+                    <a href="about.html" class="howlearn-now-btn">Get Started</a>
                 </div>
             </div>
 
             <div class="container">
-                <a href="#" class="custom-btn category">
-                    <img class="ctimg" src="images/kelly-sikkema-Uh5GWNUGgGY-unsplash.jpg" alt="">
+                <div class="category">
+                    <a class="category-link" href="shop.html"></a>
+                    <img alt="Category for Women" src="images/kelly-sikkema-Uh5GWNUGgGY-unsplash.jpg">
                     <h2>Shop</h2>
-                    <div class="shop-now">
-                        Discover <img src="images/assets/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="arrow forward">
-                    </div>
-                </a>
-                <a href="#" class="custom-btn category">
-                    <img class="ctimg" src="images/kelly-sikkema-6vudIBHwLe8-unsplash.jpg" alt="">
+                    <a class="cta-button" href="shop.html">Discover →</a>
+                </div>
+            
+                <div class="category">
+                    <a class="category-link" href="men.html"></a>
+                    <img alt="Category for Men" src="images/kelly-sikkema-6vudIBHwLe8-unsplash.jpg">
                     <h2>Sell</h2>
-                    <div class="shop-now">
-                        Start Selling <img src="images/assets/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="arrow forward">
-                    </div>
-                </a>
+                    <a class="cta-button" href="men.html">Start Selling →</a>
+                </div>
             </div>
+            
+            
+
+             
         </section>
         <section class="mission">
             <div class="mission-text">
                 <h1>Our mission</h1>
                 <p>At Terra Balance Enterprises we are more than just a business. We are catalysts for change, pioneers in transforming the African agricultural sector. Our journey began with a vision to empower smallholder farmers across the continent, and today, we stand at the forefront of innovation, leveraging technology to drive sustainable growth and prosperity.</p>
-                <button class="learn-more">Learn more <a href="http://"></a></button>
+                <button class="learn-more">Learn more <a href="about.html"></a></button>
             </div>
             <div class="mission-image">
                 <img src="images/our-mission.jpg" alt="Food on plates">
@@ -174,14 +195,18 @@
                     <img src="images/goat-farming.webp" alt="Goat Farming">
                     <div class="handbut">
                     <h3>Goat Farming</h3>
-                    <button class="learn-more">Learn More</button></div>
+                    <a href="projects.html">
+                        <button class="learn-more">Learn More</button>
+                    </a></div>
                 </div>
 
                 <div class="service-card">
                     <img src="images/chicken-farming.webp" alt="Chicken Farming">
                     <div class="handbut">
                     <h3>Chicken Farming</h3>
-                    <button class="learn-more">Learn More</button></div>
+                    <a href="projects.html">
+                        <button class="learn-more">Learn More</button>
+                    </a></div>
                 </div>
                 <div class="service-card">
                     <img src="images/catfish-farming.webp" alt="Catfish Farming">
@@ -194,7 +219,9 @@
                     <img src="images/pig-farming.webp" alt="Catfish Farming">
                     <div class="handbut">
                     <h3>Pig Farming</h3>
-                    <button class="learn-more">Learn More</button></div>
+                    <a href="projects.html">
+                        <button class="learn-more">Learn More</button>
+                    </a></div>
                 </div>
 
                 <div class="service-card">
@@ -202,7 +229,9 @@
 
                     <div class="handbut">
                     <h3>Snail Farming</h3>
-                    <button class="learn-more">Learn More</button></div>
+                    <a href="projects.html">
+                        <button class="learn-more">Learn More</button>
+                    </a></div>
                 </div>
 
                 <div class="service-card">
@@ -210,7 +239,9 @@
 
                     <div class="handbut">
                     <h3>Rabbit Farming</h3>
-                    <button class="learn-more">Learn More</button></div>
+                    <a href="projects.html">
+                        <button class="learn-more">Learn More</button>
+                    </a></div>
                 </div>
 
                 <div class="service-card">
@@ -218,7 +249,9 @@
 
                     <div class="handbut">
                     <h3>Turkey Farming</h3>
-                    <button class="learn-more">Learn More</button></div>
+                    <a href="projects.html">
+                        <button class="learn-more">Learn More</button>
+                    </a></div>
                 </div>
                 <!-- Add more service cards as needed -->
             </div>
@@ -237,20 +270,26 @@
 
                   <div class="handbut">
                   <h3>Plantain Farming</h3>
-                  <button class="learn-more">Learn More</button></div>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
               </div>
               <div class="service-card">
                   <img src="images/maize-farming.webp" alt="Chicken Farming">
 
                   <div class="handbut">
                   <h3>Maize Farming</h3>
-                  <button class="learn-more">Learn More</button></div>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
               </div>
               <div class="service-card">
                   <img src="images/cassava-farming.webp" alt="Catfish Farming">
                   <div class="handbut">
                   <h3>Cassava Farming</h3>
-                  <button class="learn-more">Learn More</button></div>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
               </div>
               <!-- Add more service cards as needed -->
           </div>
@@ -280,13 +319,13 @@
 
 <section id="blog-posts">
     <h1>Best practices, news & recipes</h1>
-    
-    
     <div class="blog-container">
         <div class="featured-post">
             <img src="images/placeholder-image.webp" alt="Featured Post Image">
+            <div class="holder">
             <h3>Featured Post Title</h3>
             <p>Brief description of the featured post goes here.</p>
+        </div>
         </div>
         <div class="latest-posts">
             <h2>Latest Posts</h2>
@@ -315,22 +354,22 @@
         <section class="features">
             <div class="feature">
                 <img src="images/assets/la--shipping-fast.svg" alt="9ja-wide shipping">
-                <h1>9ja-wide shipping</h1>
+                <h2>9ja-wide shipping</h2>
                 <p>Convenient delivery across Nigeria, with trusted shipping partners</p>
             </div>
             <div class="feature">
                 <img src="images/assets/ic--outline-workspace-premium.svg" alt="Premium quality">
-                <h1>Premium quality</h1>
+                <h2>Premium quality</h2>
                 <p>The finest ethically grown, organic veg, meat, dairy & pantry goods</p>
             </div>
             <div class="feature">
                 <img src="images/assets/icon-park-outline--local.svg" alt="Locally sourced">
-                <h1>Locally sourced</h1>
+                <h2>Locally sourced</h2>
                 <p>Carefully curated selection from Nigeria's best farmers and food producers</p>
             </div>
             <div class="feature">
                 <img src="images/assets/tabler--shopping-cart-star.svg" alt="Sustainable shopping">
-                <h1>Sustainable shopping</h1>
+                <h2>Sustainable shopping</h2>
                 <p>A more sustainable, low-carbon way to shop for food online</p>
             </div>
         </section>
@@ -361,7 +400,7 @@
             </div>
             <div>
                 <h3>ABOUT</h3>
-                <a href="#">Our story</a>
+                <a href="about.html">Our story</a>
                 <a href="#">Media</a>
                 <a href="#">Sustainability</a>
             </div>

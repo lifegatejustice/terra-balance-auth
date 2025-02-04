@@ -301,22 +301,26 @@ const blogPosts = [
     {
         image: 'images/goat-farming.webp',
         title: 'How Goats Eat on the Field',
-        description: 'Learn about the natural grazing habits of goats and how they contribute to sustainable farming.'
+        description: 'Learn about the natural grazing habits of goats and how they contribute to sustainable farming.',
+        link: 'blog.html'
     },
     {
         image: 'images/chicken-farming.webp',
         title: '1 Night Chicken Survival',
-        description: 'Essential tips for overnight care and protection of your chicken flock.'
+        description: 'Essential tips for overnight care and protection of your chicken flock.',
+        link: 'blog.html'
     },
     {
         image: 'images/terrabalance-logo.webp',
         title: 'Terra Balance Plan Presentation',
-        description: 'Discover our comprehensive approach to sustainable farming and food production.'
+        description: 'Discover our comprehensive approach to sustainable farming and food production.',
+        link: 'blog.html'
     },
     {
         image: 'images/maize-farming.webp',
         title: 'How to Cultivate Maize',
-        description: 'A complete guide to growing and maintaining healthy maize crops.'
+        description: 'A complete guide to growing and maintaining healthy maize crops.',
+        link: 'blog.html'
     }
 ];
 
@@ -326,9 +330,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomIndex = Math.floor(Math.random() * blogPosts.length);
     const featuredPost = document.querySelector('.featured-post');
     featuredPost.innerHTML = `
-        <img src="${blogPosts[randomIndex].image}" alt="${blogPosts[randomIndex].title}">
-        <h2>${blogPosts[randomIndex].title}</h2>
-        <p>${blogPosts[randomIndex].description}</p>
+        <a href="${blogPosts[randomIndex].link}">  <!-- Added link to make it clickable -->
+            <img src="${blogPosts[randomIndex].image}" alt="${blogPosts[randomIndex].title}">
+            <div class="holder">
+                <h2>${blogPosts[randomIndex].title}</h2>
+                <p>${blogPosts[randomIndex].description}</p>
+            </div>
+        </a>
     `;
 
     // Update latest posts
@@ -340,8 +348,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (index !== randomIndex) { // Exclude the featured post
             const li = document.createElement('li');
             li.innerHTML = `
-                <img src="${post.image}" alt="${post.title}">
-                <a href="#">${post.title}</a>
+                <a href="${post.link}"> <!-- Added link to make each post clickable -->
+                    <img src="${post.image}" alt="${post.title}"><p>${post.title}</p>
+                    
+                </a> 
             `;
             latestPostsList.appendChild(li);
         }
@@ -349,3 +359,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Show the form after 2 seconds
+window.onload = () => {
+    setTimeout(() => {
+        document.getElementById('discountForm').style.display = 'flex';
+    }, 2000);
+};
+
+// Close the form when clicking the close button
+const closeButton = document.querySelector('.close-button');
+closeButton.addEventListener('click', function () {
+    document.getElementById('discountForm').style.display = 'none';
+});
+
+// Show the form again every 15 seconds
+setInterval(() => {
+    document.getElementById('discountForm').style.display = 'flex';
+}, 15000);
