@@ -324,42 +324,44 @@ const blogPosts = [
     }
 ];
 
-// Function to update blog posts
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    const latestPostsList = document.querySelector('.latest-posts ul');
+    const featuredPost = document.querySelector('.featured-post');
+
+    // Clear existing posts
+    latestPostsList.innerHTML = '';
+
     // Randomly select a featured post
     const randomIndex = Math.floor(Math.random() * blogPosts.length);
-    const featuredPost = document.querySelector('.featured-post');
+    const featuredPostData = blogPosts[randomIndex];
+
+    // Update the featured post
     featuredPost.innerHTML = `
-        <a href="${blogPosts[randomIndex].link}">  <!-- Added link to make it clickable -->
-            <img src="${blogPosts[randomIndex].image}" alt="${blogPosts[randomIndex].title}">
+        <a href="${featuredPostData.link}">
+            <img src="${featuredPostData.image}" alt="${featuredPostData.title}">
             <div class="holder">
-                <h2>${blogPosts[randomIndex].title}</h2>
-                <p>${blogPosts[randomIndex].description}</p>
+                <h2>${featuredPostData.title}</h2>
+                <p>${featuredPostData.description}</p>
             </div>
         </a>
     `;
 
-    // Update latest posts
-    const latestPostsList = document.querySelector('.latest-posts ul');
-    latestPostsList.innerHTML = ''; // Clear existing posts
-
-    // Add all posts to the latest posts section
+    // Add remaining posts to the latest posts section
     blogPosts.forEach((post, index) => {
         if (index !== randomIndex) { // Exclude the featured post
             const li = document.createElement('li');
             li.innerHTML = `
-                <a href="${post.link}"> <!-- Added link to make each post clickable -->
-                    <img src="${post.image}" alt="${post.title}"><p>${post.title}</p>
-                    
-                </a> 
+                <a href="${post.link}">
+                    <img src="${post.image}" alt="${post.title}">
+                    <p>${post.title}</p>
+                </a>
             `;
             latestPostsList.appendChild(li);
         }
     });
 });
 
-
-// Show the form after 2 seconds
+// Show the discount form after 2 seconds
 window.onload = () => {
     setTimeout(() => {
         document.getElementById('discountForm').style.display = 'flex';
@@ -367,12 +369,11 @@ window.onload = () => {
 };
 
 // Close the form when clicking the close button
-const closeButton = document.querySelector('.close-button');
-closeButton.addEventListener('click', function () {
+document.querySelector('.close-button').addEventListener('click', function () {
     document.getElementById('discountForm').style.display = 'none';
 });
 
-// Show the form again every 15 seconds
+// Show the form again every 100 seconds
 setInterval(() => {
     document.getElementById('discountForm').style.display = 'flex';
 }, 15000);

@@ -744,27 +744,40 @@ h2,h1,h3{
  }
  
 
-  .latest-posts {
-    flex: 1;
-  }
-
-  .latest-posts ul {
-    display: flex;
-    flex-direction: column; /* Ensures the items are displayed in a column */
-    gap: 10px; /* Adds space between the posts */
+ .latest-posts ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between posts */
 }
 
 .latest-posts li {
-    display: flex;
-    flex-direction: column; /* Arrange image and text in a column */
-    align-items: flex-start; /* Centers the content */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between image and text */
 }
 
-  .latest-posts img {
-    width: 100px;
-    height: 100px;
-    
-  }
+.latest-posts li img {
+  width: 160px; /* Adjust based on your layout */
+  height: 100px;
+  object-fit: cover;
+ /* Rounded corners for the images */
+}
+
+.latest-posts li a {
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.latest-posts li p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
 
   .image-container img {
     width: 100%;

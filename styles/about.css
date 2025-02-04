@@ -42,7 +42,7 @@
 
 .how p{
     text-align: center;
-    line-height: 45px;
+    line-height: 35px;
 }
 .overlay {
     position: absolute;
@@ -51,5 +51,20 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Black overlay */
+}
+
+.one{
+    margin-top: -250px;
+}
+
+.second{
+    background-color: var(--amber-yellow);
+    padding: 2vw;
+    color: var(--white);
+    line-height: 30px;
+}
+
+.two{
+    flex-direction: column-reverse;
 }
 }
