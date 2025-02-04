@@ -244,6 +244,8 @@ footer{
     .one{
         margin-top: -45vw;
     }
+
+    
     
     @media (min-width: 769px) and (max-width: 1024px) {
         .one{
@@ -436,4 +438,240 @@ footer{
         height:100%;
         transform: scale(1);
     }
-}
+}@media (min-width: 426px) and (max-width: 769px) {
+        .hero{
+            position: relative;
+        }
+        
+        .heroho{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.3rem;
+            position: absolute;
+            bottom: 404px;
+            text-align: center;
+            margin: 1vw;
+            color: var(--white);
+            text-shadow: 2px 2px 2px rgb(58, 58, 58);
+        }
+        
+        .hero img{
+            width: 100%;
+            height: auto;
+        
+        }
+        
+        .how{
+            z-index: 4;
+        }
+        
+        .how p{
+            text-align: center;
+            line-height: 35px;
+        }
+    
+    
+    
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Black overlay */
+        }
+        
+        .one{
+            margin-top: -45vw;
+        }
+
+        .second{
+            background-color: var(--amber-yellow);
+            padding: 2vw;
+            color: var(--white);
+            line-height: 30px;
+        }
+        
+        .two{
+            flex-direction: column-reverse;
+        }
+        
+        .mission-two-text li{
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .history{
+            background-color: var(--amber-yellow);
+            padding: 2vw;
+            color: var(--white);
+        }
+        
+        .history h1{
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        .history p{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        
+        .founders h1{
+            background-color: var(--earthy-green);
+            padding: 2vw;
+            margin-top: -20px;
+            color: var(--white);
+            text-align: center;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .founders {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        
+        }
+        .fake-found {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .founder-profile {
+            background-color: var(--black-variant);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .founder-profile img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .founder-profile h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .founder-profile p {
+            font-size: 1rem;
+            color: var(--white);
+        }
+        
+        .founder-profile:hover {
+            transform: translateY(-10px);
+        }
+        
+        .founderdet{
+            background-color: var(--amber-yellow);
+            color: var(--black-variant);
+            padding: 1vw;
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: -20px;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .commitment{
+            background-color: var(--black);
+            color: var(--white);
+            padding: 2vw;
+            margin-bottom: -160px;
+        }
+        
+        .commitment h1{
+            font-size: 36px;
+            height: 100%;
+        }
+        .commitment p{
+            font-size: 16px;
+            height: 100%;
+            line-height: 30px;
+        }
+        
+        .subscribe-section{
+            bottom: -150px;
+        
+        }
+        
+        footer{
+            margin-top: 150px;
+        }
+    
+        .mission-two-image img {
+        
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            overflow: hidden;
+            -o-object-fit: cover;
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            z-index: 4;
+            align-self: center;
+            
+            
+            
+        }
+    
+        .mission-two {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--black);
+        }
+    
+        .mission-two-text {
+            max-width: 100%;
+            margin: 2vw;
+            text-align: center;
+        }
+    
+        .mission-two-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+    
+        .mission-two-text p {
+            font-size: 16px;
+            color: var(--white);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+    
+        .mission-two-image{
+            background-color: var(--earthy-green);
+            width: 100%;
+        }
+    
+        .mission-two-image img {
+            max-width: 100%;
+            height:100%;
+            transform: scale(1);
+        }
+    }
