@@ -524,7 +524,8 @@ body {
 }
   .mission-two {
     display: flex;
-    align-items: stretch;
+    flex-direction: row-reverse;
+    align-items: center;
     justify-content: space-between;
     
     background-color: var(--earthy-green);
@@ -595,7 +596,7 @@ body {
 .mission-image img {
     
     width: 20px;
-    height: 20px;
+    height: 100%;
     transform: scale(1);
    
     object-fit: cover;
@@ -615,7 +616,10 @@ body {
     object-fit: cover;
     position: relative;
     width: 100%;
-    z-index: 1;
+    z-index: 4;
+    left: 113px;
+    align-self: center;
+    
     
 }
 
@@ -737,7 +741,7 @@ body {
   padding-bottom: 40px;
   color: var(--white);
   position: relative;
-  bottom: -110px;
+  bottom: -155px;
  /* Centering the section */
 }
 
