@@ -605,6 +605,7 @@ body {
     z-index: 1;
     
 }
+
 .mission-two-image img {
     
     width: 100%;
@@ -622,8 +623,9 @@ body {
 .mission-image{
   overflow: hidden;
 }
+
 .mission-two-image{
-  overflow: hidden;
+  
 }
 
 #farming-services{
