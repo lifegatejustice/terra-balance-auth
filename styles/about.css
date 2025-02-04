@@ -242,7 +242,7 @@ footer{
     }
     
     .one{
-        margin-top: -190px;
+        margin-top: -45vw;
     }
     
     @media (min-width: 769px) and (max-width: 1024px) {
@@ -261,6 +261,18 @@ footer{
     .two{
         flex-direction: column-reverse;
     }
+
+    .mission-two{
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+    .mission-two {
+        display: flex;
+        align-items: center;
+        background-color: var(--earthy-green);
+    }
+    
     
     .mission-two-text li{
         color: var(--white);
