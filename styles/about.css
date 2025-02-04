@@ -1,0 +1,47 @@
+:root {
+    --earthy-green: #17a638;
+    --lemon-yellow: #234774;
+    --amber-yellow: #1155cc;
+    --white: #ffffff;
+    --whitetrans: #8a8a8a;
+    --black: #000000;
+    --black-variant: #1c1c1c;
+  
+    --heading-font: "Outfit", serif;
+    --paragraph-font: "Poppins", sans-serif;
+    --body-font: "Josefin Sans", serif;
+  }
+
+@media (min-width: 768px) {
+
+.hero{
+    position: relative;
+}
+
+.heroho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    position: absolute;
+    bottom: 300px;
+    text-align: center;
+    margin: auto;
+    color: var(--white);
+    text-shadow: 2px 2px 2px rgb(58, 58, 58);
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+}
+
+.how p{
+    text-align: center;
+    line-height: 45px;
+}
+
+}
