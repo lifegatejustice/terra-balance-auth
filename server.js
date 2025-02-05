@@ -1,38 +1,40 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const session = require('express-session');
-const MongoStore = require('connect-mongo');
-const bcrypt = require('bcryptjs');
-const User = require('./models/User'); // User model
-const path = require('path');
+const express = require('express')
+const app = express()
+const bcrypt = require('bcrypt')
 
-const app = express();
+app.use(express.json())
 
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+const users = []
 
-// Serve static files from 'public' folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.get('/users', (req, res) => {
+  res.json(users)
+})
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("MongoDB Connected"))
-    .catch(err => console.error(err));
+app.post('/users', async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10)
+    const user = { name: req.body.name, password: hashedPassword }
+    users.push(user)
+    res.status(201).send()
+  } catch {
+    res.status(500).send()
+  }
+})
 
-// Configure Sessions
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
-    cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1 day
-}));
+app.post('/users/login', async (req, res) => {
+  const user = users.find(user => user.name === req.body.name)
+  if (user == null) {
+    return res.status(400).send('Cannot find user')
+  }
+  try {
+    if(await bcrypt.compare(req.body.password, user.password)) {
+      res.send('Success')
+    } else {
+      res.send('Not Allowed')
+    }
+  } catch {
+    res.status(500).send()
+  }
+})
 
-// Routes
-app.use('/auth', require('./routes/authRoutes')); // Authentication routes
-
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(3000)
