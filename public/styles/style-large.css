@@ -749,6 +749,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
+
   top: 0;
   left: 0;
   right: 0;
@@ -833,7 +834,8 @@ body {
   z-index: 98;
   width: 50%;
   right: -0px;
-  top: 138px;
+  margin-top: 5px;
+
   box-sizing: border-box;
   
   overflow: hidden !important;
@@ -867,7 +869,7 @@ body {
 }
 
 .image-section .close-button:hover {
-  background-color: #f4f4f4;
+  background-color: var(--lemon-yellow);
 }
 
 .image-section .close-button span {

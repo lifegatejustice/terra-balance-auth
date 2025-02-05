@@ -11,6 +11,14 @@
     --paragraph-font: "Poppins", sans-serif;
     --body-font: "Josefin Sans", serif;
   }
+.hero img{
+    width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 27vw;
+        z-index: 3;
+}
+
 
 @media (min-width: 768px) {
 
