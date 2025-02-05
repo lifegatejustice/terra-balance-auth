@@ -1,57 +1,63 @@
-// Function to handle user login
-function loginUser(email, password) {
-    // Implement login logic here (e.g., API call)
-    console.log('Logging in:', email);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const registerForm = document.getElementById('register-form');
+    const loginForm = document.getElementById('login-form');
+    const logoutBtn = document.getElementById('logout-btn');
 
-// Function to handle user registration
-function registerUser(username, email, password) {
-    // Implement registration logic here (e.g., API call)
-    console.log('Registering:', username, email);
-}
+    // Register User
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.getElementById('reg-username').value;
+        const password = document.getElementById('reg-password').value;
 
-// Function to handle user logout
-function logoutUser() {
-    // Implement logout logic here
-    console.log('Logging out');
-}
+        const res = await fetch('/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
 
-// Function to check user session
-function checkUserSession() {
-    // Implement session checking logic here
-    console.log('Checking user session');
-}
-
-// Event listeners for login and registration forms
-document.getElementById('login').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = this.querySelector('input[type="email"]').value;
-    const password = this.querySelector('input[type="password"]').value;
-    loginUser(email, password);
-});
-
-document.getElementById('register').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const password = this.querySelector('input[type="password"]').value;
-    registerUser(username, email, password);
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const loginDialog = document.getElementById("loginDialog");
-    const openLoginDialog = document.getElementById("openLoginDialog");
-    const closeLoginDialog = document.getElementById("closeLoginDialog");
-
-    // Open the dialog when the sign-in icon is clicked
-    openLoginDialog.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
-        loginDialog.showModal(); // Open dialog
+        if (res.ok) {
+            alert('Registration successful! Please log in.');
+        } else {
+            alert('Registration failed.');
+        }
     });
 
-    // Close the dialog when the cancel button is clicked
-    closeLoginDialog.addEventListener("click", function () {
-        loginDialog.close(); // Close dialog
+    // Login User
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.getElementById('login-username').value;
+        const password = document.getElementById('login-password').value;
+
+        const res = await fetch('/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        if (res.ok) {
+            alert('Login successful!');
+            checkAuthStatus();
+        } else {
+            alert('Invalid credentials.');
+        }
     });
+
+    // Logout User
+    logoutBtn.addEventListener('click', async () => {
+        await fetch('/auth/logout');
+        alert('Logged out');
+        checkAuthStatus();
+    });
+
+    // Check Authentication Status
+    async function checkAuthStatus() {
+        const res = await fetch('/auth/me');
+        if (res.ok) {
+            logoutBtn.style.display = 'block';
+        } else {
+            logoutBtn.style.display = 'none';
+        }
+    }
+
+    checkAuthStatus();
 });
