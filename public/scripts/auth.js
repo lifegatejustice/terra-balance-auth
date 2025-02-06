@@ -1,43 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const registerForm = document.getElementById('register-form');
-    const loginForm = document.getElementById('login-form');
+function updateAvatar() {
+    const avatarImage = document.querySelector('.user-avatar');
+    const isLoggedIn = localStorage.getItem('loggedInUser') !== null;
 
-    // Register User
-    registerForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('reg-username').value;
-        const email = document.getElementById('reg-email').value;
-        const password = document.getElementById('reg-password').value;
+    if (isLoggedIn) {
+        avatarImage.src = 'images/assets/account_circle_logged_in.svg'; // Path to the logged-in avatar image
+    } else {
+        avatarImage.src = 'images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'; // Default avatar image
+    }
+}
 
-        const res = await fetch('/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, password })
-        });
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', updateAvatar);
 
-        if (res.ok) {
-            alert('Registration successful! Please log in.');
-        } else {
-            alert('Registration failed.');
-        }
+    // In a real application, you would retrieve and verify these details from a backend.
+    if (!localStorage.getItem('users')) {
+      // Create a dummy user if none exists.
+      const users = { "Alice": { password: "password123", email: "alice@example.com" } };
+      localStorage.setItem('users', JSON.stringify(users));
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('login-username').value.trim();
+      const password = document.getElementById('login-password').value;
+      const users = JSON.parse(localStorage.getItem('users'));
+
+      if (users[username] && users[username].password === password) {
+        // Save the logged-in user in localStorage.
+        localStorage.setItem('loggedInUser', username);
+        // Redirect to the homepage.
+        window.location.href = 'index.html';
+      } else {
+        alert('Invalid credentials. Please try again.');
+      }
     });
-
-    // Login User
-    loginForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
-
-        const res = await fetch('/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
-
-        if (res.ok) {
-            alert('Login successful!');
-        } else {
-            alert('Invalid credentials.');
-        }
-    });
-});
+    

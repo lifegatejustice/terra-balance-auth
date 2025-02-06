@@ -377,3 +377,49 @@ document.querySelector('.close-button').addEventListener('click', function () {
 setInterval(() => {
     document.getElementById('discountForm').style.display = 'flex';
 }, 15000);
+
+
+// Function to generate an avatar image using a canvas.
+function generateAvatar(letter) {
+    const canvas = document.createElement("canvas");
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext("2d");
+    
+    // Draw a circle background.
+    ctx.fillStyle = "#2196F3"; // Blue background.
+    ctx.beginPath();
+    ctx.arc(32, 32, 32, 0, 2 * Math.PI);
+    ctx.fill();
+    
+    // Draw the letter.
+    ctx.fillStyle = "#FFFFFF"; // White letter.
+    ctx.font = "bold 32px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(letter.toUpperCase(), 32, 32);
+    
+    return canvas.toDataURL();
+  }
+
+  // Update all account icons (avatar images) with the dynamic avatar.
+  function updateUserAvatars() {
+    // Retrieve the logged-in user from localStorage.
+    const username = localStorage.getItem("loggedInUser");
+    if (username) {
+      const firstLetter = username.charAt(0);
+      const avatarSrc = generateAvatar(firstLetter);
+      
+      // Select all elements with class "user-avatar"
+      const avatarImages = document.querySelectorAll('.user-avatar');
+      avatarImages.forEach(img => {
+        img.src = avatarSrc;
+      });
+    }
+  }
+
+  // Call this function on page load.
+  window.onload = function() {
+    updateUserAvatars();
+    // ... any additional page load logic ...
+  }

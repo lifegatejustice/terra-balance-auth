@@ -1,0 +1,51 @@
+
+
+html,
+body {
+  font-family: var(--body-font);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+  .formonecontainer {
+    max-width: 300px;
+    background-color: var(--black);    
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .formonecontainer h2 {
+
+    color: var(--white);
+
+  }
+
+  input {
+    display: block;
+    width: 95%;
+    padding: 8px;
+    margin: 8px auto;
+    border: 1px solid #ccc;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--amber-yellow);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .toggle-link {
+    cursor: pointer;
+    color: var(--earthy-green);
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
+  }

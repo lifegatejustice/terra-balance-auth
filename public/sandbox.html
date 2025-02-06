@@ -1,21 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Mission</title>
-    <link rel="stylesheet" href="sandbox.css">
+  <meta charset="UTF-8">
+  <title>LocalStorage Auth Demo with Registration and Email</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    input {
+      display: block;
+      width: 90%;
+      padding: 8px;
+      margin: 8px auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .toggle-link {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
-    <section class="mission">
-        <div class="mission-text">
-            <h1>Our mission</h1>
-            <p>Farmfetch is a one-stop-shop for food lovers to find the very best organic and ethically grown UK produce, direct from the source. Shop locally and support sustainable, zero-air mile, British farming.</p>
-            <button class="learn-more">Learn more</button>
-        </div>
-        <div class="mission-image">
-            <img src="images/our-mission.jpg" alt="Food on plates">
-        </div>
-    </section>
+
+  <!-- Registration Form -->
+  <div id="register-container" class="container" style="display: none;">
+    <h2>Register</h2>
+    <form id="register-form">
+      <input type="text" id="reg-username" placeholder="Username" required>
+      <input type="email" id="reg-email" placeholder="Email" required>
+      <input type="password" id="reg-password" placeholder="Password" required>
+      <input type="password" id="reg-confirm-password" placeholder="Confirm Password" required>
+      <button type="submit">Register</button>
+    </form>
+    <div class="toggle-link" id="to-login">Already have an account? Login</div>
+  </div>
+
+  <!-- Login Form -->
+  <div id="login-container" class="container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="login-username" placeholder="Username" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="toggle-link" id="to-register">Don't have an account? Register</div>
+  </div>
+
+  <!-- Welcome Section -->
+  <div id="welcome-container" class="container" style="display: none;">
+    <h2>Welcome, <span id="user-display"></span>!</h2>
+    <button id="logout-button">Logout</button>
+  </div>
+
+  <script>
+    // Initialize the "users database" in localStorage if it doesn't exist.
+    // We'll store users as an object where each key is the username,
+    // and its value is another object containing the password and email.
+    if (!localStorage.getItem('users')) {
+      localStorage.setItem('users', JSON.stringify({}));
+    }
+
+    // Select DOM elements
+    const loginContainer = document.getElementById('login-container');
+    const registerContainer = document.getElementById('register-container');
+    const welcomeContainer = document.getElementById('welcome-container');
+    const userDisplay = document.getElementById('user-display');
+
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    const toRegisterLink = document.getElementById('to-register');
+    const toLoginLink = document.getElementById('to-login');
+    const logoutButton = document.getElementById('logout-button');
+
+    // Toggle between login and registration forms
+    toRegisterLink.addEventListener('click', () => {
+      loginContainer.style.display = 'none';
+      registerContainer.style.display = 'block';
+    });
+
+    toLoginLink.addEventListener('click', () => {
+      registerContainer.style.display = 'none';
+      loginContainer.style.display = 'block';
+    });
+
+    // Check if a user is already logged in when the page loads
+    window.onload = function() {
+      const loggedInUser = localStorage.getItem('loggedInUser');
+      if (loggedInUser) {
+        showWelcome(loggedInUser);
+      }
+    };
+
+    // Registration form submission
+    registerForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const username = document.getElementById('reg-username').value.trim();
+      const email = document.getElementById('reg-email').value.trim();
+      const password = document.getElementById('reg-password').value;
+      const confirmPassword = document.getElementById('reg-confirm-password').value;
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
+      }
+
+      // Retrieve current users
+      const users = JSON.parse(localStorage.getItem('users'));
+
+      if (users[username]) {
+        alert('Username already exists. Please choose another one.');
+        return;
+      }
+
+      // Save new user. Note: This stores the password in plain text.
+      users[username] = { email, password };
+      localStorage.setItem('users', JSON.stringify(users));
+
+      alert('Registration successful! Please check your email for confirmation (simulation) and then log in.');
+
+      // Simulate sending a confirmation email.
+      // IMPORTANT: In a real-world application, you would need a backend service
+      // to send an actual email using an email provider (e.g., SendGrid, Mailgun).
+      console.log(`Simulated email: Confirmation email sent to ${email}.`);
+
+      // Switch to login form after registration
+      registerContainer.style.display = 'none';
+      loginContainer.style.display = 'block';
+      registerForm.reset();
+    });
+
+    // Login form submission
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('login-username').value.trim();
+      const password = document.getElementById('login-password').value;
+
+      // Retrieve stored users
+      const users = JSON.parse(localStorage.getItem('users'));
+
+      if (users[username] && users[username].password === password) {
+        localStorage.setItem('loggedInUser', username);
+        showWelcome(username);
+      } else {
+        alert('Invalid credentials. Please try again.');
+      }
+    });
+
+    // Logout action
+    logoutButton.addEventListener('click', function() {
+      localStorage.removeItem('loggedInUser');
+      showLogin();
+    });
+
+    // Function to show the welcome section
+    function showWelcome(username) {
+      loginContainer.style.display = 'none';
+      registerContainer.style.display = 'none';
+      welcomeContainer.style.display = 'block';
+      userDisplay.textContent = username;
+    }
+
+    // Function to show the login form
+    function showLogin() {
+      welcomeContainer.style.display = 'none';
+      loginContainer.style.display = 'block';
+      loginForm.reset();
+    }
+  </script>
 </body>
 </html>

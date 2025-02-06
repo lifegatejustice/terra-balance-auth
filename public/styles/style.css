@@ -29,6 +29,43 @@ p{
   font-family: var(--paragraph-font);
 }
 
+.user-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5vw;
+}
+
+
+
+/* Dropdown styling */
+#dropdown {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+  min-width: 120px;
+}
+#dropdown button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1em;
+}
+#dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
 /* Scrollbar Styling */
 .carousel-container::-webkit-scrollbar {
   height: 8px; /* Height of the scrollbar */
@@ -825,6 +862,12 @@ h2,h1,h3{
   .navigation.open img {
     width: 10vw;
     height: auto;
+   
+  }
+
+  .user-icon img{
+    width: 9vw !important;
+        height: auto !important;
   }
 
   /* Hamburger button styles */
@@ -1640,6 +1683,18 @@ h2,h1,h3{
     bottom: 40px;
   }
 
+.user-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5vw;
+}
+  .user-icon img{
+    width: 8vw !important;
+        height: 8vw !important;
+  }
+
   #farming-services h2 {
     text-align: center;
     font-size: 36px;
@@ -1748,6 +1803,8 @@ h2,h1,h3{
   .navigation.open img {
     width: 4vw;
     height: auto;
+    right: 15px;
+    position: relative;
   }
 
   .second-icons {
@@ -2170,7 +2227,6 @@ h2,h1,h3{
     padding-right: 100%;
 
     border: none;
-    border-radius: 4px;
     max-width: 500px;
   }
 
