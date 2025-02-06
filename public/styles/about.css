@@ -13,8 +13,7 @@
   }
 .hero img{
     width: 100%;
-        height: auto;
-        position: relative;
+        height: auto;                  
         bottom: 27vw;
         z-index: 3;
 }
@@ -253,6 +252,13 @@ footer{
         margin-top: -45vw;
     }
 
+    .image-container img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 26vw;
+        z-index: 3;
+    }
     
     
     @media (min-width: 769px) and (max-width: 1024px) {
