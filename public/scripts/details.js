@@ -21,15 +21,19 @@ function generateAvatar(letter) {
 
   function updateProfile() {
     const username = localStorage.getItem("loggedInUser");
+    const userDetailsElement = document.getElementById("user-details");
+    const profileAvatarElement = document.getElementById("profile-avatar");
+  
     if (username) {
-      document.getElementById("user-details").textContent = "Username: " + username;
-      const avatarSrc = generateAvatar(username.charAt(0));
-      document.getElementById("profile-avatar").src = avatarSrc;
+      userDetailsElement.textContent = `Username: ${username}`;
+      profileAvatarElement.src = generateAvatar(username.charAt(0));
+      profileAvatarElement.alt = `Avatar for ${username}`;
     } else {
-      // If no user is logged in, show the the login form.
-      window.location.href = "index.html";
+      // Show a login form instead of redirecting
+      document.getElementById("login-form").style.display = "block";
     }
   }
+  
 
   document.getElementById("logout-btn").addEventListener("click", function() {
     localStorage.removeItem("loggedInUser");
