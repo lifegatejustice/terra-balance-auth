@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/style-large.css">
         <link rel="stylesheet" href="styles/about.css">
+        <script src="scripts/avatar.js" defer></script>
         <script src="scripts/script.js" defer></script>
-        <script src="scripts/auth.js" defer></script>
         <link rel="icon" href="images/terrabalance-logo.svg" type="image/webp">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,42 +24,51 @@
 <body>
     <header>
         <div class="headercontainer">
-            <div class="hero-img">   
+            <div class="hero-img">
                 <a href="index.html" target="_blank" style="text-decoration: none;">
                     <img src="images/terrabalance-logo.svg" alt="Clickable Image" loading="lazy">
-                </a></div>
-
+                </a>
+            </div>
+    
             <div class="first-icons">
-                <a href="#" class="search1" id="search-icon-link"><img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Search icon image" id="search-icon"></a>
+                <a href="#" class="search1" id="search-icon-link">
+                    <img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Search icon image" id="search-icon">
+                </a>
                 <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
-  
                 <a href="#"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
-                
-                <a href="#loginForm" title="Sign"><img src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon" srcset=""></a>
+                <span class="user-icon">
+                <a href="form.html" title="Sign">
+                    <img class="user-avatar" src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+                </a>
+            </span>
                 <button id="menu" aria-label="Toggle navigation">
                     <span class="hamburger-icon"></span>
-                </button></div>
+                </button>
+            </div>
+    
             <nav class="navigation" aria-label="Main navigation">
-               
                 <div class="search-container" id="search-bar">
                     <input type="text" id="search" placeholder="Search">
                     <button type="submit" id="searchButton">
-                        <img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Search icon image" class="search-icon"></button>
+                        <!-- If you need an account icon here as well -->
+                        <button><img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="search icon"></button>
+                    </button>
                 </div>
-            
+    
                 <a href="index.html">Home</a>
-                <a href="#">About Us</a>
+                <a href="about.html">About Us</a>
                 <a href="#">Contact Us</a>
                 <a href="#">Projects</a>
                 <div class="second-icons">
                     <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
                     <a href="#"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="shop"></a>
-
-                    
-                        <a href="#" id="openLoginDialog" title="Sign">
-                            <img src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
-                        </a>
-                    
+                    <span class="user-icon">
+                    <a href="form.html" title="Sign">
+                        <img class="user-avatar" src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+                    </a>
+                    <!-- Dropdown menu (hidden by default) -->
+        
+                </span>
                 </div>
             </nav>
         </div>
@@ -72,7 +81,7 @@
                 <picture>
                     <source srcset="images/hero-aboutus-large.jpeg" media="(min-width: 794px)">
                     <source srcset="images/hero-medium.png" media="(min-width: 427px)">
-                    <img src="images/turkey.jpg" alt="Fresh Turkey">
+                    <img src="images/abouthero.jpg" alt="Fresh Turkey">
                 </picture>
                 <div class="overlay"></div> <!-- Overlay div -->
             
@@ -191,8 +200,8 @@
         <div class="footer">
             <div>
                 <h3>MY ACCOUNT</h3>
-                <a href="#">Sign in</a>
-                <a href="#">Register</a>
+                <a href="form.html">Sign in</a>
+                <a href="form.html">Register</a>
                 <a href="#">Order status</a>
             </div>
             <div>
@@ -203,7 +212,7 @@
             </div>
             <div>
                 <h3>ABOUT</h3>
-                <a href="#">Our story</a>
+                <a href="about.html">Our story</a>
                 <a href="#">Media</a>
                 <a href="#">Sustainability</a>
             </div>

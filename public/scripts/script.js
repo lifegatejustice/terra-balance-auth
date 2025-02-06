@@ -382,7 +382,7 @@ setInterval(() => {
 // Function to generate an avatar image using a canvas.
 function generateAvatar(letter) {
     const canvas = document.createElement("canvas");
-    canvas.width = 64;
+    canvas.width = 64; // You can adjust the size as needed.
     canvas.height = 64;
     const ctx = canvas.getContext("2d");
     
@@ -402,24 +402,15 @@ function generateAvatar(letter) {
     return canvas.toDataURL();
   }
 
-  // Update all account icons (avatar images) with the dynamic avatar.
-  function updateUserAvatars() {
-    // Retrieve the logged-in user from localStorage.
+  // On page load, check if the user is logged in.
+  window.onload = function() {
     const username = localStorage.getItem("loggedInUser");
     if (username) {
+      // Extract the first letter of the username.
       const firstLetter = username.charAt(0);
+      // Generate a dynamic avatar.
       const avatarSrc = generateAvatar(firstLetter);
-      
-      // Select all elements with class "user-avatar"
-      const avatarImages = document.querySelectorAll('.user-avatar');
-      avatarImages.forEach(img => {
-        img.src = avatarSrc;
-      });
+      // Replace the default account icon with the generated avatar.
+      document.getElementById("user-avatar").src = avatarSrc;
     }
-  }
-
-  // Call this function on page load.
-  window.onload = function() {
-    updateUserAvatars();
-    // ... any additional page load logic ...
   }
