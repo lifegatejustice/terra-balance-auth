@@ -103,7 +103,7 @@
 }
 
 .product-card p {
-    color: #555;
+    color: var(--white);
 }
 
 .product-card button {
