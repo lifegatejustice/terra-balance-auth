@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/products.css">
+</head>
+<body>
+    <header>
+        <div class="headercontainer">
+            <div class="hero-img">   
+                <a href="index.html" target="_blank" style="text-decoration: none;">
+                    <img src="images/terrabalance-logo.svg" alt="Clickable Image" loading="lazy">
+                </a>
+            </div>
+    
+            <div class="first-icons">
+                <a href="#" class="search1" id="search-icon-link">
+                    <img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Search icon image" id="search-icon">
+                </a>
+                <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+                <a href="#"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+                <span class="user-icon">
+                <a href="form.html" title="Sign">
+                    <img class="user-avatar" src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+                </a>
+            </span>
+                <button id="menu" aria-label="Toggle navigation">
+                    <span class="hamburger-icon"></span>
+                </button>
+            </div>
+    
+            <nav class="navigation" aria-label="Main navigation">
+                <div class="search-container" id="search-bar">
+                    <input type="text" id="search" placeholder="Search">
+                    <button type="submit" id="searchButton">
+                        <!-- If you need an account icon here as well -->
+                        <button><img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="search icon"></button>
+                    </button>
+                </div>
+    
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Projects</a>
+                <div class="second-icons">
+                    <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+                    <a href="#"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="shop"></a>
+                    <span class="user-icon">
+                    <a href="form.html" title="Sign">
+                        <img class="user-avatar" src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+                    </a>
+                    <!-- Dropdown menu (hidden by default) -->
+        
+                </span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <h1>Product Details</h1>
+    <div class="product-details-container">
+        <img id="product-image" src="" alt="">
+        <h2 id="product-name"></h2>
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+
+    <script>
+        // JavaScript to handle product details
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Array of eco-friendly products
+        const ecoFriendlyProducts = [
+            {
+                id: 1,
+                name: "Organic Tomatoes",
+                description: "Fresh organic tomatoes grown without pesticides.",
+                price: 3.99,
+                image: "images/tomatoes.jpg"
+            },
+            {
+                id: 2,
+                name: "Free-Range Eggs",
+                description: "Eggs from free-range chickens, rich in flavor.",
+                price: 4.99,
+                image: "images/fresheggs.jpg"
+            },
+            {
+                id: 3,
+                name: "Compost",
+                description: "Nutrient-rich compost for your garden.",
+                price: 5.49,
+                image: "images/compost.jpg"
+            },
+            {
+                id: 4,
+                name: "Organic Cassava",
+                description: "Sustainably farmed cassava, perfect for cooking.",
+                price: 2.99,
+                image: "images/cassava-farming.webp"
+            },
+            {
+                id: 5,
+                name: "Fresh Fish",
+                description: "Locally sourced fresh fish, caught sustainably.",
+                price: 10.99,
+                image: "images/catfish-farming.webp"
+            },
+            {
+                id: 6,
+                name: "Organic Chicken",
+                description: "Free-range organic chicken, hormone-free.",
+                price: 12.99,
+                image: "images/chicken-farming.webp"
+            },
+            {
+                id: 7,
+                name: "Plantain",
+                description: "Fresh plantains, perfect for frying or baking.",
+                price: 1.99,
+                image: "images/plantain-farming.webp"
+            },
+            {
+                id: 8,
+                name: "Goat Meat",
+                description: "Sustainably sourced goat meat, rich in flavor.",
+                price: 15.99,
+                image: "images/goat-farming.webp"
+            },
+            {
+                id: 9,
+                name: "Snail",
+                description: "Farm-raised snails, a delicacy for gourmet dishes.",
+                price: 8.99,
+                image: "images/snail-farming.webp"
+            },
+            {
+                id: 10,
+                name: "Fresh Herbs",
+                description: "A variety of fresh herbs for your cooking needs.",
+                price: 2.49,
+                image: "images/herbs.jpg" // Placeholder image
+            }
+        ];
+
+        const product = ecoFriendlyProducts.find(p => p.id == productId);
+
+        if (product) {
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-name').innerText = product.name;
+            document.getElementById('product-description').innerText = product.description;
+            document.getElementById('product-price').innerText = `Price: $${product.price.toFixed(2)}`;
+        }
+
+        document.getElementById('add-to-cart').onclick = function() {
+            const quantity = document.getElementById('quantity').value;
+            // Logic to add the product to the cart
+            console.log(`Added ${quantity} of ${product.name} to cart.`);
+        };
+    </script>
+</body>
+</html>

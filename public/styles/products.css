@@ -1,0 +1,128 @@
+/* Styles for the Products Page */
+.josefin-sans {
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  :root {
+    --earthy-green: #17a638;
+    --lemon-yellow: #234774;
+    --amber-yellow: #1155cc;
+    --white: #ffffff;
+    --whitetrans: #8a8a8a;
+    --black: #000000;
+    --black-variant: #1c1c1c;
+  
+    --heading-font: "Outfit", serif;
+    --paragraph-font: "Poppins", sans-serif;
+    --body-font: "Josefin Sans", serif;
+  }
+  
+  html,
+  body {
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(150% - 50px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.product-card:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.6s ease-in-out;
+  }
+
+  .product-card:hover::before {
+    left: 100%;
+  }
+
+  .product-card h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: left;
+    transition: color 0.6s ease-in-out;
+  }
+
+  .product-card:hover h2 {
+    color: #ffcc00; /* Change to your preferred hover color */
+  }
+
+  .product-info{
+    background-color: var(--amber-yellow);
+    padding: 1vw;
+  }
+
+
+.product-card { width: 100%; }
+        
+        
+        @media (min-width: 769px) {
+            .product-card { width: calc(30% - 20px); }
+        }
+
+.product-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #555;
+}
+
+.product-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background-color: #45a049;
+}
+
+.add-product-form {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
