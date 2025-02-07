@@ -39,8 +39,8 @@ const ecoFriendlyProducts = [
     },
     {
         id: 6,
-        name: "Organic Chicken",
-        description: "Free-range organic chicken, hormone-free.",
+        name: " Chicken",
+        description: "Free chicken meat, hormone-free.",
         price: 12.99,
         image: "images/chicken-farming.webp"
     },
@@ -66,12 +66,75 @@ const ecoFriendlyProducts = [
         image: "images/snail-farming.webp"
     },
     {
-        id: 10,
-        name: "Fresh Herbs",
-        description: "A variety of fresh herbs for your cooking needs.",
-        price: 2.49,
-        image: "images/herbs.jpg" // Placeholder image
-    }
+    id: 11,
+    name: "Fresh Basil",
+    description: "A variety of fresh basil for your cooking needs.",
+    price: 2.99,
+    image: "images/basil.jpg"
+},
+{
+    id: 12,
+    name: "Organic Carrots",
+    description: "Fresh organic carrots grown without pesticides.",
+    price: 1.99,
+    image: "images/carrots.jpg"
+},
+{
+    id: 13,
+    name: "Free-Range Turkey",
+    description: "Eggs from free-range turkeys, rich in flavor.",
+    price: 6.99,
+    image: "images/turkey.jpg"
+},
+{
+    id: 14,
+    name: "Compost Tea",
+    description: "Nutrient-rich compost tea for your garden.",
+    price: 4.99,
+    image: "images/compost-tea.jpg"
+},
+{
+    id: 15,
+    name: "Organic Quinoa",
+    description: "Sustainably farmed quinoa, perfect for cooking.",
+    price: 3.99,
+    image: "images/quinoa.jpg"
+},
+{
+    id: 16,
+    name: "Fresh Shrimp",
+    description: "Locally sourced fresh shrimp, caught sustainably.",
+    price: 12.99,
+    image: "images/shrimp.jpg"
+},
+{
+    id: 17,
+    name: "Organic Beef",
+    description: "Free-range organic beef, hormone-free.",
+    price: 14.99,
+    image: "images/beef.jpg"
+},
+{
+    id: 18,
+    name: "Plantain Chips",
+    description: "Fresh plantain chips, perfect for snacking.",
+    price: 2.99,
+    image: "images/plantain-chips.jpg"
+},
+{
+    id: 19,
+    name: "Goat Cheese",
+    description: "Sustainably sourced goat cheese, rich in flavor.",
+    price: 8.99,
+    image: "images/goat-cheese.jpg"
+},
+{
+    id: 20,
+    name: "Snail Sauce",
+    description: "Farm-raised snail sauce, a delicacy for gourmet dishes.",
+    price: 9.99,
+    image: "images/snail-sauce.jpg"
+}
 ];
 
 // Function to display products

@@ -31,13 +31,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: -1vw;
 }
 
 .product-card {
     display:flex ;
     flex-direction: column;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(140, 140, 140);
     margin: 10px;
     width: calc(150% - 50px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
@@ -45,39 +46,103 @@
 
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
-.product-card:hover:before {
-    content: "";
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -1vw;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid rgb(140, 140, 140);
+    margin: 10px;
+    width: calc(150% - 50px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    animation: cardEntrance 0.6s ease-out forwards;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+.product-card::before {
+    content: '';
     position: absolute;
     top: 0;
     left: -100%;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
     );
-    transition: left 0.6s ease-in-out;
-  }
+    transform: skewX(-25deg);
+    transition: all 0.6s;
+}
 
-  .product-card:hover::before {
-    left: 100%;
-  }
+.product-card:hover::before {
+    left: 120%;
+}
 
-  .product-card h2 {
-    font-size: 24px;
-    margin: 0;
-    margin-top: 20px;
-    text-align: left;
-    transition: color 0.6s ease-in-out;
-  }
+.product-card h3 {
+    transform: translateY(20px);
+    opacity: 100;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+}
 
-  .product-card:hover h2 {
-    color: #ffcc00; /* Change to your preferred hover color */
-  }
+.product-card p {
+    opacity: 100;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
+}
+
+.product-card:hover h3,
+.product-card:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px) rotate3d(1, 0, 0, 45deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate3d(0, 0, 0, 0);
+    }
+}
+
+/* Staggered animation delay */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+/* Add more nth-child rules as needed */
+
+/* Optional: Add hover effect on container for smooth transitions */
+.product-container:hover .product-card:not(:hover) {
+    filter: brightness(0.95);
+    transform: scale(0.98);
+}
 
   .product-info{
     display: flex;
@@ -90,39 +155,117 @@
     overflow: hidden;
   }
 
+
+
   section h1{
     background-color: var(--earthy-green);
     padding: 2vw;
     width: 100%;
-    position: absolute;
+    color: var(--white);
+    text-align: center;
+    
   }
 
   main{
     margin-top: 10vw;
   }
 
+  
+
 .product-card { width: 100%; }
+
+
+@media (min-width: 1025px) {
+    section h1 {
+        margin-top: -65px !important;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+}
         
         
-        @media (min-width: 769px) {
+        @media (min-width: 1008px) {
             .product-card { width: calc(30% - -12px); }
         }
-        @media (min-width: 426px) {
+        @media (min-width: 769px) {
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
             section h1{
-                background-color: var(--earthy-green);
-                padding: 2vw;
-                margin-top: 20px;
+                margin: -36px;
               }
-        }
-        @media (min-width: 769px) {
-            .product-card { width: calc(30% - -12px); }
+
+              .product-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 7vw;
+            }
         }
 
+
+        @media (min-width: 628px) and (max-width: 1007px) { 
+            .product-card { width: calc(50% - 23px) !important;  }
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .product-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: -1vw;
+            }
+
+            .product-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 7vw;
+            }
+
+        }
+        @media (min-width: 426px) and (max-width: 769px) {
+            
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+            section h1{
+                margin-top: 0;
+              }
+
+
+        }
+        
+
+        @media (min-width:320px)and(max-width: 426px) {
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }  
+        }
+
+        
 
 .product-card img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: center;
 }
 
 .product-card h3 {
