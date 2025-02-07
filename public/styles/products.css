@@ -120,7 +120,7 @@
 }
 
 .product-card button:hover {
-    background-color: #45a049;
+    background-color: var(--lemon-yellow);
 }
 
 .add-product-form {
@@ -129,4 +129,9 @@
     background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--earthy-green);
 }
