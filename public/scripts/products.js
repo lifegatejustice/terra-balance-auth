@@ -14,7 +14,7 @@ const ecoFriendlyProducts = [
         name: "Free-Range Eggs",
         description: "Eggs from free-range chickens, rich in flavor.",
         price: 4.99,
-        image: "images/fresheggs.jpg"
+        image: "images/fresheggs-medium.jpg"
     },
     {
         id: 3,
@@ -147,7 +147,7 @@ function displayProducts() {
             <img src="${product.image}" alt="${product.name}">
             <div class="product-info">
             <h3>${product.name}</h3>
-            <p>${product.description}</p>
+            <p>${product.description}</p> 
             <p><b class="price">Price: $${product.price.toFixed(2)}</b></p>
             <button onclick="addToCart(${product.id})">Add to Cart</button></div>
         `;
