@@ -38,7 +38,16 @@
     color: var(--white);
     padding-top: 2vw;
     padding-bottom: 2vw;
+    padding-left: 1vw;
   }
+
+  @media (max-width: 426px) {
+
+    .one {
+      padding-left: 5vw !important;
+    }
+}
+
 
   .input-group>.form-control{
     position: relative;
@@ -80,14 +89,36 @@
     
 }
 
+.nav-link {
+    color: var(--white) !important;
+    position: relative;
+}
+
 .row {
     background-color: var(--black);
     color: var(--white);
 }
 
+
+.row col-md-6 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  
+}
+
 .text-muted {
     color: var(--white) !important;
 }
+
+.start-100 {
+    left: 87% !important;
+ }
+ .top-0 {
+   bottom: 27px !important;
+ }
+ .position-absolute {
+   position: absolute !important;
+ }
 
 .product-button {
     width: 50%;

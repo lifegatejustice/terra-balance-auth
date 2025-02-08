@@ -414,3 +414,6 @@ function generateAvatar(letter) {
       document.getElementById("user-avatar").src = avatarSrc;
     }
   }
+
+
+  

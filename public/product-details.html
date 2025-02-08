@@ -42,7 +42,7 @@
             <a href="#" class="search1" id="search-icon-link">
                 <img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Search icon image" id="search-icon">
             </a>
-            <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+            <a class="nav-link" href="cart.html"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""><span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span></a>
             <a href="products.html"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
             <span class="user-icon">
             <a href="form.html" title="Sign">
@@ -69,13 +69,11 @@
             <a href="#">Projects</a>
             <div class="second-icons">
 
-                <a class="nav-link" href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""><span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span></a>
+                <a class="nav-link" href="cart.html"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""><span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span></a>
 
 
 
 
-
-                <a href="#"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
                 <a href="products.html"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="shop"></a>
                 <span class="user-icon">
                 <a href="form.html" title="Sign">
@@ -298,23 +296,85 @@
 
         document.getElementById("quantity").addEventListener("input", updatePrice);
 
-        document.getElementById("add-to-cart").addEventListener("click", function() {
-            if (!product) return;
-            let quantity = parseInt(document.getElementById("quantity").value);
-            let cartCount = localStorage.getItem("cartCount") ? parseInt(localStorage.getItem("cartCount")) : 0;
-            cartCount += quantity;
-            localStorage.setItem("cartCount", cartCount);
-            document.getElementById("cart-count").innerText = cartCount;
-            document.getElementById("cart-message").innerText = "Product added to cart!";
-            setTimeout(() => {
-                document.getElementById("cart-message").innerText = "";
-            }, 2000);
-        });
+document.getElementById("add-to-cart").addEventListener("click", function() {
+    if (!product) return;
+    let quantity = parseInt(document.getElementById("quantity").value);
+    let cartCount = localStorage.getItem("cartCount") ? parseInt(localStorage.getItem("cartCount")) : 0;
+    cartCount += quantity;
+    localStorage.setItem("cartCount", cartCount);
+    document.getElementById("cart-count").innerText = cartCount;
+    document.getElementById("cart-message").innerText = "Product added to cart!";
+    setTimeout(() => {
+        document.getElementById("cart-message").innerText = "";
+    }, 2000);
+    updateCartCount();
+});
 
-        document.addEventListener("DOMContentLoaded", function() {
-            let cartCount = localStorage.getItem("cartCount") ? parseInt(localStorage.getItem("cartCount")) : 0;
-            document.getElementById("cart-count").innerText = cartCount;
-        });
+document.addEventListener("DOMContentLoaded", function() {
+    let cartCount = localStorage.getItem("cartCount") ? parseInt(localStorage.getItem("cartCount")) : 0;
+    document.getElementById("cart-count").innerText = cartCount;
+    updateCartCount();
+});
+
+// Function to get logged-in user
+function getLoggedInUser() {
+    return JSON.parse(localStorage.getItem("loggedInUser")); // Expected format: { id: 123, name: "John Doe" }
+}
+
+// Function to get cart key based on logged-in user
+function getCartKey() {
+    let user = getLoggedInUser();
+    return user ? `cartItems_user_${user.id}` : "cartItems_guest";
+}
+
+// Function to get user-specific cart
+function getCartItems() {
+    return JSON.parse(localStorage.getItem(getCartKey())) || [];
+}
+
+// Function to update cart count
+function updateCartCount() {
+    let cartItems = getCartItems();
+    document.getElementById("cart-count").innerText = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+}
+
+// Add to cart event
+document.getElementById("add-to-cart").removeEventListener("click", function() {
+    if (!product) return;
+    let quantity = parseInt(document.getElementById("quantity").value);
+    let cartItems = getCartItems();
+
+    let existingItem = cartItems.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cartItems.push({ ...product, quantity });
+    }
+
+    localStorage.setItem(getCartKey(), JSON.stringify(cartItems));
+    document.getElementById("cart-message").innerText = "Product added to cart!";
+    setTimeout(() => document.getElementById("cart-message").innerText = "", 2000);
+    updateCartCount();
+});
+
+document.getElementById("add-to-cart").addEventListener("click", function() {
+    if (!product) return;
+    let quantity = parseInt(document.getElementById("quantity").value);
+    let cartItems = getCartItems();
+
+    let existingItem = cartItems.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cartItems.push({ ...product, quantity });
+    }
+
+    localStorage.setItem(getCartKey(), JSON.stringify(cartItems));
+    document.getElementById("cart-message").innerText = "Product added to cart!";
+    setTimeout(() => document.getElementById("cart-message").innerText = "", 2000);
+    updateCartCount();
+});
+
     </script>
 </body>
 </html>

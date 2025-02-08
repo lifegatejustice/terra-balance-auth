@@ -29,6 +29,75 @@ p{
   font-family: var(--paragraph-font);
 }
 
+
+.start-100 {
+   left: 0% !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+.start-100 {
+  left: 100%;
+}
+.top-0 {
+  font-style: normal;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.badge {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: var(--bs-border-radius);
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+}
+.position-absolute {
+  position: absolute !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+.start-100 {
+  left: 87% !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+.start-100 {
+  left: 0% !important;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+
 .user-icon {
   display: flex;
   justify-content: center;
