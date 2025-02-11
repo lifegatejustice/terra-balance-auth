@@ -1,0 +1,24 @@
+.help{
+    background-color: var(--earthy-green);
+    color: var(--white);
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+ 
+    
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+    .help {
+        margin-top: 57px;
+    }
+}
+
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .help {
+        margin-top: 65px;
+        padding-top: 0;
+    }
+}

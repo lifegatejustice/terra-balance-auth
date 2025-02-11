@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Balance</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/avatar.js"defer></script>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <script src="scripts/script.js" defer></script>
+    <link rel="icon" href="images/terrabalance-logo.svg" type="image/webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <meta name="description" content="">
+    <meta name="author" content="Lifegate Justice">
+    
+</head>
+<body>
+    <header>
+    <div class="headercontainer">
+        <div class="hero-img">   
+            <a href="index.html" target="_blank" style="text-decoration: none;">
+                <img src="images/terrabalance-logo.svg" alt="Clickable Image" loading="lazy">
+            </a>
+        </div>
+
+        <div class="first-icons">
+            <a href="#" class="search1" id="search-icon-link">
+                <img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Search icon image" id="search-icon">
+            </a>
+            <a class="nav-link" href="cart.html"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""><span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span></a>
+            <a href="products.html"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+            <span class="user-icon">
+            <a href="form.html" title="Sign">
+                <img class="user-avatar" src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+            </a>
+        </span>
+            <button id="menu" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <div class="search-container" id="search-bar">
+                <input type="text" id="search" placeholder="Search">
+                <button type="submit" id="searchButton">
+                    <!-- If you need an account icon here as well -->
+                    <button><img src="images/assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="search icon"></button>
+                </button>
+            </div>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Projects</a>
+            <div class="second-icons">
+                <a class="nav-link" href="cart.html"><img src="images/assets/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""><span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span></a>
+                <a href="products.html"><img src="images/assets/store_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="shop"></a>
+                <span class="user-icon">
+                <a href="form.html" title="Sign">
+                    <img class="user-avatar" src="images/assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="account icon">
+                </a>
+                <!-- Dropdown menu (hidden by default) -->
+    
+            </span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section>
+            <div class="help">
+                <h1>Help & Support</h1>
+                <h2>Need a helping hand?</h2>
+                <p>We're here to help and eager to hear from you! Reach out to us using our contact informationLet Terra Balance Enterprises be your partner in agriculture, guiding you toward success and sustainability in farming.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="getintouch">
+                <h1>Get in Touch</h1>
+                <p>We're here to answer any questions you have about our school, our programs, or the application process. Please use the contact information below to reach out to our team, and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group
+                ">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>  
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+   
+    <section class="subscribe-section">
+        <h1>Get 5% off your first order</h1>
+        <p>Sign up for emails to receive 5% off your first Terra Balance order, plus foodie inspiration direct to your inbox</p>
+        <div class="subscribe-form">
+            <form action="" method="get">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+    </section>
+
+
+    <div id="subscribeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <p>Subscribed</p>
+        </div>
+    </div> 
+</main>
+    <footer>
+        <div class="footer">
+            <div>
+                <h3>MY ACCOUNT</h3>
+                <a href="form.html">Sign in</a>
+                <a href="form.html">Register</a>
+                <a href="cart.html">Order status</a>
+            </div>
+            <div>
+                <h3>HELP</h3>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Sizing</a>
+            </div>
+            <div>
+                <h3>ABOUT</h3>
+                <a href="about.html">Our story</a>
+                <a href="#footer">Media</a>
+                <a href="">Sustainability</a>
+            </div>
+            <div>
+                <h3>LEGAL STUFF</h3>
+                <a href="#">Terms of use</a>
+                <a href="#">Terms of sale</a>
+                <a href="#">Privacy policy</a>
+            </div>
+        </div>
+
+        <h3 class="follow">FOLLOW US</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61571042126610" target="_blank"><img src="images/assets/entypo-social--facebook-with-circle.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/terrabalanceenterprise/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="images/assets/entypo-social--instagram-with-circle.svg" alt="instagram"></a>
+            <a href="https://chat.whatsapp.com/JyJrw8Vk1P0LM1suNPlMFD" target="_blank"><img src="images/assets/mage--whatsapp-filled.svg" alt="whatsapp"></a>
+            <a href="https://www.linkedin.com/company/terra-balance-enterprises/posts/?feedView=all" target="_blank"><img src="images/assets/entypo-social--linkedin-with-circle.svg" alt="linkedin"></a>
+        </div>  
+        <p>&copy; 2025 Terra Balance</p>
+    </footer>
+</body>
+</html>
+
+

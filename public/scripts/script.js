@@ -437,17 +437,37 @@ function generateAvatar(letter) {
     }
   }
 
+  
+
   function showModal() {
     const modal = document.getElementById("subscribeModal");
     modal.style.display = "block";
+    // Hide the discount form
+    const discountForm = document.getElementById("discountForm");
+    if (discountForm) {
+        discountForm.style.display = "none"; // Hide the discount form
+    }
+    // Store subscription status in local storage
+    localStorage.setItem("subscribed", "true");
 }
 
-// Attach the function to the subscribe button
+// Check subscription status on page load
 document.addEventListener("DOMContentLoaded", function() {
-    const subscribeButton = document.querySelector(".subscribe-form button[type='submit']");
-    subscribeButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-        showModal();
+    const isSubscribed = localStorage.getItem("subscribed");
+    if (isSubscribed) {
+        const discountForm = document.getElementById("discountForm");
+        if (discountForm) {
+            discountForm.style.display = "none"; // Hide the discount form if already subscribed
+        }
+    }
+
+    const subscribeButtons = document.querySelectorAll(".subscribe-form button[type='submit'], #discountForm button[type='submit']");
+    
+    subscribeButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            showModal();
+        });
     });
 
     const closeModalButton = document.getElementById("closeModal");
@@ -463,7 +483,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
-
-  
