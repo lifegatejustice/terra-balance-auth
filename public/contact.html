@@ -78,36 +78,37 @@
     <main>
         <section>
             <div class="help">
-                <h1>Help & Support</h1>
-                <h2>Need a helping hand?</h2>
-                <p>We're here to help and eager to hear from you! Reach out to us using our contact informationLet Terra Balance Enterprises be your partner in agriculture, guiding you toward success and sustainability in farming.</p>
+                <h2>Help & Support</h2>
+                <h3>Need a helping hand?</h3>
+                <div class="po">
+                <p>We're here to help and eager to hear from you! Reach out to us using our contact informationLet Terra Balance Enterprises be your partner in agriculture, guiding you toward success and sustainability in farming.</p></div>
             </div>
         </section>
 
-        <section>
+        <section class="contact">
             <div class="getintouch">
                 <h1>Get in Touch</h1>
                 <p>We're here to answer any questions you have about our school, our programs, or the application process. Please use the contact information below to reach out to our team, and we'll get back to you as soon as possible.</p>
             </div>
 
             <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group
-                ">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>  
-                <div class="form-group">
+                <div class="contact-form">
+                    <div class="row">
+                        <div class="half-width">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="my-input">
+                        </div>
+                        <div class="half-width">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="my-input">
+                        </div>
+                    </div>
+                    <label for="phone">Phone number</label>
+                    <input type="text" id="phone" name="phone" class="my-input">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" rows="5" class="my-input"></textarea>
+                    <button type="submit">Send</button>
                 </div>
-                <button type="submit">Send</button>
             </form>
         </section>
 
