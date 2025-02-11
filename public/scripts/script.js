@@ -182,6 +182,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector('.two');
+    const prevButton = document.querySelector('.prevo');
+    const nextButton = document.querySelector('.nexto');
+
+    prevButton.addEventListener('click', function() {
+        carousel.scrollBy({
+            top: 0,
+            left: -carousel.clientWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    nextButton.addEventListener('click', function() {
+        carousel.scrollBy({
+            top: 0,
+            left: carousel.clientWidth,
+            behavior: 'smooth'
+        });
+    });
+});
+
 // New code for customer reviews
 document.addEventListener("DOMContentLoaded", function() {
     const reviews =[
@@ -414,6 +436,34 @@ function generateAvatar(letter) {
       document.getElementById("user-avatar").src = avatarSrc;
     }
   }
+
+  function showModal() {
+    const modal = document.getElementById("subscribeModal");
+    modal.style.display = "block";
+}
+
+// Attach the function to the subscribe button
+document.addEventListener("DOMContentLoaded", function() {
+    const subscribeButton = document.querySelector(".subscribe-form button[type='submit']");
+    subscribeButton.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        showModal();
+    });
+
+    const closeModalButton = document.getElementById("closeModal");
+    closeModalButton.addEventListener("click", function() {
+        const modal = document.getElementById("subscribeModal");
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        const modal = document.getElementById("subscribeModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
 
 
   

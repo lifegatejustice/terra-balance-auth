@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/normalize.css">
     <script src="scripts/script.js" defer></script>
     <script src="scripts/avatar.js"defer></script>
+    
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
     <script src="scripts/script.js" defer></script>
@@ -168,14 +169,14 @@
             <div class="container">
                 <div class="category">
                     <a class="category-link" href="products.html"></a>
-                    <img alt="Category for Women" src="images/kelly-sikkema-Uh5GWNUGgGY-unsplash.jpg">
+                    <img alt="Category for Shopping" src="images/kelly-sikkema-Uh5GWNUGgGY-unsplash.jpg">
                     <h2>Shop</h2>
                     <a class="cta-button" href="products.html">Discover →</a>
                 </div>
             
                 <div class="category">
                     <a class="category-link" href="products.html"></a>
-                    <img alt="Category for Men" src="images/kelly-sikkema-6vudIBHwLe8-unsplash.jpg">
+                    <img alt="Category for Selling" src="images/kelly-sikkema-6vudIBHwLe8-unsplash.jpg">
                     <h2>Sell</h2>
                     <a class="cta-button" href="products.html">Start Selling →</a>
                 </div>
@@ -189,7 +190,7 @@
             <div class="mission-text">
                 <h1>Our mission</h1>
                 <p>At Terra Balance Enterprises we are more than just a business. We are catalysts for change, pioneers in transforming the African agricultural sector. Our journey began with a vision to empower smallholder farmers across the continent, and today, we stand at the forefront of innovation, leveraging technology to drive sustainable growth and prosperity.</p>
-                <button class="learn-more">Learn more <a href="about.html"></a></button>
+                <a href="about.html"><button class="learn-more">Learn more </button></a>
             </div>
             <div class="mission-image">
                 <img src="images/our-mission.jpg" alt="Food on plates">
@@ -198,7 +199,7 @@
 
         <section id="farming-services">
             <h2>Our Specialized Farming Services</h2>
-            <h3>Livestock Farming</h3>
+            <h2 class="cat">Livestock Farming</h2>
             <div class="carousel">
               
                 <div class="service-card">
@@ -272,8 +273,8 @@
         </section>
 
         <section id="farming-services">
-            <h3>Crop Farming</h3>
-          <div class="carousel">
+            <h2 class="cat">Crop Farming</h2>
+          <div class="carousel two">
             
               <div class="service-card">
                   <img src="images/plantain-farming.webp" alt="Goat Farming">
@@ -301,11 +302,46 @@
                     <button class="learn-more">Learn More</button>
                 </a></div>
               </div>
+              <div class="service-card">
+                  <img src="images/pexels-zeya-irish-170428250-15002300.webp" alt="Potato Farming">
+                  <div class="handbut">
+                  <h3>Potato Farming</h3>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
+              </div>
+              <div class="service-card">
+                  <img src="images/tomato-farming.webp" alt="Tomatoe Farming">
+                  <div class="handbut">
+                  <h3>Tomatoe Farming</h3>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
+              </div>
+
+              <div class="service-card">
+                  <img src="images/whole-and-halved-raw-african-yam-732x549-thumbnail.webp" alt="Yam Farming">
+                  <div class="handbut">
+                  <h3>Yam Farming</h3>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
+              </div>
+
+              <div class="service-card">
+                  <img src="images/pexels-wadimoo-18297019.webp" alt="Cucumber Farming">
+                  <div class="handbut">
+                  <h3>Cucumber Farming</h3>
+                  <a href="projects.html">
+                    <button class="learn-more">Learn More</button>
+                </a></div>
+              </div>
+
               <!-- Add more service cards as needed -->
           </div>
           <div class="carousel-buttons">
-              <button class="prev"><img src="images/assets/arrow_back_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" ></button>
-              <button class="next"><img src="images/assets/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" ></button>
+              <button class="prevo"><img src="images/assets/arrow_back_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" ></button>
+              <button class="nexto"><img src="images/assets/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" ></button>
           </div>
         </section>
 
@@ -394,13 +430,21 @@
             </form>
             </div>
         </section>
+
+
+        <div id="subscribeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="closeModal">&times;</span>
+                <p>Subscribed</p>
+            </div>
+        </div>
     <footer>
         <div class="footer">
             <div>
                 <h3>MY ACCOUNT</h3>
                 <a href="form.html">Sign in</a>
                 <a href="form.html">Register</a>
-                <a href="#">Order status</a>
+                <a href="cart.html">Order status</a>
             </div>
             <div>
                 <h3>HELP</h3>
@@ -411,8 +455,8 @@
             <div>
                 <h3>ABOUT</h3>
                 <a href="about.html">Our story</a>
-                <a href="#">Media</a>
-                <a href="#">Sustainability</a>
+                <a href="#footer">Media</a>
+                <a href="">Sustainability</a>
             </div>
             <div>
                 <h3>LEGAL STUFF</h3>

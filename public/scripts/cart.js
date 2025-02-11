@@ -1,26 +1,36 @@
-// JavaScript for managing the shopping cart
+// cart.js
 
-let cart = [];
-
-// Function to add an item to the cart
-function addToCart(productId, quantity) {
-    const existingProductIndex = cart.findIndex(item => item.id === productId);
-    if (existingProductIndex > -1) {
-        cart[existingProductIndex].quantity += quantity;
-    } else {
-        cart.push({ id: productId, quantity: quantity });
-    }
-    updateCartCount();
+// Function to get logged-in user (adjust as needed)
+function getLoggedInUser() {
+    return JSON.parse(localStorage.getItem("loggedInUser"));
 }
 
-// Function to update the cart count in the navigation bar
+// Function to determine the key for storing cart items
+function getCartKey() {
+    const user = getLoggedInUser();
+    return user ? `cartItems_user_${user}` : "cartItems_guest";
+}
+
+// Function to retrieve cart items from localStorage
+function getCartItems() {
+    return JSON.parse(localStorage.getItem(getCartKey())) || [];
+}
+
+// Function to update the cart count display
 function updateCartCount() {
-    const cartCountElement = document.getElementById('cart-count');
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-    cartCountElement.innerText = totalItems;
+    const cartItems = getCartItems();
+    const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) { // Only update if the element exists on the page
+        cartCountElement.innerText = totalQuantity;
+    }
 }
 
-// Initialize cart count on page load
-document.addEventListener('DOMContentLoaded', function() {
-    updateCartCount();
-});
+// Optionally, you can call updateCartCount on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
+// Expose functions if you need to call them from other scripts
+window.updateCartCount = updateCartCount;
+window.getCartItems = getCartItems;
+window.getCartKey = getCartKey;
+window.getLoggedInUser = getLoggedInUser;
