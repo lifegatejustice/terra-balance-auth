@@ -95,7 +95,7 @@
 }
 
  .row{
-    width: calc(200% - 40px);
+    width: calc(100% - 40px);
     
 }
 
@@ -113,10 +113,37 @@ label{
 .contact{
     background-color: var(--black);
     padding-top: 1vw;
+    
     margin-bottom: -20px !important;
     
     
 }
+
+form{
+    margin-left: 25vw !important;
+    margin-right: 2vw;
+    width: calc(80% - 20px);
+}
+
+.subs{
+  
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  margin-left: 8px !important;
+  margin-right: 0px;
+}
+
+.contact-form button {
+    background-color: var(--amber-yellow);
+    color: var(--white);
+    border: none;
+    font-size: 23px;
+    padding: 20px 80px !important;
+    cursor: pointer;
+    
+}
+
 }
 
 
@@ -154,6 +181,17 @@ label{
 form{
     margin-left: 2vw;
     margin-right: 2vw;
+    
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 200px !important;
+    padding: 30px;
+    grid-column: 1 / 3;
+    margin-bottom: 20px;
+    border: none;
+    display: flex;
 }
 
 .contact-form {

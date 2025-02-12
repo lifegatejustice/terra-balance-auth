@@ -752,7 +752,7 @@ h2,h1,h3{
 }
 
 .subscribe-form {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
