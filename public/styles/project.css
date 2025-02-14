@@ -1,0 +1,127 @@
+/* Styles for the Products Page */
+.josefin-sans {
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main{
+    overflow-y: hidden;
+  }
+  
+  :root {
+    --earthy-green: #17a638;
+    --lemon-yellow: #234774;
+    --amber-yellow: #1155cc;
+    --white: #ffffff;
+    --whitetrans: #8a8a8a;
+    --black: #000000;
+    --black-variant: #1c1c1c;
+  
+    --heading-font: "Outfit", serif !important;
+    --paragraph-font: "Poppins", sans-serif !important;
+    --body-font: "Josefin Sans", serif !important;
+  }
+
+
+
+  section {
+    color: var(--white);
+     background-color: var(--black);
+     display: grid;
+     
+  }
+
+  .farming {
+    display: grid;
+    grid-template-areas: 
+     "one"
+     "two"
+     "three";
+  }
+  
+  .farming img {
+    grid-area: one;
+    width: 100%;
+        height: 100%;
+        transform: scale(1);
+        object-fit: cover;
+        position: relative;
+        
+        height: 80vh;
+        z-index: 1;
+  }
+
+  .farming h1 {
+    grid-area: two;
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    padding: 1rem;
+    background-color: var(--amber-yellow);
+    margin-top: -10px;
+    
+  }
+
+  .farming p{
+    grid-area: three;
+    line-height: 30px;
+    padding: 1rem;
+  }
+
+  main{
+    margin-top: 10vw ;
+  }
+
+  .farming h2{
+    font-size: 70px;
+    margin-bottom: -10px;
+  }
+
+  .farming h3{
+    font-size: 30px;
+  }
+
+  .farming p{
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+  }
+
+  .subscribe-section{
+    bottom: 0px !important;
+    margin-top: 0px !important;
+  }
+
+  footer{margin-top: 0;}
+
+
+  @media (min-width: 769px) {
+    .farming {
+      display: grid;
+      align-items: center !important;
+      grid-template-areas: 
+       "one two"
+       "one three ";
+    }
+
+    .farming{
+      overflow: hidden;
+    }
+
+    .farming img{
+      width: 500px;
+    }
+
+  
+  }
