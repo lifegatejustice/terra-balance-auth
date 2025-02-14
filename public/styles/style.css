@@ -19,6 +19,103 @@
   --body-font: "Josefin Sans", serif;
 }
 
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+.start-100 {
+  left: 100%;
+}
+.top-0 {
+  font-style: normal;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.badge {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: var(--bs-border-radius);
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+}
+.position-absolute {
+  position: absolute !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+.start-100 {
+  left: 87% !important;
+}
+.start-100 {
+  left: 0% !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.start-100 {
+  left: 87% !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+.top-0 {
+  font-style: normal;
+}
+.start-100 {
+  left: 100%;
+}
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.top-0 {
+  bottom: 27px !important;
+}
+
 .cat{
   background-color: var(--amber-yellow) !important;
 }
