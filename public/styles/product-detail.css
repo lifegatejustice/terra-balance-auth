@@ -319,3 +319,25 @@ button:hover {
     }
 
 }
+.mt-5 {
+    margin-top: 5vw;
+    
+}
+.mt-5 h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--amber-yellow);
+    padding: 1vw;
+    margin-bottom: 16px;
+}
+
+.mt-5 p {
+    margin-top: -3.3vh;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 1vw;
+    margin-bottom: 16px;
+
+}
