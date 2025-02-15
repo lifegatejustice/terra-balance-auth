@@ -149,7 +149,7 @@
 }
 
 main {
-    margin-top: 221px;
+    margin-top: 10vw;
 }
 
 .product-card h3 {
@@ -300,3 +300,22 @@ button:hover {
     background-color: #555;
 }
 
+@media (min-width: 768px) {
+    .product-card {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .product-details {
+        width: 50%;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+    main {
+        margin-top: 5vw;
+    }
+
+}
