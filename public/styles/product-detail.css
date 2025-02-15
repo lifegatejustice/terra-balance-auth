@@ -320,7 +320,7 @@ button:hover {
 
 }
 .mt-5 {
-    margin-top: 5vw;
+    margin-top: 5vh !important;
     
 }
 .mt-5 h2 {
@@ -340,4 +340,50 @@ button:hover {
     padding: 1vw;
     margin-bottom: 16px;
 
+}
+
+.eproduct-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin: 10px;
+    width: calc(150% - 50px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.eproduct-card img {
+    width: 300px;
+    object-fit: cover;
+   height: 300px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1vw;
+   background-color: var(--black);
+}
+
+.product-info h3{
+    font-weight: bold;
+    color: var(--white);
+    margin: 1vw !important;
+}
+
+.product-info p{
+    font-size: 20px;
+    color: var(--white);
+    margin: 0.3vw !important;
+}
+
+.product-info b{
+    font-size: 20px;
+    color: var(--earthy-green);
+    margin: 0.3vw !important;
+    margin-left: 1vw !important;
 }
