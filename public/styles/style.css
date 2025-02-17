@@ -23,6 +23,10 @@
   text-decoration: none;
 }
 
+.header span{
+background-color: red;
+border-radius: 10px;}
+
 .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
