@@ -313,3 +313,8 @@ form{
     padding: 100px;
     text-align: center;
 }
+
+.container {
+    display: flex;
+    flex-direction: column !important;
+}

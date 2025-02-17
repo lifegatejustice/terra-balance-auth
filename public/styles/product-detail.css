@@ -310,15 +310,28 @@ button:hover {
         width: 50%;
     }
 
-    .product-card img {
-        width: 100%;
-        height: auto;
-    }
+    
+
     main {
         margin-top: 5vw;
     }
 
+    .row {
+        background-color: var(--black);
+        color: var(--white);
+        overflow: hidden;
+    }
+
 }
+
+.card img{
+    width: 100%;
+    border-radius: 0px !important;
+    overflow: hidden;
+}
+
+
+
 .mt-5 {
     margin-top: 5vh !important;
     
