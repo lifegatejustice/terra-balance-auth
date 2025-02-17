@@ -30,7 +30,6 @@
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--white);
   text-decoration: none;
-  background-color: red;
   border: 0;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
