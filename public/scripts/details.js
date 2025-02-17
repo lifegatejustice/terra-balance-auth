@@ -42,3 +42,6 @@ function generateAvatar(letter) {
   });
 
   document.addEventListener("DOMContentLoaded", updateProfile);
+
+
+  

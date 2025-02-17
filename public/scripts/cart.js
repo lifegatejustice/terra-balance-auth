@@ -1,36 +1,36 @@
-// cart.js
-
-// Function to get logged-in user (adjust as needed)
+// --- Cart Functions ---
+// Get the logged-in user (as a string)
 function getLoggedInUser() {
-    return JSON.parse(localStorage.getItem("loggedInUser"));
-}
-
-// Function to determine the key for storing cart items
-function getCartKey() {
+    return localStorage.getItem("loggedInUser"); // using the second method
+  }
+  
+  // Get a unique cart key based on the logged-in user or guest.
+  function getCartKey() {
     const user = getLoggedInUser();
     return user ? `cartItems_user_${user}` : "cartItems_guest";
-}
-
-// Function to retrieve cart items from localStorage
-function getCartItems() {
+  }
+  
+  // Retrieve the user-specific cart from localStorage.
+  function getCartItems() {
     return JSON.parse(localStorage.getItem(getCartKey())) || [];
-}
-
-// Function to update the cart count display
-function updateCartCount() {
+  }
+  
+  // Update every element with the 'cart-count' class.
+  function updateCartCount() {
     const cartItems = getCartItems();
-    const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-    const cartCountElement = document.getElementById("cart-count");
-    if (cartCountElement) { // Only update if the element exists on the page
-        cartCountElement.innerText = totalQuantity;
+    const count = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    document.querySelectorAll('.cart-count').forEach(el => {
+      el.innerText = count;
+    });
+  }
+  
+  // Update cart count when the DOM loads.
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+  
+  // Listen for localStorage changes (useful for multi-tab updates).
+  window.addEventListener('storage', (event) => {
+    if (event.key === getCartKey()) {
+      updateCartCount();
     }
-}
-
-// Optionally, you can call updateCartCount on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", updateCartCount);
-
-// Expose functions if you need to call them from other scripts
-window.updateCartCount = updateCartCount;
-window.getCartItems = getCartItems;
-window.getCartKey = getCartKey;
-window.getLoggedInUser = getLoggedInUser;
+  });
+  
