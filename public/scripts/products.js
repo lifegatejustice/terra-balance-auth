@@ -70,14 +70,14 @@ const ecoFriendlyProducts = [
     name: "Fresh Basil",
     description: "A variety of fresh basil for your cooking needs.",
     price: 2.99,
-    image: "images/basil.jpg"
+    image: "images/pexels-monicore-1391505.webp"
 },
 {
     id: 12,
     name: "Organic Carrots",
     description: "Fresh organic carrots grown without pesticides.",
     price: 1.99,
-    image: "images/carrots.jpg"
+    image: "images/pexels-suzyhazelwood-1306559.webp"
 },
 {
     id: 13,
@@ -91,49 +91,49 @@ const ecoFriendlyProducts = [
     name: "Compost Tea",
     description: "Nutrient-rich compost tea for your garden.",
     price: 4.99,
-    image: "images/compost-tea.jpg"
+    image: "images/compost-tea-fall-leaves-1.webp"
 },
 {
     id: 15,
     name: "Organic Quinoa",
     description: "Sustainably farmed quinoa, perfect for cooking.",
     price: 3.99,
-    image: "images/quinoa.jpg"
+    image: "images/pexels-vie-studio-7420979.webp"
 },
 {
     id: 16,
     name: "Fresh Shrimp",
     description: "Locally sourced fresh shrimp, caught sustainably.",
     price: 12.99,
-    image: "images/shrimp.jpg"
+    image: "images/pexels-tomfisk-3680164.webp"
 },
 {
     id: 17,
     name: "Organic Beef",
     description: "Free-range organic beef, hormone-free.",
     price: 14.99,
-    image: "images/beef.jpg"
+    image: "images/pexels-mali-65175.webp"
 },
 {
     id: 18,
     name: "Plantain Chips",
     description: "Fresh plantain chips, perfect for snacking.",
     price: 2.99,
-    image: "images/plantain-chips.jpg"
+    image: "images/pexels-saveurssecretes-9191924.webp"
 },
 {
     id: 19,
     name: "Goat Cheese",
     description: "Sustainably sourced goat cheese, rich in flavor.",
     price: 8.99,
-    image: "images/goat-cheese.jpg"
+    image: "images/goat-cheese-HERO.jpg (1).webp"
 },
 {
     id: 20,
     name: "Snail Sauce",
     description: "Farm-raised snail sauce, a delicacy for gourmet dishes.",
     price: 9.99,
-    image: "images/snail-sauce.jpg"
+    image: "images/pexels-nano-erdozain-120534369-30766455.webp"
 }
 ];
 

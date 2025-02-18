@@ -82,16 +82,16 @@ const productId = Number(urlParams.get('id'));
         description: "A variety of fresh basil for your cooking needs.",
         about: "Our fresh basil is grown in a controlled environment that maximizes both its aromatic properties and its vibrant green color. Using sustainable, organic practices, we ensure that each leaf is packed with essential oils and natural flavors that enhance your culinary creations. Ideal for everything from traditional Italian pasta sauces to modern fusion dishes, our basil adds a burst of freshness and complexity to every recipe. The extended growing period and careful harvesting techniques preserve its nutritional benefits and intense flavor, making it a favorite among chefs and home cooks who value quality and sustainability.",
         price: 2.99,
-        image: "images/basil.jpg"
-    },
+        image: "images/pexels-monicore-1391505.webp"
+      },
     {
         id: 12,
         name: "Organic Carrots",
         description: "Fresh organic carrots grown without pesticides.",
         about: "Our organic carrots are cultivated with care in fields where the soil is enriched naturally through crop rotation and organic composting. Free from synthetic pesticides and fertilizers, these carrots develop a deep, satisfying crunch and a naturally sweet flavor that enhances both raw and cooked dishes. The extensive growing process ensures that each carrot reaches its full nutritional potential, packed with vitamins, minerals, and antioxidants. Perfect for salads, juices, or as a healthy snack, our organic carrots are a celebration of nature’s bounty and a testament to sustainable, chemical-free agriculture.",
         price: 1.99,
-        image: "images/carrots.jpg"
-    },
+        image: "images/pexels-suzyhazelwood-1306559.webp"
+      },
     {
         id: 13,
         name: "Free-Range Turkey",
@@ -99,63 +99,63 @@ const productId = Number(urlParams.get('id'));
         about: "Our free-range turkey eggs are produced by turkeys that enjoy a natural, spacious environment, ensuring that every egg is laid with care and nurtured to perfection. The birds feed on a balanced, natural diet that enhances the eggs’ rich flavor and superior nutritional profile. With a firm yolk and a delicate white, these eggs offer a unique taste experience that sets them apart from conventional poultry eggs. Perfect for both traditional breakfast dishes and gourmet recipes, our turkey eggs represent the harmony between sustainable farming practices and culinary excellence.",
         price: 6.99,
         image: "images/turkey.jpg"
-    },
+      },
     {
         id: 14,
         name: "Compost Tea",
         description: "Nutrient-rich compost tea for your garden.",
         about: "Our compost tea is a liquid elixir crafted through a natural fermentation process that extracts the essential nutrients and beneficial microorganisms from our premium organic compost. Rich in enzymes, vitamins, and minerals, this tea nourishes your soil, boosts plant immunity, and promotes vigorous growth. Carefully brewed in controlled conditions, it revitalizes tired soil and enhances microbial activity, leading to healthier, more resilient gardens and crops. Whether you’re a hobbyist or a professional grower, our compost tea provides an eco-friendly, highly effective solution to optimize plant health and soil vitality.",
         price: 4.99,
-        image: "images/compost-tea.jpg"
-    },
+        image: "images/compost-tea-fall-leaves-1.webp"
+      },
     {
         id: 15,
         name: "Organic Quinoa",
         description: "Sustainably farmed quinoa, perfect for cooking.",
         about: "Our organic quinoa is cultivated in high-altitude fields where natural growing conditions combine with traditional farming methods to produce a grain renowned for its nutty flavor and exceptional nutritional profile. Grown without synthetic chemicals, each tiny seed is packed with complete protein, essential amino acids, and a host of vitamins and minerals. The quinoa is harvested at its peak, ensuring maximum flavor and texture that can elevate salads, soups, and side dishes alike. Embracing both time-honored cultivation techniques and modern organic standards, our quinoa offers a healthful, versatile ingredient that embodies sustainability and quality.",
         price: 3.99,
-        image: "images/quinoa.jpg"
-    },
+        image: "images/pexels-vie-studio-7420979.webp"
+      },
     {
         id: 16,
         name: "Fresh Shrimp",
         description: "Locally sourced fresh shrimp, caught sustainably.",
         about: "Our fresh shrimp are hand-selected from pristine local waters using sustainable fishing practices that ensure the long-term health of marine ecosystems. These shrimp are known for their firm, succulent texture and naturally sweet, briny flavor. Every step—from catching to processing—is carefully monitored to preserve freshness and nutritional value. Whether you choose to grill, sauté, or incorporate them into a delicate seafood stew, our shrimp offer a premium taste experience that marries quality with ethical sourcing. Their consistent quality makes them an excellent choice for both gourmet chefs and home cooks alike.",
         price: 12.99,
-        image: "images/shrimp.jpg"
-    },
+        image: "images/pexels-tomfisk-3680164.webp"
+      },
     {
         id: 17,
         name: "Organic Beef",
         description: "Free-range organic beef, hormone-free.",
         about: "Our organic beef is sourced from cattle raised under the strictest organic and free-range conditions. These animals graze on natural pastures where they develop lean, nutrient-rich meat free of hormones and antibiotics. Every cut is carefully processed to retain its natural juices and robust flavor, making it ideal for a wide range of culinary applications—from grilling to slow cooking. Our ethical and sustainable farming practices ensure that the beef not only meets high standards of taste and nutrition but also contributes to a more environmentally friendly food system. Enjoy a product that is as conscientious as it is delicious.",
         price: 14.99,
-        image: "images/beef.jpg"
-    },
+        image: "images/pexels-mali-65175.webp"
+      },
     {
         id: 18,
         name: "Plantain Chips",
         description: "Fresh plantain chips, perfect for snacking.",
         about: "Our plantain chips are crafted from carefully selected, ripe plantains that are sliced thinly and cooked to achieve the perfect balance between crunch and flavor. Each chip retains the natural sweetness and nutritional benefits of the plantain, making them an excellent alternative to conventional snack foods. Prepared using sustainable practices, these chips are low in additives and high in natural fiber, ensuring that every bite is both wholesome and satisfying. Enjoy them as a quick snack, a side with dips, or a creative addition to your culinary creations—all while knowing that you are supporting environmentally conscious agriculture.",
         price: 2.99,
-        image: "images/plantain-chips.jpg"
-    },
+        image: "images/pexels-saveurssecretes-9191924.webp"
+      },
     {
         id: 19,
         name: "Goat Cheese",
         description: "Sustainably sourced goat cheese, rich in flavor.",
         about: "Our goat cheese is crafted from the milk of goats raised in open pastures where they graze naturally, resulting in a cheese that is creamy, tangy, and full of character. The traditional aging process enhances its complex flavors and smooth texture, making it a versatile addition to a wide variety of dishes. Whether crumbled over salads, melted in gourmet recipes, or enjoyed on its own, our goat cheese delivers an authentic taste that speaks to sustainable farming and artisanal craftsmanship. Each batch is produced with an emphasis on quality and environmental responsibility, ensuring a product that is as ethical as it is delectable.",
         price: 8.99,
-        image: "images/goat-cheese.jpg"
-    },
+        image: "images/goat-cheese-HERO.jpg (1).webp"
+      },
     {
         id: 20,
         name: "Snail Sauce",
         description: "Farm-raised snail sauce, a delicacy for gourmet dishes.",
         about: "Our snail sauce is an innovative culinary creation that captures the rich, earthy essence of farm-raised snails through a slow-cooking process. Blended with a selection of herbs, spices, and locally sourced ingredients, this sauce develops layers of flavor that are both savory and complex. It serves as a unique complement to a variety of dishes, from traditional stews to modern fusion recipes. Crafted with care and a commitment to sustainable practices, every batch of our snail sauce reflects an attention to detail that ensures a consistently delectable experience. This gourmet condiment is ideal for those looking to explore new dimensions of flavor in their cooking.",
         price: 9.99,
-        image: "images/snail-sauce.jpg"
-    }
+        image: "images/pexels-nano-erdozain-120534369-30766455.webp"
+      }
 ];
 
         
