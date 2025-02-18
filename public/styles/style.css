@@ -23,14 +23,13 @@
   text-decoration: none;
 }
 
-.cart-count{
+nav .cart-count{
 background-color: red;
-border-radius: 5px;
-display: inline-flex;
+
+display: inline-block;
 align-self: center;
 justify-self: center;
-text-decoration: underl ine;
-
+text-align: center;
 }
 .nav-link {
   display: block;
