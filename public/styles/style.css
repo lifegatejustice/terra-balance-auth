@@ -23,23 +23,59 @@
   text-decoration: none;
 }
 
-nav .cart-count{
-background-color: red;
-
-display: inline-block;
-align-self: center;
-justify-self: center;
-text-align: center;
+.form-control{
+  width: 50 !important;
 }
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  margin-right: calc(-.5* var(--bs-gutter-x));
+  margin-left: calc(-.5* var(--bs-gutter-x));
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+
+@media (min-width: 768px) {
+  .col-md-8 {
+      flex: 0 0 auto;
+      width: auto !important;
+  }
+}
+
+.row>* {
+  flex-shrink: 0;
+  
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.cart-count {
+  position: absolute;
+  top: 8px; /* Adjust this value to position the count correctly */
+  right: -5px; /* Adjust this value to position the count correctly */
+  background-color: #dc3545; /* Red background color */
+  color: white; /* White text color */
+  border-radius: 32%; /* Circular shape */
+  padding: 0.25em 0.5em; /* Padding for the count */
+  font-size: 0.75em; /* Font size */
+  font-weight: bold; /* Bold text */
+  min-width: 1.5em; /* Minimum width to ensure circular shape */
+  text-align: center; /* Center the text */
+  line-height: 1.5; /* Line height for vertical centering */
+}
+
+
 .nav-link {
-  display: block;
-  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-  font-size: var(--bs-nav-link-font-size);
-  font-weight: var(--bs-nav-link-font-weight);
-  color: var(--white);
-  text-decoration: none;
-  border: 0;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+  position: relative;
+  display: inline-block;
 }
 
 .bg-danger {

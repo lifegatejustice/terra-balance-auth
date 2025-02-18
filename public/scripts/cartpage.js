@@ -16,36 +16,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     cartItems.forEach((item, index) => {
-      // Create a Bootstrap card for each cart item
-      const itemDiv = document.createElement('div');
-      itemDiv.classList.add('card', 'mb-3');
-      
-      itemDiv.innerHTML = `
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="${item.image}" class="card-img" alt="${item.name}">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">Price: $${item.price.toFixed(2)}</p>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <button class="btn btn-outline-secondary decrease-qty" data-index="${index}" type="button">-</button>
-                </div>
-                <input type="number" class="form-control text-center quantity-input" min="1" value="${item.quantity}" data-index="${index}">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary increase-qty" data-index="${index}" type="button">+</button>
-                </div>
-              </div>
-              <p class="card-text">Subtotal: $<span class="item-subtotal">${(item.price * item.quantity).toFixed(2)}</span></p>
-              <button class="btn btn-danger remove-item" data-index="${index}">Remove</button>
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('row'); // Added border and spacing
+        
+        itemDiv.innerHTML = `
+            <div class="col-md-6">
+                <img src="${item.image}" alt="${item.name}" class="img-fluid">
             </div>
-          </div>
-        </div>
-      `;
-      
-      container.appendChild(itemDiv);
+            <div class="col-md-6">
+                <h2>${item.name}</h2>
+                <p class="text-muted">${item.description || ''}</p> <!-- Add description if available -->
+                <h4 class="my-3">Price: $${item.price.toFixed(2)}</h4>
+                
+                <div class="input-group w-50 mb-3">
+                    <button class="btn btn-outline-secondary decrease-qty" data-index="${index}" type="button">-</button>
+                    <input type="number" class="form-control text-center quantity-input" 
+                           min="1" value="${item.quantity}" data-index="${index}">
+                    <button class="btn btn-outline-secondary increase-qty" data-index="${index}" type="button">+</button>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <h5>Subtotal: $<span class="item-subtotal">${(item.price * item.quantity).toFixed(2)}</span></h5>
+                    <button class="btn btn-danger remove-item" data-index="${index}">
+                        Remove Item
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        container.appendChild(itemDiv);
     });
     
     attachEventListeners();
